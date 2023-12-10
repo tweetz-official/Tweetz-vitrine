@@ -1,0 +1,27 @@
+// -------------------------------------
+// Page content
+// -------------------------------------
+
+.c-pagesection {
+  padding-top: calc(60 / 16 * 1rem);
+  padding-bottom: calc(60 / 16 * 1rem);
+
+  @include breakpoint(medium) {
+    padding-top: calc(84 / 16 * 1rem);
+    padding-bottom: calc(84 / 16 * 1rem);
+  }
+
+  @include breakpoint(large) {
+    padding-top: calc(96 / 16 * 1rem);
+    padding-bottom: calc(96 / 16 * 1rem);
+  }
+}
+
+.c-pagesection--dark {
+  background-color: var(--color-gray8);
+  color: var(--color-gray6);
+
+  a {
+    color: var(--color-brand5);
+  }
+}

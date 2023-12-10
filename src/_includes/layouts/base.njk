@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>{{ metaTitle }} - tweetz</title>
+		<meta name="author" content="{{ site.author }}">
+		<meta name="description" content="{{ metaDescription }}">
+		<meta name="generator" content="{{ eleventy.generator }}">
+
+		<!-- CSS -->
+		<link rel="stylesheet" href="/assets/css/main.css">
+
+		<!-- Feed -->
+		<link rel="alternate" href="/feed.xml" title="Tweetz" type="application/atom+xml">
+
+		<!-- Open Graph -->
+		<meta property="og:type" content="article"/>
+		<meta property="og:url" content="{{ site.url ~ page.url }}"/>
+		<meta property="og:title" content="{{ metaTitle }}"/>
+		<meta property="og:image" content="{{ metaImage }}"/>
+		<meta property="og:description" content="{{ metaDescription }}"/>
+
+		<!-- Apple icon (minimal) -->
+		<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+		<!-- Scripts -->
+		<script type="module" src="/assets/js/main.bundle.js"></script>
+
+	</head>
+	<body>
+		{% include "partials/siteheader.njk" %}
+
+		{% block content %}{% endblock %}
+
+		{% include "partials/sitefooter.njk" %}
+	</body>
+</html>

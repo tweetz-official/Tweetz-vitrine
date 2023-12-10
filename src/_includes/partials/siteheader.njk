@@ -1,0 +1,11 @@
+<header class="c-siteheader">
+  <div class="l-container  c-siteheader__inner">
+    <p class="c-siteheader__logo"><a aria-label="Homepage" href="/">{% include "svg/logo.svg" %}</a></p>
+    <div class="c-siteheader__nav">
+      {% include "partials/mainnav.njk" %}
+    </div>
+    <p class="c-siteheader__hamburger"><a class="js-navtrigger" href="#footernav">{% include "svg/menu-open.svg" %}</a></p>
+  </div>
+
+  {% include "partials/mobilemenu.njk" %}
+</header>

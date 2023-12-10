@@ -1,0 +1,33 @@
+<footer class="c-sitefooter">
+
+  <div class="c-sitefooter__cta">
+    <a class="c-footercta" href="/contact/">Let's create !</a>
+  </div>
+
+  <div class="l-container">
+
+    <div class="c-sitefooter__main">
+      <nav class="c-sitefooter__nav" aria-label="footer navigation">
+        {% for item in nav %}
+          {% if loop.first %}<ul class="c-footernav" id="footernav">{% endif %}
+            <li class="c-footernav__item"><a class="c-footernav__link  {{ 'is-active' if activeSection ==  item.navTrigger }}" href="{{ item.navUrl }}">{{ item.navLabel }}</a></li>
+          {% if loop.last %}</ul>{% endif %}
+        {% endfor %}
+      </nav>
+
+      <nav class="c-sitefooter__social" aria-label="social media">
+        <ul class="c-socialmedia">
+          {% for item in socialmedia %}
+            <li class="c-socialmedia__item"><a class="c-socialmedia__link" href="{{ item.url }}" aria-label="{{ item.name }}"><span class="u-hide"></span>{% include "svg/" ~ item.icon %}</a></li>
+          {% endfor %}
+        </ul>
+      </nav>
+    </div>
+
+    <div class="c-sitefooter__copyright">
+      <p class="u-margin-all-none">&copy; Tweetz - <time datetime="{{ site.buildTime | dateISO }}">{{ site.buildTime | dateYear }}</time></p>
+    </div>
+
+  </div>
+
+</footer>

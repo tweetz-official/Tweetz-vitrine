@@ -1,2 +1,2 @@
-# Tweetz-vitrine
-repo final pour le site vitrine.
+# tweetz-vitrine-setup
+repo for website while setting up service in tweetz repo.
