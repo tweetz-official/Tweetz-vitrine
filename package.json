@@ -21,7 +21,7 @@
     "watch:scripts": "onchange \"./src/assets/js/**/*\" -- npm run scripts:dev",
     "watch:styles": "onchange \"./src/assets/scss/**/*\" -- npm run styles:dev",
     "build": "npm-run-all clean --parallel images styles:prod scripts:prod eleventy",
-    "dev": "npm-run-all --parallel server watch:*"
+    "dev": "npm-run-all styles:dev scripts:dev --parallel server watch:*"
   },
   
   "devDependencies": {
