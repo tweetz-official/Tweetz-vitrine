@@ -7,7 +7,6 @@
 }
 
 .formule__profile--container {
-    // height: 120px;
     margin-top: 50px;
     display: flex;
     gap: 14px;
@@ -35,17 +34,11 @@
         }
 
         &-1 {
-            // background-image: url(../../img/alain_ducasse.webp);
             filter: opacity(0.5);
             transform: translateY(20px);
         }
 
-        // &-2 {
-        //     // background-image: url(../../img/alain_ducasse.webp);
-        // }
-
         &-3 {
-            // background-image: url(../../img/be_sang.jpeg);
             filter: opacity(0.5);
             transform: translateY(20px);
         }
@@ -82,13 +75,13 @@
         }
 
         &--img {
-            max-width: 285px; /* Set your desired width */
-            max-height: 191px; /* Set your desired height */
+            max-width: 285px;
+            max-height: 191px; 
             display: flex;
             align-items: center;
             justify-content: center;
             overflow: hidden;
-            position: relative; /* Add this for positioning */
+            position: relative;
             border-radius: 25px;
 
             img {
@@ -104,6 +97,7 @@
             .formule__card--subtitle {
                 color: var(--color-secondary);
                 font-size: 18px;
+                margin: 0;
             }
             .formule__card--title {
                 color: var(--color-dark);
@@ -112,6 +106,7 @@
                 text-align: center;
                 color: var(--color-grey-4);
                 max-width: 286px;
+               
             }
         }
     }
