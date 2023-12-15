@@ -1,0 +1,114 @@
+.formule {
+    background-color: var(--color-grey-10);
+}
+
+.formule__c--text {
+    max-width: 566px;
+}
+
+.formule__profile--container {
+    margin-top: 50px;
+    display: flex;
+    gap: 14px;
+    align-items: center;
+    justify-content: center;
+
+    .formule__profile-box {
+        position: relative;
+        svg {
+            position: absolute;
+            top: 0;
+            right: 0;
+            z-index: 100;
+        }
+    }
+
+    .formule__profile {
+        max-width: 94px;
+        max-height: 94px;
+        border-radius: 50%;
+        overflow: hidden;
+        img {
+            object-fit: cover;
+            width: 100%;
+        }
+
+        &-1 {
+            filter: opacity(0.5);
+            transform: translateY(20px);
+        }
+
+        &-3 {
+            filter: opacity(0.5);
+            transform: translateY(20px);
+        }
+    }
+}
+
+.formule__cards--container {
+    margin: 50px 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    .formule__card {
+        background-color: var(--color-white);
+        max-width: 345px;
+        width: 100%;
+        display: flex;
+        padding-top: 30px;
+        border-radius: 40px;
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+        box-shadow: 0px 12px 25px 0px rgba(13, 9, 27, 0.06),
+        0px 46px 46px 0px rgba(13, 9, 27, 0.05),
+        0px 104px 63px 0px rgba(13, 9, 27, 0.03),
+        0px 185px 74px 0px rgba(13, 9, 27, 0.01),
+        0px 290px 81px 0px rgba(13, 9, 27, 0);
+        transition: all 0.2s ease-in-out;
+
+        &:hover {
+            cursor: pointer;
+            transform: scale(1.04);
+        }
+
+        &--img {
+            max-width: 285px;
+            max-height: 191px; 
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            position: relative;
+            border-radius: 25px;
+
+            img {
+                max-width: 100%;
+                max-height: 100%;
+                object-fit: cover;
+            }
+        }
+        &--text {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .formule__card--subtitle {
+                color: var(--color-secondary);
+                font-size: 18px;
+                margin: 0;
+            }
+            .formule__card--title {
+                color: var(--color-dark);
+            }
+            .formule__card--description {
+                text-align: center;
+                color: var(--color-grey-4);
+                max-width: 286px;
+               
+            }
+        }
+    }
+}
+
