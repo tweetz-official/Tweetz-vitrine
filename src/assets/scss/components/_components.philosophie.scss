@@ -1,86 +1,117 @@
-.philosophie {
+.box__with__assets {
     display: flex;
     flex-direction: column;
-}
-
-.section__with__assets {
-    max-width: 1120px;
-    display: flex;
     align-items: center;
-    flex-direction: column;
-    overflow: hidden;
-    gap: 3rem;
 }
 
-
-
-.section__philosophie--img {
-    width: 100%;
+.img__container {
     max-width: 618px;
-    max-height: 890px;
+    max-height: 600px;
+    overflow: hidden;
     margin: 0 auto;
+    display: flex;
+    border-radius: 25px;
     img {
-        width: 100%;
-        height: 100%;
+        object-fit: cover;
+        object-position: center;
         display: block;
     }
 }
 
-.philosophie__c--text {
-    .c__link {
-        display: flex;
-        align-items: baseline;
-        gap: 8px;
-        text-decoration: none;
-        color: var(--color-primary);
-        font-weight: 700;
-
-        svg {
-            transition: transform 0.2s ease-in-out;
-        }
-
-        &:hover {
-            svg {
-                transform: translateX(8px);
+.box__with__assets--reverse {
+    margin: 50px 0;
+    gap: 20px;
+    .img__container {
+        position: relative;
+        overflow: visible;
+        .job__card {
+            position: absolute;
+            top: 10%;
+            left: -10%;
+            background-color: white;
+            max-width: 220px;
+            width: 100%;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0px 12px 25px 0px rgba(13, 9, 27, 0.06),
+                0px 46px 46px 0px rgba(13, 9, 27, 0.05),
+                0px 104px 63px 0px rgba(13, 9, 27, 0.03),
+                0px 185px 74px 0px rgba(13, 9, 27, 0.01),
+                0px 290px 81px 0px rgba(13, 9, 27, 0);
+            z-index: 100;
+            color: var(--color-dark);
+            &--header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                font-weight: 700;
             }
+            &--description {
+                p {
+                    margin: 0;
+                }
+            }
+            //TODO create box for tools
         }
     }
 }
 
-.philosophie__c {
-    .c-suptitle {
+.box__text {
+    padding: 10px;
+    margin-top: 20px;
+    max-width: 540px;
+    .btn__link {
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        gap: 8px;
         animation: fadeInRight 1s ease-in-out;
-    }
-    .c-suptitle--dark {
-        animation: fadeInRight 1.1s ease-in-out;
-    }
-    .philosophie__c--text {
-        p {
-            animation: fadeInRight 1.15s ease-in-out;
+        &:hover {
+            svg {
+                transform: translateX(10px);
+            }
         }
-        :nth-child(2) {
-            animation: fadeInRight 1.2s ease-in-out;
+        svg {
+            transition: transform 0.2s ease-in;
         }
-        .c__link {
-            animation: fadeInRight 1.21s ease-in-out;
-          }
+    }
+    button {
+        background-color: transparent;
+        border: none;
+        color: var(--color-primary);
+        cursor: pointer;
+    }
+    .c-h3 {
+        animation: fadeInRight 0.6s ease-in-out;
+    }
+    :nth-child(2) {
+        animation: fadeInRight 0.7s ease-in-out;
+    }
+    p {
+        animation: fadeInRight 0.8s ease-in-out;
+    }
+    :nth-child(4) {
+        animation: fadeInRight 0.9s ease-in-out;
     }
 }
 
 @media screen and (min-width: 1023px) {
-    .section__with__assets {
+    .box__with__assets {
         flex-direction: row;
-        justify-content: space-between;
-        gap: initial;
-        width: 100%;
     }
-    .section__with__assets--reverse {
-        margin-left: auto;
+    .box__with__assets--reverse {
         flex-direction: row-reverse;
-    }
-    .section__philosophie--img {
-        img {
-            border-radius: 0 25px 25px 0;
+
+        .img__container {
+            border-radius: 25px 0 0 25px;
         }
+    }
+    .img__container {
+        margin: 0;
+        border-radius: 0 25px 25px 0;
+    }
+
+    .box__text {
+        margin: 0 auto;
     }
 }
