@@ -11,12 +11,15 @@ permalink: index.html
 {% set metaImage = site.url ~ "/assets/img/metaimg.jpg" %}
 
 
+
+
 {% block content %}
     <main>
-
         <div class="l-container">
             <h1 class="c-h1">Tweetz</h1>
         </div>
+        
+        {% include "sections/carousel.njk" %}
 
     </main>
 {% endblock %}
