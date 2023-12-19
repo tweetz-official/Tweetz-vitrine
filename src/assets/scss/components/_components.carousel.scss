@@ -55,19 +55,19 @@
         .c-carousel__subtitle{
           font-size: clamp(1rem, 4vw, 4rem);
           max-width: 100%;
-          color: rgba(252, 251, 255, 0.60);
+          color: #fcfbff99;
   
         }
         .c-carousel__title{
           font-size: clamp(1.5rem, 10vw, 9rem);
-          color: #FCFBFF;
+          color: var(--color-white);
         }
   
   
         .c-carousel__desc{
           font-size: clamp(1rem, 2vw, 2rem);
           max-width: 100%;
-          color: #FCFBFF;
+          color: var(--color-white);
           font-style: normal;
           font-weight: 500;
           line-height: normal;
