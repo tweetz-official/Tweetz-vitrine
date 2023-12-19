@@ -2,15 +2,14 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    overflow: hidden;
 }
 
 .img__container {
     max-width: 618px;
     max-height: 600px;
     overflow: hidden;
-    margin: 0 auto;
     display: flex;
-    border-radius: 25px;
     img {
         object-fit: cover;
         object-position: center;
@@ -23,7 +22,6 @@
     gap: 20px;
     .img__container {
         position: relative;
-        overflow: visible;
         .job__card {
             position: absolute;
             top: 10%;
@@ -51,7 +49,50 @@
                     margin: 0;
                 }
             }
-            //TODO create box for tools
+        }
+        .tools__box {
+            position: absolute;
+            bottom: 0;
+            left: 5%;
+            z-index: 100;
+            background-color: white;
+            padding: 25px;
+            gap: 27px;
+            border-radius: 25px;
+            box-shadow: 0px 18px 37.5px 0px rgba(13, 9, 27, 0.06),
+                0px 69px 69px 0px rgba(13, 9, 27, 0.05),
+                0px 156px 94.5px 0px rgba(13, 9, 27, 0.03),
+                0px 277.5px 111px 0px rgba(13, 9, 27, 0.01),
+                0px 435px 121.5px 0px rgba(13, 9, 27, 0);
+
+            .tools__box--img {
+                display: flex;
+                align-items: center;
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+                :first-child {
+                    animation: bounce 2s ease-in infinite;
+                    max-width: 100px;
+                    max-height: 100px;
+                }
+                :nth-child(2) {
+                    animation: bounce 2.4s ease-in infinite;
+                    max-width: 110px;
+                    max-height: 110px;
+                }
+                :last-child {
+                    animation: bounce 2.8s ease-in infinite;
+                    max-width: 90px;
+                    max-height: 90px;
+                }
+            }
+            .tools__box--text {
+                justify-content: center;
+                font-weight: 700;
+                color: var(--color-dark);
+            }
         }
     }
 }
@@ -95,20 +136,66 @@
     }
 }
 
+@media screen and (max-width: 766px) {
+    .box__with__assets--reverse {
+        .img__container {
+            .job__card {
+                display: none;
+            }
+            .tools__box {
+                display: none;
+            }
+        }
+    }
+}
+@media screen and (min-width: 767px) {
+    .box__with__assets--reverse {
+        .job__card {
+            display: block;
+        }
+        .tools__box {
+            display: block;
+        }
+    }
+}
+
+// @media screen and (min-width: 767px) and (max-width: 1022px) {
+//     .box__with__assets {
+//         overflow: visible;
+//         .img__container {
+//             border-radius: 25px;
+//         }
+
+//     }
+//     .box__with__assets--reverse {
+//         .img__container {
+//             border-radius: 25px;
+//         }
+//     }
+// }
+
 @media screen and (min-width: 1023px) {
     .box__with__assets {
         flex-direction: row;
+        overflow: visible;
+        .img__container {
+            margin: 0;
+            border-radius: 0 25px 25px 0;
+        }
     }
     .box__with__assets--reverse {
         flex-direction: row-reverse;
 
         .img__container {
+            overflow: visible;
             border-radius: 25px 0 0 25px;
         }
-    }
-    .img__container {
-        margin: 0;
-        border-radius: 0 25px 25px 0;
+        .tools__box {
+            display: block;
+        }
+        .job__card {
+            display: block;
+        }
     }
 
     .box__text {
