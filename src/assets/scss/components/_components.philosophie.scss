@@ -1,3 +1,6 @@
+//TODO check for the overflow scroll-x in body
+//TODO check for the class name
+//TODO paralax effect in .img__container
 .box__with__assets {
     display: flex;
     flex-direction: column;
@@ -25,7 +28,7 @@
         .job__card {
             position: absolute;
             top: 10%;
-            left: -10%;
+            left: 2%;
             background-color: white;
             max-width: 220px;
             width: 100%;
@@ -52,7 +55,7 @@
         }
         .tools__box {
             position: absolute;
-            bottom: 0;
+            bottom: 5%;
             left: 5%;
             z-index: 100;
             background-color: white;
@@ -92,6 +95,10 @@
                 justify-content: center;
                 font-weight: 700;
                 color: var(--color-dark);
+                p {
+                    margin: 0;
+                    text-align: center;
+                }
             }
         }
     }
@@ -189,12 +196,27 @@
         .img__container {
             overflow: visible;
             border-radius: 25px 0 0 25px;
-        }
-        .tools__box {
-            display: block;
-        }
-        .job__card {
-            display: block;
+
+            .tools__box {
+                display: block;
+                bottom: -5%;
+                left: -5%;
+                .tools__box--img {
+                    :first-child {
+                        max-width: 73px;
+                    }
+                    :nth-child(2) {
+                        max-width: 138px;
+                    }
+                    :last-child {
+                        max-width: 50px;
+                    }
+                }
+            }
+            .job__card {
+                display: block;
+                left: -10%;
+            }
         }
     }
 
