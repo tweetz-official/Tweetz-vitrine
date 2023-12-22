@@ -30,6 +30,9 @@
         color: var(--color-primary);
         background: transparent;
         backdrop-filter: blur(10px);
+        &:hover{
+            color: var(--color-primary);
+        }
     }
     
     &--small{

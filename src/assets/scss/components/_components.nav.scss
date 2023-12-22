@@ -1,0 +1,18 @@
+.c-nav{
+    position: fixed;
+    top: 10%;
+    z-index: 99999999;
+    
+    width: 100%;
+    height: 81px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 39.72%;
+
+    user-select: none;
+}
+.c-nav__link{
+    gap: 1.66666667%;
+}
