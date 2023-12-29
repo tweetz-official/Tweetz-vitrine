@@ -7,10 +7,14 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  
+  width: 100%;
+  background: var(--color-white);
+
   .c-nav.footer{
     position: relative;
-    width: 88.87%;
+
+    justify-content: space-between;
+    
     &::after {
       content: "";
       position: absolute;
@@ -24,10 +28,15 @@
   .c-sitefooter__social{
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: center;
     align-self: stretch;
     
     
+    svg{
+      width: 48.311px;
+      height: 48.311px;
+      margin: 13.5px;
+    }
     ul{
       list-style: none;
       display: flex;
