@@ -1,36 +1,19 @@
-nav{
-    width: 100%;
-    .l-container{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        
-        // width: 100%;
-        height: 81px;
-        max-width: 1140px;
-
-        margin: 0 auto;
-        padding-right: calc(24 / 16 * 1rem);
-        padding-left: calc(24 / 16 * 1rem);
-    }
-}
-
-.c-nav{
-    position: fixed;
+.c-sitenav{
     top: 0%;
     z-index: 99;
-    padding: 1% 0%;
-
+    
     width: 100%;
     height: 81px;
+    
+}
+.c-nav{
 
-    // backdrop-filter: blur(3px);
-    background: #fff;
+    width: 100%;
+    height: 100%;
 
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    gap: 39.72%;
 
     user-select: none;
 }
