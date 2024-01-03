@@ -1,11 +1,4 @@
-.l-container{
-    width: 100%;
-    max-width: 1440px;
-    padding: 0 20px;
-    margin: 0 auto;
-  }
-  
-    .c-carousel {
+      .c-carousel {
       position: relative;
       width: 100%;
       aspect-ratio: 1/0.5;
@@ -16,7 +9,7 @@
       box-sizing: border-box;
   
       padding: calc(5vw + 15px);
-      
+      margin: 10vh auto;
       .c-carousel__gallery {
         position: absolute;
         top: 0;

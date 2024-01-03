@@ -1,0 +1,21 @@
+---
+permalink: /creator/index.html
+---
+
+{% extends "layouts/base.njk" %}
+{% set activeSection = "home" %}
+{% set metaTitle = "Welcome" %}
+{% set metaDescription = "Tweetz description" %}
+{% set metaImage = site.url ~ "/assets/img/metaimg.jpg" %}
+{% block content %}
+    <main>
+        {% include "sections/carousel-creator.njk" %}
+        <section class="sectionpage__group1">
+            {% include "sections/type-creator.njk" %}
+        </section>
+        <section class="sectionpage__group2">
+            {% include "sections/formules-section.njk" %}
+        </section>
+        <section class="sectionpage__group3"></section>
+    </main>
+{% endblock %}
