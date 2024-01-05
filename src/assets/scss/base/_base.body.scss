@@ -8,6 +8,7 @@ body {
   background-color: var(--color-white);
   color: var(--color-gray2);
   font-size: 1rem;
+  overflow-x: hidden;
 
   @include breakpoint(medium) {
     font-size: calc(18 / 16 * 1rem);
