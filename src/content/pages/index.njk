@@ -9,10 +9,9 @@ permalink: index.html
 {% set metaImage = site.url ~ "/assets/img/metaimg.jpg" %}
 {% block content %}
     <main>
-        <section class="sectionpage__group1">
-            {% include "sections/philosophie-section.njk" %}
-        </section>
-        <section class="sectionpage__group2"></section>
-        <section class="sectionpage__group3"></section>
+
+        {% include "sections/hero-section.njk" %} 
+        {% include "sections/philosophie-section.njk" %}
+        {% include "sections/philosophie-section2.njk" %}
     </main>
 {% endblock %}
