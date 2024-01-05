@@ -2,9 +2,16 @@
 // Page content
 // -------------------------------------
 
+
+:root{
+  --c-pagesection-border-radius: calc(10vw + 35px);
+}
+
 .c-pagesection {
+  position: relative;
   padding-top: calc(60 / 16 * 1rem);
   padding-bottom: calc(60 / 16 * 1rem);
+  background-color: var(--color-white);
 
   @include breakpoint(medium) {
     padding-top: calc(84 / 16 * 1rem);
@@ -18,7 +25,7 @@
 }
 
 .c-pagesection--dark {
-  background-color: var(--color-gray8);
+  background-color: var(--color-grey-10);
   color: var(--color-gray6);
 
   a {
@@ -27,49 +34,51 @@
 }
 
 
-// -------------------------------------
+// decoration
 
+:root{
+  --c-pagesection-deco-blur: 20px;
+}
 
-  .sectionpage{
+.c-pagesection--first::after{
+  // drop shadow on top
+  content: "";
+  position: absolute;
+  top: calc( -1 * var(--c-pagesection-deco-blur) );
+  left: calc( -1 * var(--c-pagesection-deco-blur) );
+  right: calc( -1 * var(--c-pagesection-deco-blur) );
+  height: 500px;
+  background-color: var(--color-grey-2);
+  filter: blur(var(--c-pagesection-deco-blur));
+  border-radius: inherit;
+  opacity: 0.25;
+  z-index: -1;
+} 
 
-    &__group1 {
-        position: relative;
-        width: 100%;
-        background-color: var(--color-white);
-        border-radius: 0px 0px 12.15vw 0px;
-        // box-shadow: 0px -22.5px 56.25px 0px rgba(0, 0, 0, 0.20);
-        &::before {
-          content: "";
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          z-index: -1;
-          background: var(--color-grey-10);
-        }
-      }
-&__group2{
-  z-index: 1;
-    width: 100%;
-    background-color: var(--color-grey-10);
-    border-radius: 12.15vw 0px 0px 12.15vw;
-    }
-    &__group3{
-    position: relative;
-    width: 100%;
-    height: 2121px;
-    background-color: var(--color-white);
-    border-radius: 0px 12.15vw 0px 0px;
-    &::before {
-      z-index: -1;
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: var(--color-grey-10);
-    }
-   }
+.c-pagesection--deco{
+  border-radius: 0 var(--c-pagesection-border-radius) var(--c-pagesection-border-radius) 0;
+}
+
+.c-pagesection--deco + .c-pagesection--dark{
+  border-radius: var(--c-pagesection-border-radius) 0 0 var(--c-pagesection-border-radius);
+}
+
+.c-pagesection--deco::before{
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: var(--color-grey-10);
+}
+
+.c-pagesection--dark::before {
+  background-color: var(--color-white);
+}
+
+.c-pagesection--no-top-deco::before{
+  top: 50%;
+}
+
+.c-pagesection--no-bottom-deco::before{
+  bottom: 50%;
 }
