@@ -10,13 +10,14 @@
     font-size: 18px;
     line-height: 120%;
     font-family: var(--fontstack-main);
-    font-weight: 500;
+    font-weight: 400;
     text-decoration: none;
-
+    
+    
     color: var(--color-white);
     background: var(--color-primary);
-
-    border: solid 2px var(--color-primary);
+    
+    border: solid 2px transparent;
 
     transition: transform 0.3s ease-in-out;
 
@@ -38,7 +39,7 @@
 
 .c-btn--secondary {
     background-color: transparent;
-    border: solid 2px var(--color-primary);
+    border-color: var(--color-primary);
     color: var(--color-primary);
 }
 

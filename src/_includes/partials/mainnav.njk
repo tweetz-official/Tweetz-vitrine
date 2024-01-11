@@ -8,9 +8,9 @@
         {% set currentClass = "" %}
         {% set currentAria = "" %}
           {% if navItem.isPrimary %}
-            {% set currentClass = "is-primary c-btn c-btn--small" %}
+            {% set currentClass = "is-primary c-btn" %}
           {% elseif navItem.isSecondary %}
-            {% set currentClass = "is-secondary c-btn c-btn--secondary c-btn--small" %}
+            {% set currentClass = "is-secondary c-btn c-btn--secondary" %}
           {% else %}
             {% if navItem.trigger == currentSection %}
               {% set currentClass = "is-current" %}
