@@ -4,7 +4,6 @@ const elBody = document.querySelector("body");
 const classActive = "is-active";
 const classBodyScroll = "has-menu";
 
-console.log(elNavLinks);
 // init
 const init = () => {
   for (let i = 0; i < elNavLinks.length; i++) {

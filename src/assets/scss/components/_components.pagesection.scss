@@ -2,9 +2,12 @@
 // Page content
 // -------------------------------------
 
+:root {
+  --c-pagesection__deco-size: calc(10vw + 35px);
 
-:root{
-  --c-pagesection-border-radius: calc(10vw + 35px);
+  @media all and (max-width: 1920px) {
+    --c-pagesection__deco-size: calc(192px + 35px);
+  }
 }
 
 .c-pagesection {
@@ -22,6 +25,9 @@
     padding-top: calc(96 / 16 * 1rem);
     padding-bottom: calc(96 / 16 * 1rem);
   }
+
+
+  --deco-blur: 20px;
 }
 
 .c-pagesection--dark {
@@ -36,31 +42,28 @@
 
 // decoration
 
-:root{
-  --c-pagesection-deco-blur: 20px;
-}
-
 .c-pagesection--first::after{
   // drop shadow on top
   content: "";
   position: absolute;
-  top: calc( -1 * var(--c-pagesection-deco-blur) );
-  left: calc( -1 * var(--c-pagesection-deco-blur) );
-  right: calc( -1 * var(--c-pagesection-deco-blur) );
+  top: calc( -1 * var(--deco-blur) );
+  left: calc( -1 * var(--deco-blur) );
+  right: calc( -1 * var(--deco-blur) );
   height: 500px;
   background-color: var(--color-grey-2);
-  filter: blur(var(--c-pagesection-deco-blur));
+  filter: blur(var(--deco-blur));
   border-radius: inherit;
   opacity: 0.25;
   z-index: -1;
 } 
 
 .c-pagesection--deco{
-  border-radius: 0 var(--c-pagesection-border-radius) var(--c-pagesection-border-radius) 0;
+  border-radius: 0 var(--c-pagesection__deco-size) var(--c-pagesection__deco-size) 0;
+  padding: var(--c-pagesection__deco-size) 0;
 }
 
 .c-pagesection--deco + .c-pagesection--dark{
-  border-radius: var(--c-pagesection-border-radius) 0 0 var(--c-pagesection-border-radius);
+  border-radius: var(--c-pagesection__deco-size) 0 0 var(--c-pagesection__deco-size);
 }
 
 .c-pagesection--deco::before{

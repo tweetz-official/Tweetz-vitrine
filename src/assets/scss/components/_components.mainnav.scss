@@ -2,7 +2,7 @@
 // Mainnav
 // -------------------------------------
 
-.c-mainnav {
+.c-mainnav{
   list-style: none;
   margin: 0;
   padding: 0;
@@ -18,7 +18,7 @@
 }
 
 
-.c-mainnav__link {
+.c-mainnav__link:not(.c-btn) {
   display: block;
   padding: calc(12 / 16 * 1rem);
 
@@ -44,6 +44,7 @@
 }
 
 .c-mainnav__link:hover:not(.c-btn)::after,
-.c-mainnav__link:focus:not(.c-btn)::after {
+.c-mainnav__link:focus:not(.c-btn)::after,
+.c-mainnav__link:not(.c-btn).is-current::after {
   width: 100%;
 }

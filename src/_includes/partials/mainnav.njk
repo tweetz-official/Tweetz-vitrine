@@ -18,7 +18,7 @@
               {% set currentAria = 'aria-current="page"'|safe %}
             {% endif %}
           {% endif %}
-        <li class="c-mainnav__item"><a class="c-mainnav__link  {{ currentClass }} {{ additionnalClasses }}" {{ currentAria }} href="{{ navItem.url }}">{{ navItem.label }}</a></li>
+        <li class="c-mainnav__item"><a class="c-mainnav__link {{ currentClass }} {{ additionnalClasses }}" {{ currentAria }} href="{{ navItem.url }}">{{ navItem.label }}</a></li>
       {% if loop.last %}</ul>{% endif %}
     {% endfor %}
   </nav>

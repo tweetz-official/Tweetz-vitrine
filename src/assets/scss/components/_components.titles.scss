@@ -16,22 +16,15 @@
 }
 
 .c-h1 {
-  font-size: calc(31 / 16 * 1rem);
+  font-size: clamp(calc(31 / 16 * 1rem) , 4vw, calc(54 / 16 * 1rem));
   margin-bottom: calc(18 / 16 * 1rem);
   
-  // cletter spacing : calc 1% from the base font size
+  // leeter spacing - 3% of font-size
+  letter-spacing: calc(1em / 100 * -3);
 
-  letter-spacing: calc((31 / 16 * 1rem) / 100 * -3);
-  
-  
-  @include breakpoint(medium) {
-    font-size: calc(37 / 16 * 1rem);
-    letter-spacing: calc((37 / 16 * 1rem) / 100 * -3);
-  }
-  
-  @include breakpoint(large) {
-    font-size: calc(45 / 16 * 1rem);
-    letter-spacing: calc((45 / 16 * 1rem) / 100 * -3);
+  & span {
+    color: var(--color-primary);
+    font-size: clamp(calc(31 / 16 * 1rem) , 7vw, calc(90 / 16 * 1rem));
   }
 }
 
