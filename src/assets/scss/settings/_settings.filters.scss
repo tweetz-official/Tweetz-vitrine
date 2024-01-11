@@ -1,3 +1,9 @@
 :root{
-    --brand-drop-shadow: drop-shadow(0 12px 18px rgba(224, 41, 93, 0.8));
+
+    --brand-drop-shadow-color: rgba(224, 41, 93, 0.8);
+
+    --brand-drop-shadow: drop-shadow(0 12px 18px var(--brand-drop-shadow-color));
+    --brand-drop-shadow--hover: drop-shadow(0 6px 18px var(--brand-drop-shadow-color));
+    
+    --brand-drop-shadow--small: drop-shadow(0 6px 6px var(--brand-drop-shadow-color));
 }
