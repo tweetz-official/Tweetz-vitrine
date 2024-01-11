@@ -8,19 +8,18 @@
     
     // anim on th icon when hover
     &:hover .c-logo__icon {
-        transform: translate3d(0, -5px, 0) rotate(2deg);
+        transform: translate3d(0, -2px, 0);
+        scale: 1.05;
     }
 }
 
 
 .c-logo__icon {
     filter: var(--brand-drop-shadow);
-
-    transform-origin: bottom center;
     height: 100%;
     width: auto;
 
-    transition: transform 0.2s ease-in-out;
+    transition: transform 0.3s ease-in-out, scale 0.2s ease-in-out 0.1s;
 }
 
 .c-logo__text {
