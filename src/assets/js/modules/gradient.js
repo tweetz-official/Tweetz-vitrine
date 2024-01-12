@@ -3,12 +3,14 @@ import Gradient from '@bedard/gradient';
 const canvas = document.querySelector('.js-gradient')
 
 document.addEventListener('DOMContentLoaded', () => {
-  const splineViewer = document.querySelector('.js-spline');
-  if (splineViewer) {
-    const logo = splineViewer.shadowRoot.querySelector('#logo');
-    // remove logo
-    logo.parentNode.removeChild(logo);
-  }
+  const allSplineViewer = document.querySelectorAll('.js-spline');
+  allSplineViewer.forEach((splineViewer) => {
+    if (splineViewer) {
+      const logo = splineViewer.shadowRoot.querySelector('#logo');
+      // remove logo
+      logo.parentNode.removeChild(logo);
+    }
+  });
 });
 
 const colorPrimary = '#E0295D';

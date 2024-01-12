@@ -3,6 +3,8 @@
 --------------------------------- */
 
 .c-siteheader {
+  position: relative;
+  z-index: 10;
   color: var(--color-text);
   padding-top: calc(24 / 16 * 1rem);
   padding-bottom: calc(18 / 16 * 1rem);

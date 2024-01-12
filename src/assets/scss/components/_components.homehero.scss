@@ -13,33 +13,89 @@
 }
 
 .c-hero__text{
-    margin-bottom: 20%;
+    @include breakpoint(medium){
+        margin-bottom: 20%;
+    }
+}
+
+.c-hero__illu{
+    position: relative;
+    width: 100%;
+    height: 40vh;
+
+    @include breakpoint(medium){
+        height: 45vh;
+    }
+
+    @include breakpoint(large){
+        height: 70vh;
+    }
 }
 
 .c-hero__spline{
-    width: 100%;
-    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
+
+    width: 150%;
+    height: 150%;
+
+
+    @include breakpoint(large){
+        left: 70%;
+
+        width: 150%;
+        height: 150%;
+    }
 }
 
 .c-hero__gradient-container{
     position: absolute;
     inset: 0;
-    left: 25vw;
-    right: -10vw;
-    bottom: calc( var(--bottom) * -1);
+    left: -10vw;
+    right: -25vw;
+    bottom: calc( var(--bottom) * -1 - 10vh);
     z-index: -1;
 
     filter: drop-shadow(rgba(255, 255, 255, 0.65) 0px 12px 50px);
 }
 
 .c-hero__gradient{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
+
     width: 100%;
     height: 100%;
+}
 
-    clip-path: url(#myClip);
+.c-hero__gradient--shadow{
+    z-index: -1;
+    filter: blur(50px);
 }
 
 .c-hero__content::after{
     width: 100%;
     height: 100%;
+}
+
+.c-hero__deco{
+    position: absolute;
+    z-index: -1;
+
+    top: -150px;
+    left: 0;
+    height: 90vh;
+    width: 100vw;
+
+    opacity: .04;
+
+    & > svg {
+        width: fit-content;
+        height: 100%;
+
+        overflow: visible;
+    }
 }
