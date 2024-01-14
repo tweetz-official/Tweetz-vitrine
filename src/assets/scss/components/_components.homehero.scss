@@ -1,7 +1,6 @@
 
 .c-hero{
     position: relative;
-    height: 70vh;
 
     --bottom: var(--c-pagesection__deco-size);
 }
@@ -18,6 +17,16 @@
     }
 }
 
+.c-hero__buttons{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+
+    @include breakpoint(medium){
+        gap: 24px;
+    }
+}
+
 .c-hero__illu{
     position: relative;
     width: 100%;
@@ -29,6 +38,7 @@
 
     @include breakpoint(large){
         height: 70vh;
+        max-height: 920px;
     }
 }
 

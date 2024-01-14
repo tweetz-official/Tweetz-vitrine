@@ -10,8 +10,19 @@
   flex-direction: column;
   width: 100%;
 
-  gap: 18px;
+  gap: 24px;
+
+  & hr{
+    display: block;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    border: none;
+    border-top: solid 2px var(--color-grey-9);
+    margin-top: 6px;
+  }
 }
+
 
 .c-sitefooter__nav,
 .c-sitefooter__footer{
@@ -23,16 +34,6 @@
 
 .c-sitefooter__nav{
   position: relative;
-
-  &::after{
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 1px;
-    background-color: var(--color-grey-2);
-  }
 }
 
 .c-sitefooter__footer{

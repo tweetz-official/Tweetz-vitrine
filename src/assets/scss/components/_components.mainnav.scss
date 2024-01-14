@@ -8,7 +8,6 @@
   padding: 0;
 
   display: flex;
-  justify-content: space-between;
   align-items: center;
   flex-wrap: nowrap;
 
@@ -20,10 +19,10 @@
 
 .c-mainnav__link:not(.c-btn) {
   display: block;
-  padding: calc(12 / 16 * 1rem);
+  padding: calc(12 / 16 * 1rem);  
 
   font-weight: 500;
-  font-size: calc(18 / 16 * 1rem);
+  font-size: calc(16 / 16 * 1rem);
   line-height: 1;
   text-decoration: none;
   color: var(--color-primary);
@@ -36,7 +35,7 @@
   content: "";
   display: block;
   width: 0;
-  height: 2px;
+  height: 1.5px;
   margin-top: 3px;
   filter: var(--brand-drop-shadow--small);
   background-color: var(--color-primary);

@@ -44,9 +44,18 @@
   }
 }
 
-.c-siteheader__mainnav {
-  display: none;
+.c-siteheader__nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  & .c-mainnav {
+    display: none;
+  }
+  
   @include breakpoint(medium) {
-    display: block;
+    & .c-mainnav {
+      display: flex;
+    }
   }
 }

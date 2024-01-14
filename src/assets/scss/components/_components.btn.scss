@@ -7,7 +7,6 @@
     padding: 12px 36px;
     box-sizing: border-box;
 
-    font-size: 18px;
     font-family: var(--fontstack-main);
     font-weight: 400;
     text-decoration: none;
@@ -22,11 +21,6 @@
 
     transition: filter 0.5s ease-in-out, transform 0.4s ease-in-out 0.1s;
 
-    @media all and (max-width: 950px) {
-        padding: 12px 24px;
-        font-size: 16px;
-    }
-
     &:hover,
     &:focus {
         filter: var(--brand-drop-shadow--hover);
@@ -40,9 +34,9 @@
 // ---------------------------------
 
 .c-btn--secondary {
-    background-color: transparent;
     border-color: var(--color-primary);
     color: var(--color-primary);
+    background: transparent;
 }
 
 .c-btn--small {

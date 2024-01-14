@@ -539,7 +539,7 @@ address {
   display: flex;
   align-items: center;
   gap: 12px;
-  height: 72px;
+  height: 60px;
 }
 .c-logo:hover .c-logo__icon {
   transform: translate3d(0, -2px, 0);
@@ -592,7 +592,6 @@ address {
   margin: 0;
   padding: 0;
   display: flex;
-  justify-content: space-between;
   align-items: center;
   flex-wrap: nowrap;
   width: 100%;
@@ -603,7 +602,7 @@ address {
   display: block;
   padding: 0.75rem;
   font-weight: 500;
-  font-size: 1.125rem;
+  font-size: 1rem;
   line-height: 1;
   text-decoration: none;
   color: var(--color-primary);
@@ -719,7 +718,16 @@ address {
   align-items: center;
   flex-direction: column;
   width: 100%;
-  gap: 18px;
+  gap: 24px;
+}
+.c-sitefooter hr {
+  display: block;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  border: none;
+  border-top: solid 2px var(--color-grey-9);
+  margin-top: 6px;
 }
 
 .c-sitefooter__nav,
@@ -732,15 +740,6 @@ address {
 
 .c-sitefooter__nav {
   position: relative;
-}
-.c-sitefooter__nav::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 1px;
-  background-color: var(--color-grey-2);
 }
 
 .c-sitefooter__footer {
@@ -812,18 +811,22 @@ address {
   }
 }
 
-.c-siteheader__mainnav {
+.c-siteheader__nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.c-siteheader__nav .c-mainnav {
   display: none;
 }
 @media all and (min-width: 750px) {
-  .c-siteheader__mainnav {
-    display: block;
+  .c-siteheader__nav .c-mainnav {
+    display: flex;
   }
 }
 
 .c-hero {
   position: relative;
-  height: 70vh;
   --bottom: var(--c-pagesection__deco-size);
 }
 
@@ -835,6 +838,17 @@ address {
 @media all and (min-width: 750px) {
   .c-hero__text {
     margin-bottom: 20%;
+  }
+}
+
+.c-hero__buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+@media all and (min-width: 750px) {
+  .c-hero__buttons {
+    gap: 24px;
   }
 }
 
@@ -851,6 +865,7 @@ address {
 @media all and (min-width: 1024px) {
   .c-hero__illu {
     height: 70vh;
+    max-height: 920px;
   }
 }
 
@@ -1592,7 +1607,6 @@ address {
   border-radius: 150px;
   padding: 12px 36px;
   box-sizing: border-box;
-  font-size: 18px;
   font-family: var(--fontstack-main);
   font-weight: 400;
   text-decoration: none;
@@ -1602,21 +1616,15 @@ address {
   filter: var(--brand-drop-shadow);
   transition: filter 0.5s ease-in-out, transform 0.4s ease-in-out 0.1s;
 }
-@media all and (max-width: 950px) {
-  .c-btn {
-    padding: 12px 24px;
-    font-size: 16px;
-  }
-}
 .c-btn:hover, .c-btn:focus {
   filter: var(--brand-drop-shadow--hover);
   transform: scale(1.05);
 }
 
 .c-btn--secondary {
-  background-color: transparent;
   border-color: var(--color-primary);
   color: var(--color-primary);
+  background: transparent;
 }
 
 .c-btn--small {

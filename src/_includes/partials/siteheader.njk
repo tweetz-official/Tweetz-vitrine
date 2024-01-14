@@ -1,10 +1,13 @@
 <header class="c-siteheader">
 
   <div class="l-container">
-    {% include "partials/mainnav.njk" %}
-    <p class="c-siteheader__menunav">
-      <a class="c-menulink  js-menutrigger" href="#footernav">Menu</a>
-    </p>
+    <div class="c-siteheader__nav">
+    <p class="c-siteheader__logo"><a aria-label="Homepage" href="/">{% include "macros/logo.njk" %}</a></p>
+      {% include "partials/mainnav.njk" %}
+      <p class="c-siteheader__menunav">
+        <a class="c-menulink  js-menutrigger" href="#footernav">Menu</a>
+      </p>
+    </div>
   </div>
 
   {% include "partials/mobilemenu.njk" %}

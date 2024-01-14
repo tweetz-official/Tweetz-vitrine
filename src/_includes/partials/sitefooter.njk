@@ -1,21 +1,31 @@
 <footer>
-  <div class="l-container">
-    <div class="c-sitefooter">
+  <div class="c-pagesection">
 
-      {% include "partials/mainnav.njk" %}
+    <div class="l-container">
+      <div class="c-sitefooter">
 
-      <div class="c-sitefooter__footer">
-        <p class="c-copyright">&copy; <time datetime="{{ site.buildTime | dateISO }}">{{ site.buildTime | dateYear }}</time> - Tweetz</p>
-        <nav class="c-sitefooter__social" aria-label="social media">
-          <ul class="c-socialmedia">
-            {% for item in socialmedia %}
-              <li class="c-socialmedia__item">
-                <a class="c-socialmedia__link" href="{{ item.url }}" aria-label="{{ item.name }}">
-                  <span class="u-hide"></span>{% include "svg/" ~ item.icon %}</a>
-              </li>
-            {% endfor %}
-          </ul>
-        </nav>
+        <div class="c-sitefooter__nav">
+          <p class="c-siteheader__logo">
+            <a aria-label="Homepage" href="/">{% include "macros/logo.njk" %}</a>
+          </p>
+          {% include "partials/mainnav.njk" %}
+        </div>
+
+        <hr>
+
+        <div class="c-sitefooter__footer">
+          <p class="c-copyright">&copy; <time datetime="{{ site.buildTime | dateISO }}">{{ site.buildTime | dateYear }}</time> - Tweetz</p>
+          <nav class="c-sitefooter__social" aria-label="social media">
+            <ul class="c-socialmedia">
+              {% for item in socialmedia %}
+                <li class="c-socialmedia__item">
+                  <a class="c-socialmedia__link" href="{{ item.url }}" aria-label="{{ item.name }}">
+                    <span class="u-hide"></span>{% include "svg/" ~ item.icon %}</a>
+                </li>
+              {% endfor %}
+            </ul>
+          </nav>
+        </div>
       </div>
     </div>
   </div>
