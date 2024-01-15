@@ -1,15 +1,16 @@
+// Mixins
+@import "mixins/mixins.media-queries.scss";
+@import "mixins/mixins.animations.scss";
+
 // Settings and variables
 @import "settings/settings.colors.scss";
 @import "settings/settings.media-queries.scss";
 @import "settings/settings.fonts.scss";
 @import "settings/settings.filters.scss";
+@import "settings/settings.gap.scss";
 
 // normalize
 @import "vendors/normalize.scss";
-
-// Mixins
-@import "mixins/mixins.media-queries.scss";
-@import "mixins/mixins.animations.scss";
 
 // Base (unclassed elements)
 @import "base/base.fonts.scss";
@@ -25,6 +26,7 @@
 // Layout
 @import "layouts/layouts.containers.scss";
 @import "layouts/layouts.grid.scss";
+@import "layouts/layouts.flex.scss";
 
 
 // Components

@@ -3,7 +3,7 @@
     width: 100%;
     aspect-ratio: 1/0.5;
 
-    border-radius: var(--c-pagesection__deco-size);
+    border-radius: calc(var(--c-pagesection__deco-size)/1.5);
     margin: 0 auto;
     overflow: hidden;
     box-sizing: border-box;

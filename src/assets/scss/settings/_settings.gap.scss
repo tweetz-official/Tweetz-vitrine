@@ -1,0 +1,21 @@
+// -------------------------------------
+// Colors
+// -------------------------------------
+
+:root {
+  --gap : 30px;
+
+  --gap-large : calc(var(--gap) * 2);
+
+  @include breakpoint(medium) {
+    --gap : 36px;
+  }
+
+  @include breakpoint(large) {
+    --gap : 60px;
+  }
+
+  @include breakpoint(xlarge) {
+    --gap : 120px;
+  }
+}

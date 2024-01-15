@@ -8,47 +8,50 @@ permalink: /creator/index.html
 {% set metaDescription = "Tweetz description" %}
 {% set metaImage = site.url ~ "/assets/img/metaimg.jpg" %}
 
-{# {% set typeCardTypes =  [ "podcast", "vidéaste", "gamer", "codeur", "artiste"] %} #}
-{% set typeCardTypes = ["podcast", "podcast", "podcast", "podcast", "podcast"] %}
+{% set typeCardTypes = [
+    "food",
+    "podcast",
+    "vidéaste",
+    "gamer",
+    "codeur",
+    "artiste"
+] %}
 
 {% from "macros/type-card.njk" import typeCard %}
 
 {% block content %}
     <main>
+
         {% include "sections/creator/carousel-creator.njk" %}
+        <div class="c-pagesection">
+            <div class="l-container">
+                <div class="c-vertical-section">
+                    <h2 class="c-h2">Peu importe qui vous êtes...</h2>
 
-        <div class="l-container c-image-text-container">
+                    {% for typeCardType in typeCardTypes %}
+                        {% if loop.first %}
+                            <div class="c-gallery-section">
+                                <div class="js-gallery-section__scroll">
+                                    <ul class="u-list-bare c-gallery-section__gallery js-init-cards l-grid">
+                                    {% endif %}
 
-            <div class="c-vertical-section">
-                <h2 class="c-h2">Peu importe qui vous êtes...</h2>
+                                    <li class="c-gallery-section__card">
+                                        {{ typeCard(typeCardType) }}
+                                    </li>
 
-                {% for typeCardType in typeCardTypes %}
-                    {% if loop.first %}
-                        <div class="c-gallery-section">
-                            <div class="js-gallery-section__scroll">
-                                <ul class="u-list-bare c-gallery-section__gallery js-init-cards l-grid">
-                                {% endif %}
-
-                                <li class="c-gallery-section__card">
-                                    {{ typeCard(typeCardType) }}
-                                </li>
-
-                                {% if loop.last %}
-                                </ul>
+                                    {% if loop.last %}
+                                    </ul>
+                                </div>
                             </div>
-                        </div>
-                    {% endif %}
-                {% endfor %}
-                <h2 class="c-h2">... <span>tweetz</span> s’adapte à vous.</h2>
+                        {% endif %}
+                    {% endfor %}
+                    <h2 class="c-h2">... <span>tweetz</span> s’adapte à vous.</h2>
+                </div>
             </div>
         </div>
 
-        <section class="sectionpage__group1">
-            {% include "sections/creator/type-creator.njk" %}
-        </section>
-
         <section class="c-pagesection c-pagesection--dark c-pagesection--deco">
-            <div class="l-container c-image-text-container">
+            <div class="l-container">
 
                 {% include "sections/creator/formules-section.njk" %}
 
@@ -56,26 +59,28 @@ permalink: /creator/index.html
         </section>
 
         <section class="c-pagesection c-pagesection--no-bottom c-pagesection--deco">
-            <div class="l-container c-image-text-container">
+            <div class="l-container">
 
-                <div class="c-vertical-section">
-                    <div class="c-vertical-section__titles">
-                        <h5 class="c-h5">Un petit avant goût</h5>
-                        <h2 class="c-h2">Quelques unes de nos solutions</h2>
-                    </div>
-                    {% include "partials/bento-grid.njk" %}
-                    <a href="/#beta" class="c-btn">Rejoindre la beta</a>
-                </div>
+                <div class="l-flex l-flex--column">
 
-                <div class="c-image-cta">
-                    <img class="c-image-cta__image" src="/assets/img/template_img-5.png" alt=""/>
-                    <div class="c-image-cta__content">
-                        <h2 class="c-image-cta__title">Prêt à créer ?</h2>
-                        <p class="c-image-cta__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut adipiscing et amet, massa mi.</p>
+                    <div class="c-vertical-section">
+                        <div class="c-vertical-section__titles">
+                            <h5 class="c-h5">Un petit avant goût</h5>
+                            <h2 class="c-h2">Quelques unes de nos solutions</h2>
+                        </div>
+                        {% include "partials/bento-grid.njk" %}
                         <a href="/#beta" class="c-btn">Rejoindre la beta</a>
                     </div>
-                </div>
 
+                    <div class="c-image-cta">
+                        <img class="c-image-cta__image" src="/assets/img/template_img-5.png" alt=""/>
+                        <div class="c-image-cta__content">
+                            <h2 class="c-image-cta__title">Prêt à créer ?</h2>
+                            <p class="c-image-cta__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut adipiscing et amet, massa mi.</p>
+                            <a href="/#beta" class="c-btn">Rejoindre la beta</a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     </main>

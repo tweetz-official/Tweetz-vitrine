@@ -1,27 +1,21 @@
 //TODO paralax effect in .img__container
 
-.c-image-text-container {
-    display: flex;
-    flex-direction: column;
-
-    gap: 60px;
-
-    @include breakpoint(medium) {
-        gap: 120px;
-    }
-}
-
 .c-image-text {
     grid-template-areas:
         "image"
         "text";
-
     place-items: center;
-    gap: 42px;
+    gap: var(--gap);
+
 
     @include breakpoint(medium) {
         grid-template-columns: 1fr 1fr;
         grid-template-areas: "image text";
+        gap: calc(var(--gap) - var(--l-container__padding));
+    }
+
+    @include breakpoint(xlarge) {
+        gap: var(--gap);
     }
 }
 
@@ -38,7 +32,7 @@
     .c-image-text__image-container {
         border-radius: 25px 0 0 25px;
 
-        @include breakpoint(+large) {
+        @include breakpoint(xlarge) {
             border-radius: 25px;
         }
     }
@@ -53,7 +47,7 @@
 
     transform: translate3d(calc(-1 * var(--l-container__padding)), 0, 0);
 
-    @include breakpoint(+large) {
+    @include breakpoint(xlarge) {
         transform: translate3d(0, 0, 0);
     }
 
@@ -67,7 +61,7 @@
 
     border-radius: 0 25px 25px 0;
 
-    @include breakpoint(+large) {
+    @include breakpoint(xlarge) {
         border-radius: 25px;
     }
 }
@@ -82,12 +76,12 @@
     grid-area: text;
 }
 
-.c-image-text__media-deco{
+.c-image-text__media-deco {
     position: absolute;
-    
+
     background-color: var(--color-white);
     color: var(--color-dark);
-    
+
     padding: 25px;
     border-radius: 20px;
     box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 30px, rgba(0, 0, 0, 0.22) 0px 12px 12px;
