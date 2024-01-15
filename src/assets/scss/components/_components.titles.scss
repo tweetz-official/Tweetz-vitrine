@@ -37,6 +37,7 @@
   font-size: calc(26 / 16 * 1rem);
   margin-bottom: calc(18 / 16 * 1rem);
   font-weight: 550;
+  letter-spacing: calc(1em / 100 * -2);
 
   @include breakpoint(medium) {
     font-size: calc(31 / 16 * 1rem);
@@ -50,6 +51,7 @@
 .c-h3 {
   font-size: calc(22 / 16 * 1rem);
   margin-bottom: calc(18 / 16 * 1rem);
+  letter-spacing: calc(1em / 100 * -2);
 
   @include breakpoint(medium) {
     font-size: calc(26 / 16 * 1rem);
@@ -63,6 +65,7 @@
 .c-h4 {
   font-size: calc(18 / 16 * 1rem);
   margin-bottom: calc(18 / 16 * 1rem);
+  letter-spacing: calc(1em / 100 * -2);
   
   @include breakpoint(medium) {
     font-size: calc(22 / 16 * 1rem);
@@ -75,7 +78,7 @@
 
 .c-h5 {
   font-size: calc(18 / 16 * 1rem);
-  margin-bottom: calc(12 / 16 * 1rem);
+  margin-bottom: calc(6 / 16 * 1rem);
   color: var(--color-secondary);
   font-family: var(--fontstack-main);
   font-weight: 400;

@@ -1,0 +1,12 @@
+.c-vertical-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+}
+
+.c-vertical-section__titles{
+    h2, h3, h4, h5{
+        text-align: center;
+    }
+}
