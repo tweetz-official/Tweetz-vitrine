@@ -51,7 +51,7 @@
   border-radius: inherit;
   opacity: 0.25;
   z-index: -1;
-} 
+}
 
 .c-pagesection--deco{
   border-radius: 0 var(--c-pagesection__deco-size) var(--c-pagesection__deco-size) 0;
@@ -78,6 +78,7 @@
   top: 50%;
 }
 
-.c-pagesection--no-bottom-deco::before{
+.c-pagesection--no-bottom::before{
   bottom: 50%;
+  border-radius:  0 var(--c-pagesection__deco-size) 0 0;
 }
