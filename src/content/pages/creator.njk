@@ -9,19 +9,39 @@ permalink: /creator/index.html
 {% set metaImage = site.url ~ "/assets/img/metaimg.jpg" %}
 
 {# {% set typeCardTypes =  [ "podcast", "vidéaste", "gamer", "codeur", "artiste"] %} #}
-{% set typeCardTypes =  [ "podcast", "podcast", "podcast", "podcast", "podcast"] %}
+{% set typeCardTypes = ["podcast", "podcast", "podcast", "podcast", "podcast"] %}
 
 {% from "macros/type-card.njk" import typeCard %}
 
 {% block content %}
     <main>
-
-        
         {% include "sections/creator/carousel-creator.njk" %}
 
-        {% for typeCardType in typeCardTypes %}
-            {{ typeCard(typeCardType) }}
-        {% endfor %}
+        <div class="l-container c-image-text-container">
+
+            <div class="c-vertical-section">
+                <h2 class="c-h2">Peu importe qui vous êtes...</h2>
+
+                {% for typeCardType in typeCardTypes %}
+                    {% if loop.first %}
+                        <div class="c-gallery-section">
+                            <div class="js-gallery-section__scroll">
+                                <ul class="u-list-bare c-gallery-section__gallery js-init-cards l-grid">
+                                {% endif %}
+
+                                <li class="c-gallery-section__card">
+                                    {{ typeCard(typeCardType) }}
+                                </li>
+
+                                {% if loop.last %}
+                                </ul>
+                            </div>
+                        </div>
+                    {% endif %}
+                {% endfor %}
+                <h2 class="c-h2">... <span>tweetz</span> s’adapte à vous.</h2>
+            </div>
+        </div>
 
         <section class="sectionpage__group1">
             {% include "sections/creator/type-creator.njk" %}
