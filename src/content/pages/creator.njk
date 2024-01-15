@@ -7,9 +7,17 @@ permalink: /creator/index.html
 {% set metaTitle = "Creator page" %}
 {% set metaDescription = "Tweetz description" %}
 {% set metaImage = site.url ~ "/assets/img/metaimg.jpg" %}
+
+{% from "macros/type-card.njk" import typeCard %}
+
 {% block content %}
     <main>
         {% include "sections/creator/carousel-creator.njk" %}
+        
+        {{ typeCard(
+            type="podcast") 
+        }}
+
         <section class="sectionpage__group1">
             {% include "sections/creator/type-creator.njk" %}
         </section>
