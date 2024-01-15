@@ -1,5 +1,5 @@
 import * as navigation from "./modules/navigation.js";
-import * as gradient from "./modules/gradient.js";
+import * as hero from "./modules/hero.js";
 
 navigation.init();
-gradient.init();
+hero.init();
