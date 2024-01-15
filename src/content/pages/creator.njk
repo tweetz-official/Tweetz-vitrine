@@ -8,15 +8,20 @@ permalink: /creator/index.html
 {% set metaDescription = "Tweetz description" %}
 {% set metaImage = site.url ~ "/assets/img/metaimg.jpg" %}
 
+{# {% set typeCardTypes =  [ "podcast", "vidéaste", "gamer", "codeur", "artiste"] %} #}
+{% set typeCardTypes =  [ "podcast", "podcast", "podcast", "podcast", "podcast"] %}
+
 {% from "macros/type-card.njk" import typeCard %}
 
 {% block content %}
     <main>
-        {% include "sections/creator/carousel-creator.njk" %}
+
         
-        {{ typeCard(
-            type="podcast") 
-        }}
+        {% include "sections/creator/carousel-creator.njk" %}
+
+        {% for typeCardType in typeCardTypes %}
+            {{ typeCard(typeCardType) }}
+        {% endfor %}
 
         <section class="sectionpage__group1">
             {% include "sections/creator/type-creator.njk" %}
