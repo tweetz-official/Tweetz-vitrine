@@ -9,8 +9,136 @@ permalink: index.html
 {% set metaImage = site.url ~ "/assets/img/metaimg.jpg" %}
 {% block content %}
     <main>
-        {% include "sections/hero-section.njk" %}
-        {% include "sections/philosophie-section.njk" %}
-        {% include "sections/philosophie-section2.njk" %}
+        {# Hero #}
+        <section class="c-hero">
+            <div class="c-hero__deco">
+                {% include "svg/logo/logo-text--stroke.svg" %}
+            </div>
+            <div class="l-container">
+               
+                <div class="c-hero__content l-grid l-grid--2cols@medium">
+                    <div class="c-hero__text">
+                        <h1 class="c-hero__title c-h1">La passion engendre <span>l’action</span></h1>
+                        <p class="c-hero__description">Où la créativité rencontre l'interaction : une plateforme offrant une double expérience, alliant réseau social vibrant et opportunités pour les créateurs de vivre de leurs passions.</p>
+
+                        <div class="c-hero__buttons">
+                            <a href="/beta" class="c-btn c-btn--primary">Rejoindre la beta</a>
+                            <a href="mailto:{{ site.email }}" class="c-btn c-btn--secondary">Nous contacter</a>
+                        </div>
+                    </div>
+                    <div class="c-hero__illu">
+                        <spline-viewer class="c-hero__spline js-spline" url="https://prod.spline.design/ALwGgs47WruzU4wp/scene.splinecode"></spline-viewer>
+                        <div class="c-hero__gradient-container">
+                            <spline-viewer class="c-hero__gradient js-spline" url="https://prod.spline.design/j2Y6LkRM57uXpjNS/scene.splinecode"></spline-viewer>
+                            <spline-viewer class="c-hero__gradient c-hero__gradient--shadow js-spline" url="https://prod.spline.design/j2Y6LkRM57uXpjNS/scene.splinecode"></spline-viewer>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="c-pagesection c-pagesection--first c-pagesection--deco c-pagesection--no-top-deco">
+            <div class="l-container c-image-text-container">
+                
+                <div class="c-image-text l-grid">
+                    <div class="c-image-text__media">
+                        <div class="c-image-text__image-container">
+                            <img class="o-fluidimage c-image-text__image" src="assets/img/phone.png" alt="">
+                        </div>
+                    </div>
+                    <div class="c-image-text__text">
+                        <h5 class="c-h5">not just a social network</h5>
+                        <h2 class="c-h2">Creative network</h2>
+                        <p>Ce n'est pas seulement une plateforme, c'est une communauté florissante où l'innovation rencontre l'expression artistique. Ici, les créateurs deviennent des pionniers, élevant leurs œuvres au-delà des limites conventionnelles. Notre engagement envers l'originalité et la créativité est ce qui nous distingue, érigeant Creative Network en tant que phare lumineux dans l'océan des réseaux sociaux.</span>
+                        </p>
+                        <a href="/" class="c-link"> En savoir plus {% include "svg/arrow-right.svg" %}
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="c-image-text c-image-text--invert l-grid">
+                    <div class="c-image-text__media">
+                        <div class="c-image-text__image-container">
+                            <img class="o-fluidimage c-image-text__image" src="assets/img/phone.png" alt="">
+                        </div>
+                    </div>
+                    <div class="c-image-text__text">
+                        <h5 class="c-h5">une opportunité pour tous</h5>
+                        <h2 class="c-h2">Briller au milieu de la foule</h2>
+                        <p>C'est l'antidote à une concurrence impitoyable, déterminé à aider chaque créateur à briller dans la foule
+                        Nous croyons fermement que le talent ne devrait pas être entravé par des barrières ou des communautés déjà établies.</p>
+                        <a href="/" class="c-link"> En savoir plus {% include "svg/arrow-right.svg" %}
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="c-pagesection c-pagesection--dark c-pagesection--deco">
+            <div class="l-container c-image-text-container">
+               
+                <div class="c-image-text l-grid">
+                    <div class="c-image-text__media">
+                        <div class="c-image-text__media-deco job__card">
+                            <div class="job__card--header">
+                                <span>Léo,</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none">
+                                    <path
+                            d="M19 3H5C4.46957 3 3.96086 3.21071 3.58579 3.58579C3.21071 3.96086 3 4.46957 3 5V19C3 19.5304 3.21071 20.0391 3.58579
+                                20.4142C3.96086 20.7893 4.46957 21 5 21H19C19.5304 21 20.0391 20.7893 20.4142 20.4142C20.7893 20.0391 21 19.5304 21
+                                19V5C21 4.46957 20.7893 3.96086 20.4142 3.58579C20.0391 3.21071 19.5304 3 19 3ZM19 18C19 18.5523 18.5523 19 18
+                                19H6C5.44772 19 5 18.5523 5 18V6C5 5.44772 5.44772 5 6 5H18C18.5523 5 19 5.44772 19 6V18ZM9 16C9 16.5523 8.55228 17 8
+                                17C7.44772 17 7 16.5523 7 16V8C7 7.44772 7.44772 7 8 7C8.55228 7 9 7.44772 9 8V16ZM13 16C13 16.5523 12.5523 17 12
+                                17C11.4477 17 11 16.5523 11 16V11C11 10.4477 11.4477 10 12 10C12.5523 10 13 10.4477 13 11V16ZM17 16C17 16.5523 16.5523 17
+                                16 17C15.4477 17 15 16.5523 15 16V13C15 12.4477 15.4477 12 16 12C16.5523 12 17 12.4477 17 13V16Z"
+                            fill="#E0295D"/>
+                                </svg>
+                            </div>
+                            <div class="job__card--description">
+                                <p>Formateur en marketing</p>
+                            </div>
+                        </div>
+                        <div class="c-image-text__media-deco tools__box">
+                            <div class="tools__box--img">
+                                <img src="assets/img/powerpoint.svg" alt="">
+                                <img src="assets/img/excel.svg" alt="">
+                                <img src="assets/img/notion.svg" alt="">
+                            </div>
+                            <div class="tools__box--text">
+                                <p>Monétisez vos outils !</p>
+                            </div>
+                        </div>
+                        <div class="c-image-text__image-container">
+                            <img class="o-fluidimage c-image-text__image" src="assets/img/guy.png" alt="">
+                        </div>
+                    </div>
+                    <div class="c-image-text__text">
+                        <h5 class="c-h5">not just a social network</h5>
+                        <h2 class="c-h2">Creative network</h2>
+                        <p>Nous croyons fermement que le talent ne devrait pas être entravé par des barrières ou des <span>communautés déjà établies.</span>
+                        </p>
+                        <a href="/" class="c-link"> En savoir plus {% include "svg/arrow-right.svg" %} </a> 
+                    </div>
+                </div>
+                
+                <div class="c-image-text c-image-text--invert l-grid">
+                    <div class="c-image-text__media">
+                        <div class="c-image-text__image-container">
+                            <img class="o-fluidimage c-image-text__image" src="assets/img/phone.png" alt="">
+                        </div>
+                    </div>
+                    <div class="c-image-text__text">
+                        <h5 class="c-h5">une opportunité pour tous</h5>
+                        <h2 class="c-h2">Briller au milieu de la foule</h2>
+                        <p>C'est l'antidote à une concurrence impitoyable, déterminé à aider chaque créateur à briller dans la foule
+                        Nous croyons fermement que le talent ne devrait pas être entravé par des barrières ou des communautés déjà établies.</p>
+                        <a href="/" class="c-link"> En savoir plus {% include "svg/arrow-right.svg" %}
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 {% endblock %}

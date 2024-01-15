@@ -36,6 +36,7 @@
 .c-h2 {
   font-size: calc(26 / 16 * 1rem);
   margin-bottom: calc(18 / 16 * 1rem);
+  font-weight: 550;
 
   @include breakpoint(medium) {
     font-size: calc(31 / 16 * 1rem);
@@ -62,11 +63,11 @@
 .c-h4 {
   font-size: calc(18 / 16 * 1rem);
   margin-bottom: calc(18 / 16 * 1rem);
-
+  
   @include breakpoint(medium) {
     font-size: calc(22 / 16 * 1rem);
   }
-
+  
   @include breakpoint(large) {
     font-size: calc(26 / 16 * 1rem);
   }
@@ -75,6 +76,9 @@
 .c-h5 {
   font-size: calc(18 / 16 * 1rem);
   margin-bottom: calc(12 / 16 * 1rem);
+  color: var(--color-secondary);
+  font-family: var(--fontstack-main);
+  font-weight: 400;
 
   @include breakpoint(large) {
     font-size: calc(22 / 16 * 1rem);
@@ -84,17 +88,6 @@
 // -------------------------------------
 // Special titles
 // -------------------------------------
-
-.c-suptitle {
-  font-weight: 500;
-  font-size: calc(13 / 16 * 1rem);
-  font-family: var(--fontstack-main);
-  line-height: 1.2;
-  color: var(--color-secondary);
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  margin-bottom: calc(12 / 16 * 1rem);
-}
 
 .c-suptitle--dark {
   color: var(--color-brand5);

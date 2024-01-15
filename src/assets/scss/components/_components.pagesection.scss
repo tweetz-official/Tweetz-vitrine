@@ -5,7 +5,7 @@
 :root {
   --c-pagesection__deco-size: calc(10vw + 35px);
 
-  @media all and (max-width: 1920px) {
+  @include breakpoint(xlarge) {
     --c-pagesection__deco-size: calc(192px + 35px);
   }
 }
@@ -33,10 +33,6 @@
 .c-pagesection--dark {
   background-color: var(--color-grey-10);
   color: var(--color-gray6);
-
-  a {
-    color: var(--color-brand5);
-  }
 }
 
 

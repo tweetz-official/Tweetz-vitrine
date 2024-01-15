@@ -8,14 +8,15 @@
 @import "vendors/normalize.scss";
 
 // Mixins
-
 @import "mixins/mixins.media-queries.scss";
+@import "mixins/mixins.animations.scss";
 
 // Base (unclassed elements)
 @import "base/base.fonts.scss";
 @import "base/base.html.scss";
 @import "base/base.body.scss";
 @import "base/base.links.scss";
+@import "base/base.paragraph.scss";
 @import "base/base.margins.scss";
 
 // Objects
@@ -36,15 +37,14 @@
 @import "components/components.homehero.scss";
 
 @import "components/components.titles.scss";
+@import "components/components.link.scss";
 @import "components/components.pagesection.scss";
 @import "components/components.lists.scss";
 @import "components/components.wysiwyg.scss";
-@import "components/components.text";
+@import "components/components.image-text.scss";
 
 // Sacha
 @import "components/components.formules.scss";
-@import "components/components.philosophie.scss";
-@import "mixins/mixins.animations.scss";
 
 // --- ROMAIN - COMPONENTS
 @import "components/components.carousel.scss";

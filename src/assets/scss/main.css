@@ -1308,7 +1308,7 @@ address {
   max-width: 286px;
 }
 
-.box__with__assets {
+.c-image-text {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1329,14 +1329,14 @@ address {
   display: block;
 }
 
-.box__with__assets--reverse {
+.c-image-text--reverse {
   margin: 50px 0;
   gap: 20px;
 }
-.box__with__assets--reverse .img__container {
+.c-image-text--reverse .img__container {
   position: relative;
 }
-.box__with__assets--reverse .img__container .job__card {
+.c-image-text--reverse .img__container .job__card {
   position: absolute;
   top: 10%;
   left: 2%;
@@ -1349,16 +1349,16 @@ address {
   z-index: 100;
   color: var(--color-dark);
 }
-.box__with__assets--reverse .img__container .job__card--header {
+.c-image-text--reverse .img__container .job__card--header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   font-weight: 700;
 }
-.box__with__assets--reverse .img__container .job__card--description p {
+.c-image-text--reverse .img__container .job__card--description p {
   margin: 0;
 }
-.box__with__assets--reverse .img__container .tools__box {
+.c-image-text--reverse .img__container .tools__box {
   position: absolute;
   bottom: 5%;
   left: 5%;
@@ -1369,35 +1369,35 @@ address {
   border-radius: 25px;
   box-shadow: 0px 18px 37.5px 0px rgba(13, 9, 27, 0.06), 0px 69px 69px 0px rgba(13, 9, 27, 0.05), 0px 156px 94.5px 0px rgba(13, 9, 27, 0.03), 0px 277.5px 111px 0px rgba(13, 9, 27, 0.01), 0px 435px 121.5px 0px rgba(13, 9, 27, 0);
 }
-.box__with__assets--reverse .img__container .tools__box .tools__box--img {
+.c-image-text--reverse .img__container .tools__box .tools__box--img {
   display: flex;
   align-items: center;
 }
-.box__with__assets--reverse .img__container .tools__box .tools__box--img img {
+.c-image-text--reverse .img__container .tools__box .tools__box--img img {
   width: 100%;
   height: 100%;
 }
-.box__with__assets--reverse .img__container .tools__box .tools__box--img :first-child {
+.c-image-text--reverse .img__container .tools__box .tools__box--img :first-child {
   animation: bounce 2s ease-in infinite;
   max-width: 100px;
   max-height: 100px;
 }
-.box__with__assets--reverse .img__container .tools__box .tools__box--img :nth-child(2) {
+.c-image-text--reverse .img__container .tools__box .tools__box--img :nth-child(2) {
   animation: bounce 2.4s ease-in infinite;
   max-width: 110px;
   max-height: 110px;
 }
-.box__with__assets--reverse .img__container .tools__box .tools__box--img :last-child {
+.c-image-text--reverse .img__container .tools__box .tools__box--img :last-child {
   animation: bounce 2.8s ease-in infinite;
   max-width: 90px;
   max-height: 90px;
 }
-.box__with__assets--reverse .img__container .tools__box .tools__box--text {
+.c-image-text--reverse .img__container .tools__box .tools__box--text {
   justify-content: center;
   font-weight: 700;
   color: var(--color-dark);
 }
-.box__with__assets--reverse .img__container .tools__box .tools__box--text p {
+.c-image-text--reverse .img__container .tools__box .tools__box--text p {
   margin: 0;
   text-align: center;
 }
@@ -1440,52 +1440,52 @@ address {
 }
 
 @media screen and (max-width: 766px) {
-  .box__with__assets--reverse .img__container .job__card {
+  .c-image-text--reverse .img__container .job__card {
     display: none;
   }
-  .box__with__assets--reverse .img__container .tools__box {
+  .c-image-text--reverse .img__container .tools__box {
     display: none;
   }
 }
 @media screen and (min-width: 767px) {
-  .box__with__assets--reverse .job__card {
+  .c-image-text--reverse .job__card {
     display: block;
   }
-  .box__with__assets--reverse .tools__box {
+  .c-image-text--reverse .tools__box {
     display: block;
   }
 }
 @media screen and (min-width: 1023px) {
-  .box__with__assets {
+  .c-image-text {
     flex-direction: row;
     overflow: visible;
   }
-  .box__with__assets .img__container {
+  .c-image-text .img__container {
     margin: 0;
     border-radius: 0 25px 25px 0;
   }
-  .box__with__assets--reverse {
+  .c-image-text--reverse {
     flex-direction: row-reverse;
   }
-  .box__with__assets--reverse .img__container {
+  .c-image-text--reverse .img__container {
     overflow: visible;
     border-radius: 25px 0 0 25px;
   }
-  .box__with__assets--reverse .img__container .tools__box {
+  .c-image-text--reverse .img__container .tools__box {
     display: block;
     bottom: -5%;
     left: -5%;
   }
-  .box__with__assets--reverse .img__container .tools__box .tools__box--img :first-child {
+  .c-image-text--reverse .img__container .tools__box .tools__box--img :first-child {
     max-width: 73px;
   }
-  .box__with__assets--reverse .img__container .tools__box .tools__box--img :nth-child(2) {
+  .c-image-text--reverse .img__container .tools__box .tools__box--img :nth-child(2) {
     max-width: 138px;
   }
-  .box__with__assets--reverse .img__container .tools__box .tools__box--img :last-child {
+  .c-image-text--reverse .img__container .tools__box .tools__box--img :last-child {
     max-width: 50px;
   }
-  .box__with__assets--reverse .img__container .job__card {
+  .c-image-text--reverse .img__container .job__card {
     display: block;
     left: -10%;
   }
