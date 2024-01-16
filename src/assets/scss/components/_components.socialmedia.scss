@@ -11,23 +11,49 @@
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
-  gap: calc(6 / 16 * 1rem);
+  gap: calc(12 / 16 * 1rem);
 
   @include breakpoint(medium) {
     justify-content: flex-end;
   }
+
+
 }
 
 .c-socialmedia__link {
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 42px;
+  height: 42px;
+  padding: 9px;
+  box-sizing: border-box;
+
+  background-color: var(--color-primary);
+  border-radius: 50%;
+
   color: var(--color-gray7);
   transition: color 0.2s ease-in-out;
 
-  &:hover {
-    color: var(--color-gray6);
-  }
-}
+  filter: var(--brand-drop-shadow--small);
+  transition: filter 0.4s ease-in-out;
 
-.c-socialmedia__link > svg {
-  display: block;
+  &:hover, &:focus {
+    filter: var(--brand-drop-shadow--small--hover);
+  }
+
+  &:hover svg, &:focus svg{
+    scale: 1.07;
+  }
+
+  *{
+    fill: var(--color-white);
+  }
+
+  svg{
+    width: 100%;
+    height: 100%;
+    transition: scale 0.3s ease-in-out;
+  }
 }

@@ -2,11 +2,9 @@
 
   <div class="l-container">
     <div class="c-siteheader__nav">
-    <p class="c-siteheader__logo"><a aria-label="Homepage" href="/">{% include "partials/logo.njk" %}</a></p>
+      {% include "partials/logo.njk" %}</a>
       {% include "partials/mainnav.njk" %}
-      <p class="c-siteheader__menunav">
-        <a class="c-menulink  js-menutrigger" href="#footernav">Menu</a>
-      </p>
+      <a class="c-siteheader__menu js-navtrigger" href="#footernav">{% include "partials/hamburger.njk" %}</a>
     </div>
   </div>
 

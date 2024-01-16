@@ -30,15 +30,15 @@
 .c-hero__illu{
     position: relative;
     width: 100%;
-    height: 40vh;
+    height: 40lvh;
     pointer-events: none;
 
     @include breakpoint(medium){
-        height: 45vh;
+        height: 45lvh;
     }
 
     @include breakpoint(large){
-        height: 70vh;
+        height: 70lvh;
         max-height: 920px;
     }
 }
@@ -68,7 +68,7 @@
     inset: 0;
     left: -10vw;
     right: -25vw;
-    bottom: calc( var(--bottom) * -1 - 10vh);
+    bottom: calc( var(--bottom) * -1 - 10lvh);
     z-index: -1;
 
     filter: drop-shadow(rgba(255, 255, 255, 0.65) 0px 12px 50px);
@@ -107,7 +107,7 @@
 
     top: -150px;
     left: 0;
-    height: 90vh;
+    height: 90lvh;
     width: 100vw;
 
     opacity: .04;
