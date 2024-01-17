@@ -1,4 +1,3 @@
-
 // init
 
 const allSplineElement = document.querySelectorAll('.js-spline');

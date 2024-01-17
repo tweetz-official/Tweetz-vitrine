@@ -1,61 +1,62 @@
- <div class="l-container"> 
-            <div class="c-carousel">
-                <div class="c-carousel__gallery">
-                    <img class="c-carousel__item" src="./../../assets/img/template_img-5.png" alt="Slide 1">
-                    <img class="c-carousel__item" src="./../../assets/img/template_img-5.png" alt="Slide 2">
-                    <img class="c-carousel__item" src="./../../assets/img/template_img-5.png" alt="Slide 3">
-                </div>
-                <div class="c-carousel__content">
-                    <div class="c-caroussel__title-group">
-                        <h3 class="c-carousel__subtitle">Pour vous,</h3>
-                        <h1 class="c-h1 c-carousel__title">créateur</h1>
-                    </div>
-                    <div class="c-carousel__footer">
-                        <p class="c-carousel__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Ut et massa mi.</p>
-                        <a href="/beta" class="c-btn">Créer mon compte</a>
-                    </div>
-                </div>
-                <div class="c-carousel__bubbles">
-                    <div class="c-carousel__bubble" data-index="0"></div>
-                    <div class="c-carousel__bubble" data-index="1"></div>
-                    <div class="c-carousel__bubble" data-index="2"></div>
-                </div>
+<div class="l-container">
+    <div class="c-carousel">
+        <div class="c-carousel__gallery">
+            <img class="c-carousel__item" src="./../../assets/img/template_img-5.png" alt="Slide 1">
+            <img class="c-carousel__item" src="./../../assets/img/template_img-5.png" alt="Slide 2">
+            <img class="c-carousel__item" src="./../../assets/img/template_img-5.png" alt="Slide 3">
+        </div>
+        <div class="c-carousel__content">
+            <div class="c-caroussel__title-group">
+                <h3 class="c-carousel__subtitle">Pour vous,</h3>
+                <h1 class="c-h1 c-carousel__title">créateur</h1>
+            </div>
+            <div class="c-carousel__footer">
+                <p class="c-carousel__desc">Explorez un monde de créativité où l'expression artistique prend vie.</p>
+                <a href="/#beta" class="c-btn">Rejoindre la beta</a>
             </div>
         </div>
-        <script>
-            document.addEventListener("DOMContentLoaded", function () {
-    const carousel = document.querySelector(".c-carousel__gallery");
-    const bubbles = document.querySelectorAll(".c-carousel__bubble");
+        <div class="c-carousel__bubbles">
+            <div class="c-carousel__bubble" data-index="0"></div>
+            <div class="c-carousel__bubble" data-index="1"></div>
+            <div class="c-carousel__bubble" data-index="2"></div>
+        </div>
+    </div>
+</div>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const carousel = document.querySelector(".c-carousel__gallery");
+        const bubbles = document.querySelectorAll(".c-carousel__bubble");
 
-    let currentIndex = 0;
+        let currentIndex = 0;
 
-    function showSlide(index) {
-        const newTransformValue = -index * 100 + "%";
-        carousel.style.transform = "translateX(" + newTransformValue + ")";
-        bubbles.forEach(bubble => bubble.classList.remove("active"));
-        bubbles[index].classList.add("active");
-    }
+        function showSlide(index) {
+            const newTransformValue = -index * 100 + "%";
+            carousel.style.transform = "translateX(" + newTransformValue + ")";
+            bubbles.forEach(bubble => bubble.classList.remove("active"));
+            bubbles[index]
+                .classList
+                .add("active");
+        }
 
-    function nextSlide() {
-        currentIndex = (currentIndex + 1) % bubbles.length;
-        showSlide(currentIndex);
-    }
+        function nextSlide() {
+            currentIndex = (currentIndex + 1) % bubbles.length;
+            showSlide(currentIndex);
+        }
 
-    function prevSlide() {
-        currentIndex = (currentIndex - 1 + bubbles.length) % bubbles.length;
-        showSlide(currentIndex);
-    }
+        function prevSlide() {
+            currentIndex = (currentIndex - 1 + bubbles.length) % bubbles.length;
+            showSlide(currentIndex);
+        }
 
-    function selectSlide(index) {
-        currentIndex = index;
-        showSlide(currentIndex);
-    }
+        function selectSlide(index) {
+            currentIndex = index;
+            showSlide(currentIndex);
+        }
 
-    bubbles.forEach((bubble, index) => {
-        bubble.addEventListener("click", () => selectSlide(index));
+        bubbles.forEach((bubble, index) => {
+            bubble.addEventListener("click", () => selectSlide(index));
+        });
+
+        setInterval(nextSlide, 5000);
     });
-
-    setInterval(nextSlide, 5000);
-});
-
-     </script>
+</script>

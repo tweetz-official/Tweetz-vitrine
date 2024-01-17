@@ -74,6 +74,10 @@
 
 .c-image-text__text {
     grid-area: text;
+
+    @include breakpoint(medium) {
+        font-size: calc(18 / 16 * 1rem);
+    }
 }
 
 .c-image-text__media-deco {

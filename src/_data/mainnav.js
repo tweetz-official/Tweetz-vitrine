@@ -7,7 +7,7 @@ module.exports = [
     {   
         label: "Rejoindre la beta", 
         trigger: "beta", 
-        url: "/beta/",
+        url: "/#beta",
         isPrimary: true,
     },
     

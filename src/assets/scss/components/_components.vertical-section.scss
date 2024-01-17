@@ -14,3 +14,11 @@
         margin-bottom: 0;
     }
 }
+
+.c-vertical-section__text{
+    text-align: center;
+
+    @include breakpoint(medium){
+        font-size: calc(18 / 16 * 1rem);
+    }
+}

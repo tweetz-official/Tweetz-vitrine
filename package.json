@@ -40,6 +40,7 @@
     "sharp": "^0.32.6"
   },
   "dependencies": {
-    "@bedard/gradient": "^0.1.3"
+    "@bedard/gradient": "^0.1.3",
+    "@splinetool/runtime": "^1.0.29"
   }
 }

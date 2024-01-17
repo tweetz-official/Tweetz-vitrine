@@ -3,13 +3,13 @@
       width: 100%;
       aspect-ratio: 1/0.5;
   
-      border-radius: calc(10vw + 35px);
+      border-radius: calc(var(--c-pagesection__deco-size)/1.5);
       margin: 0 auto;
       overflow: hidden;
       box-sizing: border-box;
   
       padding: calc(5vw + 15px);
-      margin: 10lvh auto;
+
       .c-carousel__gallery {
         position: absolute;
         top: 0;
