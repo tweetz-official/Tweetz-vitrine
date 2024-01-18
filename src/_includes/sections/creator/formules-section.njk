@@ -33,29 +33,39 @@
         </div>
     </div>
     {# profile picture #}
-    <div class="c-formule-profiles-container">
-        <div class="c-formule-profile">
-            <div class="c-formule-profile__image" data-index="0">
-                <img src="/assets/img/alain_ducasse.webp" alt="Cuisinier 1">
+    <div class="c-formule__profiles-container">
+
+
+        <div class="c-formule__profiles">
+            <div class="c-formule-profile">
+                <div class="c-formule-profile__image" data-index="0">
+                    <img src="/assets/img/alain_ducasse.webp" alt="Cuisinier 1">
+                </div>
+                {% include "svg/certified.svg" %}
             </div>
-            {% include "svg/certified.svg" %}
-        </div>
-        <div class="c-formule-profile is-active" data-index="1">
-            <div class="c-formule-profile__image">
-                <img src="/assets/img/be_sang.jpeg" alt="Cuisinier 2">
+            <div class="c-formule-profile is-active" data-index="1">
+                <div class="c-formule-profile__image">
+                    <img src="/assets/img/be_sang.jpeg" alt="Cuisinier 2">
+                </div>
+                {% include "svg/certified.svg" %}
             </div>
-            {% include "svg/certified.svg" %}
-        </div>
-        <div class="c-formule-profile" data-index="2">
-            <div class="c-formule-profile__image">
-                <img src="/assets/img/george-blanc.jpeg" alt="Cuisinier 3">
+            <div class="c-formule-profile" data-index="2">
+                <div class="c-formule-profile__image">
+                    <img src="/assets/img/george-blanc.jpeg" alt="Cuisinier 3">
+                </div>
+                {% include "svg/certified.svg" %}
             </div>
-            {% include "svg/certified.svg" %}
         </div>
+
+        <div class="c-formule__profiles-footer">
+            <h4 class="c-h4 c-h4--font-main">Chef name</h4>
+            <p class="c-formule__tag">Cuisinier</p>
+        </div>
+
     </div>
 
     {# Cards formules #}
-    <div class="c-formule-card-container">
+    <div class="c-formule__card-container">
         <div class="c-formule-card">
             <div class="c-formule-card__img">
                 <img src="/assets/img/plat2.webp" alt="Plat 1" />

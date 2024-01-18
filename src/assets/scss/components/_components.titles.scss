@@ -64,6 +64,7 @@
   }
 }
 
+
 .c-h4 {
   font-size: calc(18 / 16 * 1rem);
   margin-bottom: calc(18 / 16 * 1rem);
@@ -76,6 +77,11 @@
   @include breakpoint(large) {
     font-size: calc(26 / 16 * 1rem);
   }
+}
+
+.c-h4--font-main {
+  font-family: var(--fontstack-main);
+  font-weight: 600;
 }
 
 .c-h5 {

@@ -4,9 +4,36 @@
     gap: var(--gap);
 }
 
-.c-formule-profiles-container {
+.c-formule__profiles-container{
     display: flex;
-    gap: 24px;
+    flex-direction: column;
+    align-items: center;
+    gap: 36px;
+}
+
+.c-formule__profiles-footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+
+    * {
+        margin: 0;
+    }
+}
+
+.c-formule__tag{
+    font-size: calc(14 / 16 * 1rem);
+    font-weight: 500;
+    padding: 6px 12px;
+    border-radius: 100px;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+}
+
+.c-formule__profiles {
+    display: flex;
+    gap: 36px;
     align-items: center;
     justify-content: center;
 }
@@ -15,8 +42,8 @@
     position: relative;
 
     aspect-ratio: 1;
-    width: 72px;
-    height: 72px;
+    width: 84px;
+    height: 84px;
     transform: translateY(20px);
     opacity: .5;
 
@@ -24,6 +51,8 @@
         transform: translateY(0);
         scale: 1.3;
         opacity: 1;
+
+        filter: drop-shadow(0px 6px 12px rgba(16, 37, 66, 0.25));
 
         svg {
             opacity: 1;
@@ -51,7 +80,7 @@
     }
 }
 
-.c-formule-card-container {
+.c-formule__card-container {
     margin: 50px 0;
     display: flex;
     flex-wrap: wrap;

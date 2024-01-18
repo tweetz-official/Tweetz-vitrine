@@ -51,6 +51,10 @@
   .c-logo{
     flex-direction: column;
     height: 100%;
+
+    @include breakpoint(medium){
+      flex-direction: row;
+    }
   }
 }
 
