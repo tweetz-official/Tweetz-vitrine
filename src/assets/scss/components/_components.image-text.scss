@@ -19,6 +19,10 @@
     @include breakpoint(xlarge) {
         gap: var(--gap);
     }
+
+    p {
+        margin: 0;
+    }
 }
 
 .c-image-text--invert {
@@ -47,6 +51,17 @@
     .c-image-text__media{
         transform: translate3d(0, 0, 0);
         aspect-ratio: auto;
+
+        max-width: 450px;
+    }
+
+    .c-image-text__image-container {
+        border-radius: 25px;
+        box-shadow: var(--box-shadow);
+
+        @include breakpoint(xlarge) {
+            border-radius: 25px;
+        }
     }
 
 }
