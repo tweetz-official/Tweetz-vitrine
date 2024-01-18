@@ -1,11 +1,3 @@
-
-.c-bento-grid {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: repeat(12, 1fr);
-  gap: 18px;
-}
-
 .c-bento-grid__card {
   display: flex;
   flex-direction: column;
@@ -16,15 +8,15 @@
   padding: 24px;
   background-color: var(--color-white);
   box-shadow: var(--box-shadow);
-  
+
   text-align: center;
-  
-  .c-h4{
+
+  .c-h4 {
     width: 100%;
     margin: 0;
   }
 
-  p{
+  p {
     width: 100%;
   }
 }
@@ -36,7 +28,7 @@
   filter: var(--drop-shadow);
 }
 
-.c-bento-grid__img{
+.c-bento-grid__img {
   display: block;
   width: 100%;
   height: 100%;
@@ -56,123 +48,103 @@
   line-height: 1.2;
 }
 
-.c-bento-grid__card--1 {
-  grid-area: 1 / 1 / 7 / 4;
+// grid part
+
+
+.c-bento-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px;
+
+  .c-bento-grid__card {
+      
+    
+    &.c-bento-grid__card--smaller-media {
+      .c-bento-grid__media{
+        width: 75%;
+      }
+    }
+
+    &.abo {
+      min-height: 50vh;
+    }
+
+  }
 }
 
-.c-bento-grid__card--2 {
-  grid-area: 7 / 1 / 13 / 4;
-}
 
-.c-bento-grid__card--3 {
-  grid-area: 1 / 10 / 5 / 13;
-}
-
-.c-bento-grid__card--4 {
-  grid-area: 5 / 10 / 13 / 13;
-}
-
-.c-bento-grid__card--5 {
-  grid-area: 1 / 4 / 10 / 10;
-}
-
-.c-bento-grid__card--6 {
-  grid-area: 10 / 4 / 13 / 10;
-}
-
-/* Setup panel */
-
-@media (max-width: 1024px) {
+@include breakpoint(medium) {
   .c-bento-grid {
-    grid-template-columns: repeat(9, 1fr);
-    grid-template-rows: repeat(12, 1fr);
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: repeat(9);
   }
 
-  .c-bento-grid__card--1 {
-    grid-area: 1 / 1 / 6 / 4;
-  }
+  .c-bento-grid__card {
 
-  .c-bento-grid__card--2 {
-    grid-area: 1 / 4 / 8 / 13;
-  }
+    &.c-bento-grid__card--smaller-media {
+      .c-bento-grid__media{
+        width: 100%;
+      }
+    }
 
-  .c-bento-grid__card--3 {
-    grid-area: 8 / 4 / 11 / 7;
-  }
+    &.lives {
+      grid-area: 1 / 1 / 3 / 2;
+    }
 
-  .c-bento-grid__card--4 {
-    grid-area: 8 / 7 / 11 / 10;
-  }
+    &.wallet {
+      grid-area: 1 / 2 / 3 / 3;
+    }
 
-  .c-bento-grid__card--5 {
-    grid-area: 11 / 4 / 13 / 10;
-  }
+    &.abo {
+      grid-area: 3 / 1 / 7 / 2;
+      min-height: unset;
+    }
 
-  .c-bento-grid__card--6 {
-    grid-area: 6 / 1 / 13 / 4;
+    &.crm {
+      grid-area: 3 / 2 / 6 / 3;
+    }
+
+    &.post {
+      grid-area: 6 / 2 / 9 / 3;
+    }
+
+    &.messages {
+      grid-area: 7 / 1 / 9 / 2;
+    }
+
   }
 }
 
-@media (max-width: 760px) {
-  .c-bento-grid__card{
-      height: fit-content;
-  }
-
+@include breakpoint(large) {
   .c-bento-grid {
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-areas:
-      "c-bento-grid__card--2 c-bento-grid__card--2 c-bento-grid__card--2"
-      "c-bento-grid__card--2 c-bento-grid__card--2 c-bento-grid__card--2"
-      "c-bento-grid__card--2 c-bento-grid__card--2 c-bento-grid__card--2"
-      "c-bento-grid__card--2 c-bento-grid__card--2 c-bento-grid__card--2"
-      "c-bento-grid__card--2 c-bento-grid__card--2 c-bento-grid__card--2"
-      "c-bento-grid__card--1 c-bento-grid__card--1 c-bento-grid__card--1"
-      "c-bento-grid__card--1 c-bento-grid__card--1 c-bento-grid__card--1"
-      "c-bento-grid__card--1 c-bento-grid__card--1 c-bento-grid__card--1"
-      "c-bento-grid__card--1 c-bento-grid__card--1 c-bento-grid__card--1"
-      "c-bento-grid__card--1 c-bento-grid__card--1 c-bento-grid__card--1"
-      "c-bento-grid__card--4 c-bento-grid__card--4 c-bento-grid__card--4"
-      "c-bento-grid__card--4 c-bento-grid__card--4 c-bento-grid__card--4"
-      "c-bento-grid__card--4 c-bento-grid__card--4 c-bento-grid__card--4"
-      "c-bento-grid__card--4 c-bento-grid__card--4 c-bento-grid__card--4"
-      "c-bento-grid__card--4 c-bento-grid__card--4 c-bento-grid__card--4"
-      "c-bento-grid__card--6 c-bento-grid__card--6 c-bento-grid__card--6"
-      "c-bento-grid__card--6 c-bento-grid__card--6 c-bento-grid__card--6"
-      "c-bento-grid__card--6 c-bento-grid__card--6 c-bento-grid__card--6"
-      "c-bento-grid__card--6 c-bento-grid__card--6 c-bento-grid__card--6"
-      "c-bento-grid__card--6 c-bento-grid__card--6 c-bento-grid__card--6"
-      "c-bento-grid__card--6 c-bento-grid__card--6 c-bento-grid__card--6"
-      "c-bento-grid__card--3 c-bento-grid__card--3 c-bento-grid__card--3"
-      "c-bento-grid__card--3 c-bento-grid__card--3 c-bento-grid__card--3"
-      "c-bento-grid__card--3 c-bento-grid__card--3 c-bento-grid__card--3"
-      "c-bento-grid__card--3 c-bento-grid__card--3 c-bento-grid__card--3"
-      "c-bento-grid__card--5 c-bento-grid__card--5 c-bento-grid__card--5"
-      "c-bento-grid__card--5 c-bento-grid__card--5 c-bento-grid__card--5"
-      "c-bento-grid__card--5 c-bento-grid__card--5 c-bento-grid__card--5";
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: repeat(8);
   }
 
-  .c-bento-grid__card--2 {
-    grid-area: c-bento-grid__card--2;
-  }
+  .c-bento-grid__card {
 
-  .c-bento-grid__card--1 {
-    grid-area: c-bento-grid__card--1;
-  }
+    &.lives {
+      grid-area: 1 / 1 / 4 / 2;
+    }
 
-  .c-bento-grid__card--4 {
-    grid-area: c-bento-grid__card--4;
-  }
+    &.wallet {
+      grid-area: 4 / 1 / 8 / 2;
+    }
 
-  .c-bento-grid__card--6 {
-    grid-area: c-bento-grid__card--6;
-  }
+    &.abo {
+      grid-area: 1 / 2 / 6 / 3;
+    }
 
-  .c-bento-grid__card--3 {
-    grid-area: c-bento-grid__card--3;
-  }
+    &.crm {
+      grid-area: 1 / 3 / 3 / 4;
+    }
 
-  .c-bento-grid__card--5 {
-    grid-area: c-bento-grid__card--5;
+    &.post {
+      grid-area: 3 / 3 / 8 / 4;
+    }
+
+    &.messages {
+      grid-area: 6 / 2 / 8 / 3;
+    }
   }
 }
