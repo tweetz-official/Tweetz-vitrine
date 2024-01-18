@@ -5,6 +5,12 @@
     gap: var(--gap);
 }
 
+.c-vertical-section--no-margin{
+    h2, h3, h4, h5{
+        margin-bottom: 0;
+    }
+}
+
 .c-vertical-section__titles{
     h2, h3, h4, h5{
         text-align: center;

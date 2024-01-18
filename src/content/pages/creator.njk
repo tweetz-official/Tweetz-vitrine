@@ -24,30 +24,45 @@ permalink: /creator/index.html
 
         {% include "sections/creator/carousel-creator.njk" %}
         <div class="c-pagesection">
-            <div class="l-container">
-                <div class="c-vertical-section c-gallery-section-container">
-                    <h2 class="c-h2">Peu importe qui vous êtes...</h2>
+            <div class="c-vertical-section">
+
+                <div class="l-container">
+                    <div class="c-vertical-section c-vertical-section--no-margin">
+                        <h2 class="c-h2">Peu importe qui vous êtes...</h2>
+                    </div>
+                </div>
 
                     {% for typeCardType in typeCardTypes %}
                         {% if loop.first %}
-                            <div class="c-gallery-section">
-                                <div class="js-gallery-section__scroll">
-                                    <ul class="u-list-bare c-gallery-section__gallery js-init-cards l-grid">
-                                    {% endif %}
+                        <div class=" c-gallery-section-container">
+                            <div class="l-container">
+                                <div class="c-gallery-section">
+                                    <div class="js-gallery-section__scroll">
+                                        <ul class="u-list-bare c-gallery-section__gallery js-init-cards l-grid">
+                                        {% endif %}
 
-                                    <li class="c-gallery-section__card">
-                                        {{ typeCard(typeCardType) }}
-                                    </li>
+                                        <li class="c-gallery-section__card">
+                                            {{ typeCard(typeCardType) }}
+                                        </li>
 
-                                    {% if loop.last %}
-                                    </ul>
+                                        {% if loop.last %}
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
+                        </div>
                         {% endif %}
                     {% endfor %}
-                    <h2 class="c-h2">... <span>tweetz</span> s’adapte à vous.</h2>
+
+                    <div class="l-container">
+                        <div class="c-vertical-section">
+                            <h2 class="c-h2">... <span>tweetz</span> s’adapte à vous.</h2>
+                        </div>
+                    </div>
+
                 </div>
             </div>
+
         </div>
 
         <section class="c-pagesection c-pagesection--dark c-pagesection--deco">
