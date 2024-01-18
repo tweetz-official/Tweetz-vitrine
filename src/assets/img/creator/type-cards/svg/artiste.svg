@@ -1,9 +1,1 @@
-<svg width="150" height="150" viewBox="0 0 150 150" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect width="150" height="150" />
-<g id="artiste">
-<path id="Vector" d="M75.5 109.208L110.208 74.5L125.083 89.375L90.375 124.083L75.5 109.208Z" stroke="#FCFBFF" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
-<path id="Vector_2" d="M105.25 79.4587L97.8128 42.2712L25.917 24.917L43.2712 96.8128L80.4587 104.25L105.25 79.4587Z" stroke="#FCFBFF" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
-<path id="Vector_3" d="M25.917 24.917L63.5309 62.5309" stroke="#FCFBFF" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
-<path id="Vector_4" d="M70.5417 79.4583C76.0185 79.4583 80.4583 75.0185 80.4583 69.5417C80.4583 64.0648 76.0185 59.625 70.5417 59.625C65.0648 59.625 60.625 64.0648 60.625 69.5417C60.625 75.0185 65.0648 79.4583 70.5417 79.4583Z" stroke="#FCFBFF" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
-</g>
-</svg>
+<svg fill="none" height="150" viewBox="0 0 150 150" width="150" xmlns="http://www.w3.org/2000/svg"><path d="m0 0h150v150h-150z"/><g stroke="#fcfbff" stroke-linecap="round" stroke-linejoin="round" stroke-width="7"><path d="m75.5 109.208 34.708-34.708 14.875 14.875-34.708 34.708z"/><path d="m105.25 79.4587-7.4372-37.1875-71.8958-17.3542 17.3542 71.8958 37.1875 7.4372z"/><path d="m25.917 24.917 37.6139 37.6139"/><path d="m70.5417 79.4583c5.4768 0 9.9166-4.4398 9.9166-9.9166 0-5.4769-4.4398-9.9167-9.9166-9.9167-5.4769 0-9.9167 4.4398-9.9167 9.9167 0 5.4768 4.4398 9.9166 9.9167 9.9166z"/></g></svg>

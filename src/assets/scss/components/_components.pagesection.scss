@@ -55,7 +55,7 @@
 
 .c-pagesection--deco{
   border-radius: 0 var(--c-pagesection__deco-size) var(--c-pagesection__deco-size) 0;
-  padding: var(--c-pagesection__deco-size) 0;
+  padding: calc( var(--c-pagesection__deco-size) + 24px )0;
 }
 
 .c-pagesection--deco + .c-pagesection--dark{
