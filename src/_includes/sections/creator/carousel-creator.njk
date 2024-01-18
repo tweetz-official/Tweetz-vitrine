@@ -2,11 +2,11 @@
     <div class="c-carousel">
         <div class="c-carousel__gallery">
             <img class="c-carousel__item" src="./../../assets/img/template_img-5.png" alt="Slide 1">
-            <img class="c-carousel__item" src="./../../assets/img/template_img-5.png" alt="Slide 2">
-            <img class="c-carousel__item" src="./../../assets/img/template_img-5.png" alt="Slide 3">
+            <img class="c-carousel__item" src="./../../assets/img/alain_ducasse.webp" alt="Slide 2">
+            <img class="c-carousel__item" src="./../../assets/img/be_sang.jpeg" alt="Slide 3">
         </div>
         <div class="c-carousel__content">
-            <div class="c-caroussel__title-group">
+            <div class="c-carousel__title-group">
                 <h3 class="c-carousel__subtitle">Pour vous,</h3>
                 <h1 class="c-h1 c-carousel__title">créateur</h1>
             </div>
@@ -15,48 +15,46 @@
                 <a href="/#beta" class="c-btn">Rejoindre la beta</a>
             </div>
         </div>
-        <div class="c-carousel__bubbles">
-            <div class="c-carousel__bubble" data-index="0"></div>
-            <div class="c-carousel__bubble" data-index="1"></div>
-            <div class="c-carousel__bubble" data-index="2"></div>
-        </div>
+        <div class="c-carousel__bubbles"></div>
     </div>
 </div>
 <script>
     document.addEventListener("DOMContentLoaded", function () {
         const carousel = document.querySelector(".c-carousel__gallery");
-        const bubbles = document.querySelectorAll(".c-carousel__bubble");
-
         let currentIndex = 0;
+        let isResetting = false;
+
+        // Duplicate the first slide and append it to the carousel for seamless looping
+        const firstSlide = carousel.firstElementChild.cloneNode(true);
+        carousel.appendChild(firstSlide);
+
+        const numberOfSlides = carousel.children.length;
 
         function showSlide(index) {
-            const newTransformValue = -index * 100 + "%";
-            carousel.style.transform = "translateX(" + newTransformValue + ")";
-            bubbles.forEach(bubble => bubble.classList.remove("active"));
-            bubbles[index]
-                .classList
-                .add("active");
+            if (index >= numberOfSlides) {
+                // Instantly reset to the first slide without transition
+                isResetting = true;
+                carousel.style.transition = 'none';
+                carousel.style.transform = "translateX(0)";
+                currentIndex = 0;
+                // Allow for the reset to apply before re-enabling transitions
+                setTimeout(() => {
+                    isResetting = false;
+                }, 50); // Short timeout
+            } else {
+                if (!isResetting) {
+                    // Normal slide transition
+                    carousel.style.transition = 'transform 0.5s ease-in-out';
+                    const newTransformValue = -index * 100 + '%';
+                    carousel.style.transform = `translateX(${newTransformValue})`;
+                    currentIndex = index;
+                }
+            }
         }
 
-        function nextSlide() {
-            currentIndex = (currentIndex + 1) % bubbles.length;
-            showSlide(currentIndex);
-        }
-
-        function prevSlide() {
-            currentIndex = (currentIndex - 1 + bubbles.length) % bubbles.length;
-            showSlide(currentIndex);
-        }
-
-        function selectSlide(index) {
-            currentIndex = index;
-            showSlide(currentIndex);
-        }
-
-        bubbles.forEach((bubble, index) => {
-            bubble.addEventListener("click", () => selectSlide(index));
-        });
-
-        setInterval(nextSlide, 5000);
+        // Automatic sliding logic
+        setInterval(() => {
+            showSlide(currentIndex + 1);
+        }, 5000); // Change slides every 3 seconds
     });
 </script>

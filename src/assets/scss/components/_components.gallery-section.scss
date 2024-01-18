@@ -1,3 +1,10 @@
+.c-gallery-section-container{
+    gap: 42px;
+    h2 {
+        margin-bottom: 0;
+    }
+}
+
 .c-gallery-section {
     display: flex;
     flex-direction: column;
@@ -7,7 +14,7 @@
 
 .c-gallery-section__gallery {
     display: flex;
-    gap: 20px;
+    gap: 42px;
     height: fit-content;
     transition: transform 0.5s var(--ease-in-out);
     cursor: grab;
@@ -18,7 +25,6 @@
 }
 
 .c-gallery-section__card {
-
     img {
         pointer-events: none;
     }

@@ -15,7 +15,7 @@ function addFooter(parent, gallery) {
     const nextButton = parent.querySelector(".next");
     const footer = parent.querySelector(".c-gallery-section__footer");
 
-    let scrollOffset = cardWidth + 20;
+    let scrollOffset = cardWidth + 40;
 
     nextButton.addEventListener("click", () => {
         let newCurrentScrollPosition =
