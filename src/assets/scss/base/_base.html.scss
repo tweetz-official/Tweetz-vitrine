@@ -10,3 +10,11 @@ html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+html.has-menu {
+  overflow-y: hidden;
+
+  @include breakpoint(medium) {
+    overflow-y: auto;
+  }
+}
