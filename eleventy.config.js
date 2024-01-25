@@ -24,9 +24,9 @@ module.exports = function (eleventyConfig) {
         trim: true,
     });
 
-    // ignores
-    eleventyConfig.ignores.add("src/assets/**/*");
-    eleventyConfig.watchIgnores.add("src/assets/**/*");
+    // // ignores
+    // eleventyConfig.ignores.add("src/assets/**/*");
+    // eleventyConfig.watchIgnores.add("src/assets/**/*");
 
     // passthrough copy
     eleventyConfig.setServerPassthroughCopyBehavior("copy");

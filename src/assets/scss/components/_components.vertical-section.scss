@@ -1,0 +1,30 @@
+.c-vertical-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--gap);
+}
+
+.c-vertical-section--no-margin{
+    h2, h3, h4, h5{
+        margin-bottom: 0;
+    }
+}
+
+.c-vertical-section__titles{
+    h2, h3, h4, h5{
+        text-align: center;
+    }
+
+    .c-h2{
+        margin-bottom: 0;
+    }
+}
+
+.c-vertical-section__text{
+    text-align: center;
+
+    @include breakpoint(medium){
+        font-size: calc(18 / 16 * 1rem);
+    }
+}

@@ -1,18 +1,26 @@
 <nav aria-label="main navigation">
-  {% for item in nav %}
-
-    {% set activeClass = "" %}
-    {% set activeAria = "" %}
-    {% if item.navTrigger == activeSection %}
-      {% set activeClass = "is-active" %}
-      {% set activeAria = 'aria-current="page"' | safe %}
-    {% endif %}
-
-    {% if loop.first %}<ul class="c-mainnav">{% endif %}
+  {% for navItem in mainnav %}
+    {% if loop.first %}
+      <ul class="c-mainnav">
+      {% endif %}
+      {% set currentClass = "" %}
+      {% set additionnalClasses = "" %}
+      {% set currentAria = "" %}
+      {% if navItem.isPrimary %}
+        {% set additionnalClasses = "c-btn" %}
+      {% elseif navItem.isSecondary %}
+        {% set additionnalClasses = "c-btn c-btn--secondary" %}
+      {% else %}
+        {% if navItem.trigger == currentSection %}
+          {% set currentClass = "is-current" %}
+          {% set currentAria = 'aria-current="page"'|safe %}
+        {% endif %}
+      {% endif %}
       <li class="c-mainnav__item">
-        <a class="c-mainnav__link  {{ activeClass }}" href="{{ item.navUrl }}" {{ activeAria }}>{{ item.navLabel }}</a>
+        <a class="c-mainnav__link {{ currentClass }} {{ additionnalClasses }}" {{ currentAria }} href="{{ navItem.url }}">{{ navItem.label }}</a>
       </li>
-    {% if loop.last %}</ul>{% endif %}
-
+      {% if loop.last %}
+      </ul>
+    {% endif %}
   {% endfor %}
 </nav>

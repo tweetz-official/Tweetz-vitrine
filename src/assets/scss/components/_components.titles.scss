@@ -2,8 +2,6 @@
 // Titles
 // -------------------------------------
 
-// https://www.modularscale.com/?18&px&1.2
-
 .c-h1,
 .c-h2,
 .c-h3,
@@ -13,25 +11,23 @@
   line-height: 1.2;
   font-family: var(--fontstack-alt);
   color: var(--color-dark);
+
+  span{
+    color: var(--color-primary);
+  }
 }
 
 .c-h1 {
-  font-size: calc(31 / 16 * 1rem);
+  font-size: clamp(calc(31 / 16 * 1rem) , 3.5vw, calc(54 / 16 * 1rem));
   margin-bottom: calc(18 / 16 * 1rem);
   
-  // cletter spacing : calc 1% from the base font size
+  // leeter spacing - 3% of font-size
+  letter-spacing: calc(1em / 100 * -3);
 
-  letter-spacing: calc((31 / 16 * 1rem) / 100 * -3);
-  
-  
-  @include breakpoint(medium) {
-    font-size: calc(37 / 16 * 1rem);
-    letter-spacing: calc((37 / 16 * 1rem) / 100 * -3);
-  }
-  
-  @include breakpoint(large) {
-    font-size: calc(45 / 16 * 1rem);
-    letter-spacing: calc((45 / 16 * 1rem) / 100 * -3);
+  & span {
+    display: block;
+    color: var(--color-primary);
+    font-size: clamp(calc(42 / 16 * 1rem) , 5.5vw, calc(82 / 16 * 1rem));
   }
 }
 
@@ -42,6 +38,8 @@
 .c-h2 {
   font-size: calc(26 / 16 * 1rem);
   margin-bottom: calc(18 / 16 * 1rem);
+  font-weight: 550;
+  letter-spacing: calc(1em / 100 * -2);
 
   @include breakpoint(medium) {
     font-size: calc(31 / 16 * 1rem);
@@ -55,6 +53,7 @@
 .c-h3 {
   font-size: calc(22 / 16 * 1rem);
   margin-bottom: calc(18 / 16 * 1rem);
+  letter-spacing: calc(1em / 100 * -2);
 
   @include breakpoint(medium) {
     font-size: calc(26 / 16 * 1rem);
@@ -65,22 +64,32 @@
   }
 }
 
+
 .c-h4 {
   font-size: calc(18 / 16 * 1rem);
   margin-bottom: calc(18 / 16 * 1rem);
-
+  letter-spacing: calc(1em / 100 * -2);
+  
   @include breakpoint(medium) {
     font-size: calc(22 / 16 * 1rem);
   }
-
+  
   @include breakpoint(large) {
     font-size: calc(26 / 16 * 1rem);
   }
 }
 
+.c-h4--font-main {
+  font-family: var(--fontstack-main);
+  font-weight: 600;
+}
+
 .c-h5 {
   font-size: calc(18 / 16 * 1rem);
-  margin-bottom: calc(12 / 16 * 1rem);
+  margin-bottom: calc(6 / 16 * 1rem);
+  color: var(--color-secondary);
+  font-family: var(--fontstack-main);
+  font-weight: 400;
 
   @include breakpoint(large) {
     font-size: calc(22 / 16 * 1rem);
@@ -90,17 +99,6 @@
 // -------------------------------------
 // Special titles
 // -------------------------------------
-
-.c-suptitle {
-  font-weight: 500;
-  font-size: calc(13 / 16 * 1rem);
-  font-family: var(--fontstack-main);
-  line-height: 1.2;
-  color: var(--color-brand4);
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  margin-bottom: calc(12 / 16 * 1rem);
-}
 
 .c-suptitle--dark {
   color: var(--color-brand5);

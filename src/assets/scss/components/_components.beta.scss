@@ -1,0 +1,19 @@
+.c-beta{
+    gap: 18px;
+
+    scroll-margin-top: 20vh;
+
+    @include breakpoint(medium){
+        scroll-margin-top: 30vh;
+    }
+
+}
+
+.c-beta__text{
+    font-size: calc(18/16 * 1rem);
+    text-wrap: pretty;
+
+    @include breakpoint(medium){
+        font-size: calc(20/16 * 1rem);
+    }
+}

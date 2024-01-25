@@ -3,13 +3,10 @@
 // -------------------------------------
 
 a {
-  color: var(--color-brand6);
-  text-decoration: underline;
+  color: var(--color-primary);
+  text-decoration: none;
 
-  &:hover {
-    color: var(--color-brand6);
-    text-decoration: none;
-  }
+  font-weight: 500;
 }
 
 // -------------------------------------

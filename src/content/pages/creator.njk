@@ -1,0 +1,183 @@
+---
+permalink: /creator/index.html
+---
+
+{% extends "layouts/base.njk" %}
+{% set currentSection = "creator" %}
+{% set metaTitle = "Creator page" %}
+{% set metaDescription = "Tweetz description" %}
+{% set metaImage = site.url ~ "/assets/img/metaimg.jpg" %}
+
+{% set typeCardTypes = [
+    "food",
+    "podcast",
+    "vidéaste",
+    "gamer",
+    "codeur",
+    "artiste"
+] %}
+
+{% from "macros/type-card.njk" import typeCard %}
+
+{% block content %}
+    <main>
+
+        {% include "sections/creator/carousel-creator.njk" %}
+
+        <section class="c-pagesection">
+            <div class="l-flex l-flex--column l-flex--l-gap">
+
+                <div class="l-container">
+                    <div class="c-image-text l-grid">
+                        <div class="c-image-text__media">
+                            <div class="c-image-text__image-container">
+                                <img class="o-fluidimage c-image-text__image" src="/assets/img/img-text/live.jpg" alt="Homme devant une caméra">
+                            </div>
+                        </div>
+                        <div class="c-image-text__text">
+                            <h5 class="c-h5">Une plateforme sur mesure</h5>
+                            <h2 class="c-h2">Créez une communauté sûre et solidaire</h2>
+                            <p>Créer un espace en ligne sûr et solidaire où chacun peut s'épanouir. Créez des liens authentiques, partagez vos passions et contribuez à une expérience communautaire empreinte d'inclusivité et de soutien mutuel. Ensemble, nous construisons bien plus qu'une simple plateforme.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="c-vertical-section">
+                    <div class="l-container">
+                        <div class="c-vertical-section c-vertical-section--no-margin">
+                            <h2 class="c-h2">Peu importe qui vous êtes...</h2>
+                        </div>
+                    </div>
+
+                    {% for typeCardType in typeCardTypes %}
+                        {% if loop.first %}
+                            <div class=" c-gallery-section-container">
+                                <div class="l-container">
+                                    <div class="c-gallery-section">
+                                        <div class="js-gallery-section__scroll">
+                                            <ul class="u-list-bare c-gallery-section__gallery js-init-cards l-grid">
+                                            {% endif %}
+
+                                            <li class="c-gallery-section__card">
+                                                {{ typeCard(typeCardType) }}
+                                            </li>
+
+                                            {% if loop.last %}
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+
+                    <div class="l-container">
+                        <div class="c-vertical-section">
+                            <h2 class="c-h2">... <span>tweetz</span> s’adapte à vous.</h2>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="c-pagesection c-pagesection--dark c-pagesection--deco">
+            <div class="l-container l-flex l-flex--column">
+
+                {% include "sections/creator/formules-section.njk" %}
+
+                <div class="c-image-text c-image-text--protect-image l-grid">
+                    <div class="c-image-text__media">
+                        <div class="c-image-text__image-container">
+                            <img class="o-fluidimage c-image-text__image" src="/assets/img/post.jpg" alt="Post screenshot">
+                        </div>
+                    </div>
+                    <div class="c-image-text__text">
+                        <h5 class="c-h5">Tout se passe en un clique !</h5>
+                        <h2 class="c-h2">La monétisation à portée de main</h2>
+                        <p>Avec Tweetz, monétisez directement sous vos publications. Cette fonctionnalité intuitive transforme chaque création en opportunité de revenus.
+                        Simple, transparente et directe, elle vous permet de connecter avec votre audience et de transformer l'engagement en soutien financier. <span>Créez, partagez, et profitez de vos talents avec nous.</span></p>
+                    </div>
+                </div>
+
+                <div class="c-image-text c-image-text--invert l-grid">
+                    <div class="c-image-text__media">
+                        {# <div class="c-image-text__media-deco job__card">
+                            <div class="job__card--header">
+                                <span>Léa,</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none">
+                                    <path
+                                d="M19 3H5C4.46957 3 3.96086 3.21071 3.58579 3.58579C3.21071 3.96086 3 4.46957 3 5V19C3 19.5304 3.21071 20.0391 3.58579
+                                    20.4142C3.96086 20.7893 4.46957 21 5 21H19C19.5304 21 20.0391 20.7893 20.4142 20.4142C20.7893 20.0391 21 19.5304 21
+                                    19V5C21 4.46957 20.7893 3.96086 20.4142 3.58579C20.0391 3.21071 19.5304 3 19 3ZM19 18C19 18.5523 18.5523 19 18
+                                    19H6C5.44772 19 5 18.5523 5 18V6C5 5.44772 5.44772 5 6 5H18C18.5523 5 19 5.44772 19 6V18ZM9 16C9 16.5523 8.55228 17 8
+                                    17C7.44772 17 7 16.5523 7 16V8C7 7.44772 7.44772 7 8 7C8.55228 7 9 7.44772 9 8V16ZM13 16C13 16.5523 12.5523 17 12
+                                    17C11.4477 17 11 16.5523 11 16V11C11 10.4477 11.4477 10 12 10C12.5523 10 13 10.4477 13 11V16ZM17 16C17 16.5523 16.5523 17
+                                    16 17C15.4477 17 15 16.5523 15 16V13C15 12.4477 15.4477 12 16 12C16.5523 12 17 12.4477 17 13V16Z"
+                                fill="#E0295D"/>
+                                </svg>
+                            </div>
+                            <div class="job__card--description">
+                                <p>Formateur en marketing</p>
+                            </div>
+                        </div>
+                        <div class="c-image-text__media-deco tools__box">
+                            <div class="tools__box--img">
+                                <img src="/assets/img/powerpoint.svg" alt="">
+                                <img src="/assets/img/excel.svg" alt="">
+                                <img src="/assets/img/notion.svg" alt="">
+                            </div>
+                            <div class="tools__box--text">
+                                <p>Monétisez vos outils !</p>
+                            </div>
+                        </div> #}
+                        <div class="c-image-text__image-container">
+                            <img class="o-fluidimage c-image-text__image" src="/assets/img/img-text/cameraman.jpg" alt="Homme qui filme avec une caméra de dos">
+                        </div>
+                    </div>
+                    <div class="c-image-text__text">
+                        <h5 class="c-h5">Restez focus sur la création</h5>
+                        <h2 class="c-h2">On suit votre activité</h2>
+                        <p>Sur Tweetz, concentrez-vous sur votre art pendant que nous suivons l'activité de vos abonnés et vos revenus.
+                        Nos outils intuitifs vous fournissent des insights clairs sans vous submerger. 
+                        Créez, nous nous occupons des analyses.
+                        </p>
+                        <a href="/" class="c-link"> S'inscrire à la beta {% include "svg/arrow-right.svg" %}
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="c-pagesection c-pagesection--no-bottom c-pagesection--deco">
+            <div class="l-container">
+
+                <div class="l-flex l-flex--column l-flex--l-gap">
+
+                    <div class="c-vertical-section">
+                        <div class="c-vertical-section__titles">
+                            <h5 class="c-h5">Un petit avant goût</h5>
+                            <h2 class="c-h2">Quelques unes de nos solutions</h2>
+                        </div>
+                        {% include "partials/bento-grid.njk" %}
+                        <a href="/#beta" class="c-btn">Rejoindre la beta</a>
+                    </div>
+
+                    {% include "partials/vers-avant.njk" %}
+
+                    <div class="c-image-cta">
+                        <img class="c-image-cta__image" src="/assets/img/image-cta/creator.jpg" alt="Homme souriant parlant à une caméra"/>
+                        <div class="c-image-cta__content">
+                            <h2 class="c-image-cta__title">Prêt à créer ?</h2>
+                            <p class="c-image-cta__desc">Explorez notre plateforme et rejoignez la beta dès maintenant</p>
+                            <a href="/#beta" class="c-btn">Rejoindre la beta</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+{% endblock %}

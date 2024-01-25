@@ -1,11 +1,13 @@
 <header class="c-siteheader">
-  <div class="l-container  c-siteheader__inner">
-    <p class="c-siteheader__logo"><a aria-label="Homepage" href="/">{% include "svg/logo.svg" %}</a></p>
+
+  <div class="l-container">
     <div class="c-siteheader__nav">
+      {% include "partials/logo.njk" %}</a>
       {% include "partials/mainnav.njk" %}
+      <a class="c-siteheader__menu js-navtrigger" href="#footernav">{% include "partials/hamburger.njk" %}</a>
     </div>
-    <p class="c-siteheader__hamburger"><a class="js-navtrigger" href="#footernav">{% include "svg/menu-open.svg" %}</a></p>
   </div>
 
   {% include "partials/mobilemenu.njk" %}
+
 </header>

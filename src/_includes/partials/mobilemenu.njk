@@ -1,10 +1,39 @@
-<div class="c-mobilemenu  js-mobilemenu">
-  <p class="c-mobilemenu__actions"><button class="c-mobilemenu__close  js-navtrigger" href="#">{% include "svg/menu-close.svg" %}</button></p>
+<div class="c-mobilemenu js-mobilemenu">
+  
   <nav aria-label="mobile navigation">
-    {% for item in nav %}
-      {% if loop.first %}<ul class="c-mobilenav">{% endif %}
-        <li class="c-mobilenav__item"><a class="c-mobilenav__link  {{ 'is-active' if activeSection == item.navTrigger }}" href="{{ item.navUrl }}">{{ item.navLabel }}</a></li>
-      {% if loop.last %}</ul>{% endif %}
-    {% endfor %}
+    {% for navItem in mainnav %}
+    {% if loop.first %}
+      <ul class="c-mobilenav">
+      {% endif %}
+      {% set currentClass = "" %}
+      {% set additionnalClasses = "" %}
+      {% set currentAria = "" %}
+      {% if navItem.isPrimary %}
+        {% set additionnalClasses = "c-btn" %}
+      {% elseif navItem.isSecondary %}
+        {% set additionnalClasses = "c-btn c-btn--secondary" %}
+      {% else %}
+        {% if navItem.trigger == currentSection %}
+          {% set currentClass = "is-current" %}
+          {% set currentAria = 'aria-current="page"'|safe %}
+        {% endif %}
+      {% endif %}
+      <li class="c-mainnav__item">
+        <a class="c-mainnav__link {{ currentClass }} {{ additionnalClasses }}" {{ currentAria }} href="{{ navItem.url }}">{{ navItem.label }}</a>
+      </li>
+      {% if loop.last %}
+      </ul>
+    {% endif %}
+  {% endfor %}
+  </nav>
+
+  <nav aria-label="social media">
+    <ul class="c-socialmedia">
+      {% for item in socialmedia %}
+        <li class="c-socialmedia__item">
+          <a class="c-socialmedia__link" href="{{ item.url }}" aria-label="{{ item.name }}">{% include "svg/socials/" ~ item.icon %}</a>
+        </li>
+      {% endfor %}
+    </ul>
   </nav>
 </div>

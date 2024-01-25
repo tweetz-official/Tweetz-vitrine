@@ -1,0 +1,151 @@
+.c-bento-grid__card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  border-radius: 25px;
+  padding: 24px;
+  background-color: var(--color-white);
+  box-shadow: var(--box-shadow);
+
+  text-align: center;
+
+  .c-h4 {
+    width: 100%;
+    margin: 0;
+  }
+
+  p {
+    width: 100%;
+  }
+}
+
+.c-bento-grid__media {
+  border-radius: 18px;
+
+  width: 100%;
+  filter: var(--drop-shadow);
+}
+
+.c-bento-grid__img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 18px;
+}
+
+.c-bento-grid__text {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 12px;
+
+  line-height: 1.2;
+}
+
+// grid part
+
+
+.c-bento-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px;
+
+  .c-bento-grid__card {
+      
+    
+    &.c-bento-grid__card--smaller-media {
+      .c-bento-grid__media{
+        width: 75%;
+      }
+    }
+
+    &.abo {
+      min-height: 50vh;
+    }
+
+  }
+}
+
+
+@include breakpoint(medium) {
+  .c-bento-grid {
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: repeat(9);
+    }
+
+    .c-bento-grid__card--smaller-media {
+      .c-bento-grid__media{
+        width: 100% !important;
+      }
+    }
+
+  .c-bento-grid__card {
+
+
+    &.lives {
+      grid-area: 1 / 1 / 3 / 2;
+    }
+
+    &.wallet {
+      grid-area: 1 / 2 / 3 / 3;
+    }
+
+    &.abo {
+      grid-area: 3 / 1 / 7 / 2;
+      min-height: unset;
+    }
+
+    &.crm {
+      grid-area: 3 / 2 / 6 / 3;
+    }
+
+    &.post {
+      grid-area: 6 / 2 / 9 / 3;
+    }
+
+    &.messages {
+      grid-area: 7 / 1 / 9 / 2;
+    }
+
+  }
+}
+
+@include breakpoint(large) {
+  .c-bento-grid {
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: repeat(8);
+  }
+
+  .c-bento-grid__card {
+
+    &.lives {
+      grid-area: 1 / 1 / 4 / 2;
+    }
+
+    &.wallet {
+      grid-area: 4 / 1 / 8 / 2;
+    }
+
+    &.abo {
+      grid-area: 1 / 2 / 6 / 3;
+    }
+
+    &.crm {
+      grid-area: 1 / 3 / 3 / 4;
+    }
+
+    &.post {
+      grid-area: 3 / 3 / 8 / 4;
+    }
+
+    &.messages {
+      grid-area: 6 / 2 / 8 / 3;
+    }
+  }
+}
