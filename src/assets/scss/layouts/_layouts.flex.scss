@@ -1,0 +1,14 @@
+.l-flex{
+    display: flex;
+    gap: var(--gap);
+    width: 100%;
+}
+
+.l-flex--l-gap{
+    gap: var(--gap-large);
+}
+
+.l-flex--column{
+    flex-direction: column;
+    align-items: center;
+}

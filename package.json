@@ -17,13 +17,11 @@
     "scripts:prod": "esbuild \"./src/assets/js/main.js\" --target=\"es6\" --bundle --minify --outfile=\"./dist/assets/js/main.bundle.js\"",
     "scripts:dev": "esbuild \"./src/assets/js/main.js\" --target=es6 --bundle --outfile=\"./dist/assets/js/main.bundle.js\"",
     "eleventy": "npx @11ty/eleventy --quiet",
-    "images": "node \"./build_tasks/generate-images.js\"",
-    "watch:scripts": "onchange \"./src/assets/js/**/*\" -- npm run scripts:dev",
-    "watch:styles": "onchange \"./src/assets/scss/**/*\" -- npm run styles:dev",
-    "build": "npm-run-all clean --parallel images styles:prod scripts:prod eleventy",
-    "dev": "npm-run-all styles:dev scripts:dev --parallel server watch:*"
+    "watch:scripts": "onchange './src/assets/js/**/*' -- npm run scripts:dev",
+    "watch:styles": "onchange './src/assets/scss/**/*' -- npm run styles:dev",
+    "build": "npm-run-all clean --parallel styles:prod scripts:prod eleventy",
+    "dev": "npm run styles:dev && npm-run-all scripts:dev --parallel server watch:*"
   },
-  
   "devDependencies": {
     "@11ty/eleventy": "^2.0.1",
     "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
@@ -39,5 +37,9 @@
     "rimraf": "^5.0.1",
     "sass": "^1.68.0",
     "sharp": "^0.32.6"
+  },
+  "dependencies": {
+    "@bedard/gradient": "^0.1.3",
+    "@splinetool/runtime": "^1.0.29"
   }
 }

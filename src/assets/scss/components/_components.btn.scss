@@ -1,48 +1,45 @@
-.c-btn{
-
+.c-btn {
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    
+
     border-radius: 150px;
     padding: 12px 36px;
     box-sizing: border-box;
-    
-    font-size: 18px;
-    line-height: 120%;
+
     font-family: var(--fontstack-main);
-    font-weight: 500;
+    font-weight: 400;
     text-decoration: none;
-
-    background:  var(--color-primary);
+    
+    
     color: var(--color-white);
-    border: 2px solid var(--color-primary);
+    background: var(--color-primary);
     
-    transition: scale 0.3s ease-in-out;
-    filter: drop-shadow(0px 10px 65px #e0295d80);
+    border: solid 2px transparent;
     
-    &:hover{
-        scale: 1.03;
-        color: var(--color-white);
-    }
-    
-    &--border{
-        color: var(--color-primary);
-        background: transparent;
-        backdrop-filter: blur(10px);
-        &:hover{
-            color: var(--color-primary);
-        }
-    }
-    
-    &--small{
-        padding: 12px 24px;
-        font-size: 16px;
+    filter: var(--brand-drop-shadow);
+
+    transition: filter 0.5s ease-in-out, transform 0.4s ease-in-out 0.1s;
+
+    &:hover,
+    &:focus {
+        filter: var(--brand-drop-shadow--hover);
+        transform: scale(1.05);
     }
 
-    @media all and (max-width: 950px){
-        padding: 12px 24px;
-        font-size: 16px;
-    }
+}
 
+// ---------------------------------
+// =variants
+// ---------------------------------
+
+.c-btn--secondary {
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+    background: transparent;
+}
+
+.c-btn--small {
+    padding: 10px 18px;
+    font-size: calc(16 / 16 * 1rem);
 }

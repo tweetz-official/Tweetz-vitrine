@@ -1,0 +1,14 @@
+:root{
+
+    --brand-drop-shadow-color: rgba(224, 41, 93, 0.8);
+
+    --brand-drop-shadow: drop-shadow(0 12px 18px var(--brand-drop-shadow-color));
+    --brand-drop-shadow--hover: drop-shadow(0 6px 18px var(--brand-drop-shadow-color));
+    
+    --brand-drop-shadow--small: drop-shadow(0 6px 6px var(--brand-drop-shadow-color));
+    --brand-drop-shadow--small--hover: drop-shadow(0 3px 6px var(--brand-drop-shadow-color));
+    
+    
+    --box-shadow: rgba(16, 37, 66, .1) 0px 18px 30px, rgba(16, 37, 66, .1) 0px 12px 12px, rgba(16, 37, 66, .05) 0px 0px 12px;
+    --drop-shadow: drop-shadow(rgba(16, 37, 66, .1) 0px 12px 24px) drop-shadow(rgba(16, 37, 66, .1) 0px 9px 9px) drop-shadow( rgba(16, 37, 66, .05) 0px 0px 9px);
+}

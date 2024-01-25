@@ -1,12 +1,17 @@
 module.exports = [
-  // {
-  //   name: "LinkedIn",
-  //   url: "https://www.linkedin.com/in/tweetz/",
-  //   icon: "icon-linkedin.svg",
-  // },
-  // {
-  //   name: "Twitter",
-  //   url: "https://twitter.com/tweetz",
-  //   icon: "icon-twitter.svg",
-  // },
+  {
+    name: "Instagram",
+    url: "https://www.instagram.com/tweetz_officiel/",
+    icon: "instagram.svg",
+  },
+  {
+    name: "TikTok",
+    url: "https://www.tiktok.com/@tweetz_officiel",
+    icon: "tiktok.svg",
+  },
+  {
+    name: "LinkedIn",
+    url: "https://www.linkedin.com/company/tweetz/",
+    icon: "linkedin.svg",
+  },
 ];

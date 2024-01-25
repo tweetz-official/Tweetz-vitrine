@@ -1,0 +1,124 @@
+
+.c-hero{
+    position: relative;
+
+    --bottom: var(--c-pagesection__deco-size);
+}
+
+.c-hero__content{
+    // pace grid items centred
+    height: 100%;
+    place-items: center;
+}
+
+.c-hero__text{
+    font-size: calc(20/16 * 1rem);
+    text-wrap: pretty;
+
+    @include breakpoint(medium){
+        margin-bottom: 20%;
+    }
+}
+
+.c-hero__buttons{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+
+    @include breakpoint(medium){
+        gap: 24px;
+    }
+}
+
+.c-hero__illu{
+    position: relative;
+    width: 100%;
+    height: 40lvh;
+    pointer-events: none;
+
+    @include breakpoint(medium){
+        height: 45lvh;
+    }
+
+    @include breakpoint(large){
+        height: 70lvh;
+        max-height: 920px;
+    }
+}
+
+.c-hero__spline{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
+
+    width: 150%;
+    height: 150%;
+
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+
+
+    @include breakpoint(large){
+        left: 70%;
+
+        width: 150%;
+        height: 150%;
+    }
+}
+
+.c-hero__gradient-container{
+    position: absolute;
+    inset: 0;
+    left: -10vw;
+    right: -25vw;
+    bottom: calc( var(--bottom) * -1 - 10lvh);
+    z-index: -1;
+
+    filter: drop-shadow(rgba(255, 255, 255, 0.65) 0px 12px 50px);
+}
+
+.c-hero__gradient{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);    
+    
+    width: 100%;
+    height: 100%;
+
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.c-hero__gradient--shadow{
+    z-index: -1;
+    filter: blur(50px);
+}
+
+.not-loaded{
+    opacity: 0;
+    translate: 0 20px;
+}
+
+.c-hero__content::after{
+    width: 100%;
+    height: 100%;
+}
+
+.c-hero__deco{
+    position: absolute;
+    z-index: -1;
+
+    top: -150px;
+    left: 0;
+    height: 90lvh;
+    width: 100vw;
+
+    opacity: .04;
+
+    & > svg {
+        width: fit-content;
+        height: 100%;
+
+        overflow: visible;
+    }
+}

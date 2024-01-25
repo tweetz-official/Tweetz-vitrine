@@ -1,21 +1,4 @@
 // ---------------------------------
-// breakpoints
-// ---------------------------------
-
-// ---------------------------------
-// variables
-// ---------------------------------
-
-$breakpoints-map: (
-  "xsmall": "all and (min-width: 300px)",
-  "small": "all and (min-width: 500px)",
-  "medium": "all and (min-width: 760px)",
-  "large": "all and (min-width: 1024px)",
-  "+large": "all and (min-width: 1200px)",
-  "xlarge": "all and (min-width: 1440px)",
-) !default;
-
-// ---------------------------------
 // mixin
 // ---------------------------------
 

@@ -1,89 +1,124 @@
       .c-carousel {
-      position: relative;
-      width: 100%;
-      aspect-ratio: 1/0.5;
-  
-      border-radius: calc(10vw + 35px);
-      margin: 0 auto;
-      overflow: hidden;
-      box-sizing: border-box;
-  
-      padding: calc(5vw + 15px);
-      margin: 10vh auto;
-      .c-carousel__gallery {
-        position: absolute;
-        top: 0;
-        left: 0;
-        bottom: 0;
-        right: 0;
-        
-        display: flex;
-        transition: transform 0.5s ease-in-out;
-        z-index: -1;
-      }
-      
-      .c-carousel__item {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
-      
-      .c-carousel__content {
+        position: relative;
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
-  
+        justify-content: flex-end;
+        
         width: 100%;
-        height: 100%;
-        z-index: 2;
-  
-        .c-carousel__subtitle, .c-carousel__title {
-          line-height: 100%;
-          font-family: var(--fontstack-alt);
-          font-weight: 600;
-          margin: 0;
-  
-        }
+        min-height: 50lvh;
+
+        border-radius: calc(var(--c-pagesection__deco-size)/1.5);
+        margin: 0 auto;
+        overflow: hidden;
+        box-sizing: border-box;
+
+        padding: 42px 42px;
+
+        margin-bottom: calc(24px + 2.5vh);
         
-        .c-carousel__subtitle{
-          font-size: clamp(1rem, 4vw, 4rem);
-          max-width: 100%;
-          color: #fcfbff99;
-  
+        @include breakpoint(medium) {
+          padding: calc(3vw + 42px);
+          aspect-ratio: 1/0.5;
+          min-height: unset;
         }
-        .c-carousel__title{
-          font-size: clamp(1.5rem, 10vw, 9rem);
-          color: var(--color-white);
-        }
+
+        &::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          bottom: 0;
+          right: 0;
   
-  
-        .c-carousel__desc{
-          font-size: clamp(1rem, 2vw, 2rem);
-          max-width: 100%;
-          color: var(--color-white);
-          font-style: normal;
-          font-weight: 500;
-          line-height: normal;
-          font-family: var(--fontstack-main);
+          background-color: var(--color-dark);
+          opacity: 0.4;
         }
-      }
-      
-      &__bubbles {
-        position: absolute;
-        bottom: 20px;
-        left: 50%;
-        transform: translateX(-50%);
-        display: flex;
-        
-        .c-carousel__bubble {
+
+        .c-carousel__gallery {
+          position: absolute;
+          top: 0;
+          left: 0;
+          bottom: 0;
+          right: 0;
+
+          display: flex;
+          transition: transform 0.5s ease-in-out;
+          z-index: -1;
+        }
+
+        .c-carousel__item {
+          min-width: 100%;
+          min-height: 100%;
+          object-fit: cover;
+        }
+
+        .c-carousel__content {
+          position: relative;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+
+          width: 100%;
+          height: 100%;
           z-index: 2;
-          width: 12px;
-          height: 12px;
-          border-radius: 50%;
-          background-color: #fff;
-          margin: 0 5px;
-          cursor: pointer;
-  
+
+          .c-carousel__subtitle,
+          .c-carousel__title {
+            line-height: 100%;
+            font-family: var(--fontstack-alt);
+            font-weight: 600;
+            margin: 0;
+
+          }
+
+          .c-carousel__subtitle {
+            font-size: clamp(1rem, 4vw, 4rem);
+            max-width: 100%;
+            color: #fcfbff99;
+
+          }
+
+          .c-carousel__title {
+            font-size: clamp(1.5rem, 10vw, 9rem);
+            color: var(--color-white);
+          }
+
+
+          .c-carousel__desc {
+            font-size: clamp(1rem, 2vw, 1.7rem);
+            max-width: 100%;
+            color: var(--color-white);
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+            font-family: var(--fontstack-main);
+          }
+        }
+
+        &__bubbles {
+          position: absolute;
+          bottom: 20px;
+          left: 50%;
+          transform: translateX(-50%);
+          display: flex;
+          gap: 12px;
+
+          .c-carousel__bubble {
+            z-index: 2;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: var(--color-white);
+            opacity: 0.3;
+            transform-origin: bottom;
+            cursor: pointer;
+
+            transition: opacity 0.5s ease-in-out scale 0.5s ease-in-out;
+
+            &.active {
+              opacity: .7;
+              scale: 1.1;
+            }
+          }
         }
       }
-  }

@@ -1,0 +1,50 @@
+.c-hamburger {
+    position: relative;
+
+    height: 36px;
+    width: 36px;
+    transform: all 0.2s ease-in-out;
+
+    svg {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.c-hamburger__line {
+    transition: all 0.5s ease-in-out;
+    stroke-width: 6px;
+    stroke: var(--color-primary);
+}
+
+.c-hamburger__lineTop {
+    stroke-dasharray: 40 40;
+    stroke-dashoffset: 25;
+}
+
+.c-hamburger__lineBottom {
+    stroke-dasharray: 40 40;
+    stroke-dashoffset: 60;
+}
+
+.c-hamburger__lineMid {
+    stroke-dasharray: 40 40;
+}
+
+.has-menu {
+    .c-hamburger svg .c-hamburger__lineTop {
+        stroke-dashoffset: 0;
+        transform-origin: left;
+        transform: rotateZ(45deg) translate(-7px, -5px);
+    }
+    
+    .c-hamburger svg .c-hamburger__lineMid {
+        stroke-dashoffset: 40;
+    }
+    
+    .c-hamburger svg .c-hamburger__lineBottom {
+        stroke-dashoffset: 0;
+        transform-origin: left;
+        transform: rotateZ(-45deg) translate(-5px, 5px);
+    }
+}

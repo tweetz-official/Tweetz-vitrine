@@ -5,80 +5,57 @@
 .c-mobilemenu {
   display: none;
 
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 100;
 
   box-sizing: border-box;
   width: 100%;
-  min-height: 100vh;
+  min-height: 100lvh;
 
-  padding: calc(42 / 16 * 1rem) calc(24 / 16 * 1rem);
+  padding: calc(24 / 16 * 1rem);
 
-  background-color: var(--color-brand5);
+  background-color: var(--color-white);
+
+  .c-socialmedia{
+    animation: slideIn 0.3s ease-out .3s both;
+  }
+
 }
 
 .c-mobilemenu.is-active {
-  display: block;
+  display: flex;
 
   @include breakpoint(medium) {
     display: none;
   }
 }
 
-.c-mobilemenu__actions {
-  margin: 0;
-  padding: 0;
-  text-align: right;
-}
-
-.c-mobilemenu__close {
-  cursor: pointer;
-  background-color: rgba(0, 0, 0, 0);
-  padding: 0;
-  border: none;
-
-  & svg {
-    display: block;
-  }
-}
-
 .c-mobilenav {
+  margin-top: 40vh;
   list-style: none;
-  margin: calc(120 / 16 * 1rem) 0 0;
   padding: 0;
+  gap: calc(24 / 16 * 1rem);
 
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  align-items: stretch;
+  justify-content: center;
+  align-items: center;
 }
 
 .c-mobilenav__link {
-  display: block;
-  padding: calc(6 / 16 * 1rem) 0;
-
-  font-weight: 600;
   font-size: calc(22 / 16 * 1rem);
-  line-height: 1.36;
-  font-family: var(--fontstack-alt);
-  text-decoration: none;
-  color: var(--color-gray8);
-
-  transition: opacity 0.2s ease-in-out;
 
   &:hover,
   &:focus {
     color: var(--color-gray8);
     opacity: 0.66;
   }
-}
-
-.c-mobilenav__link.is-active,
-.c-mobilenav__link.is-active:hover,
-.c-mobilenav__link.is-active:focus {
-  color: var(--color-white);
-  opacity: 1;
 }
 
 // -------------------------------------
@@ -88,7 +65,7 @@
 @keyframes slideIn {
   0% {
     opacity: 0;
-    transform: translate3d(-30px, 0, 0);
+    transform: translate3d(0, 30px, 0);
   }
   100% {
     opacity: 1;
@@ -98,6 +75,6 @@
 
 .c-mobilenav {
   .is-active & {
-    animation: slideIn 0.15s ease-out both;
+    animation: slideIn 0.3s ease-out both;
   }
 }
