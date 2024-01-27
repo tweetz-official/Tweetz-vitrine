@@ -16,11 +16,7 @@
 		<!-- CSS -->
 		<link rel="stylesheet" href="/assets/css/main.css">
 
-		<!-- Feed -->
-		<link rel="alternate" href="/feed.xml" title="Tweetz" type="application/atom+xml">
-
 		<!-- Open Graph -->
-		<meta property="og:type" content="article"/>
 		<meta property="og:url" content="{{ site.url ~ page.url }}"/>
 		<meta property="og:title" content="{{ metaTitle }}"/>
 		<meta property="og:image" content="{{ metaImage }}"/>
@@ -34,6 +30,7 @@
 		<script type="module" src="https://unpkg.com/@splinetool/viewer@1.0.29/build/spline-viewer.js"></script>
 	</head>
 	<body>
+
 		{% include "partials/siteheader.njk" %}
 
 		{% block content %}{% endblock %}
