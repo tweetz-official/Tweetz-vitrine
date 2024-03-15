@@ -106,6 +106,10 @@
     @include breakpoint(medium) {
         font-size: calc(18 / 16 * 1rem);
     }
+
+    p {
+        margin-bottom: 12px;
+    }
 }
 
 .c-image-text__media-deco {

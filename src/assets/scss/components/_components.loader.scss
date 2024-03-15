@@ -1,0 +1,83 @@
+.c-loader {
+    display: none;
+}
+
+.js-enabled {
+    .c-loader {
+        display: flex;
+    }
+}
+
+
+.c-loader {
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    inset: 0;
+
+    transition: opacity .1s ease-in;
+
+    background-color: var(--color-white);
+    z-index: 1000;
+
+    p{
+        font-weight: 500;
+        color: var(--color-primary);
+        opacity: .7;
+        white-space: nowrap;
+        text-align: center;
+
+        span{
+            animation: blink 1s infinite;
+        }
+
+        :nth-child(2){
+            animation-delay: .2s;
+        }
+        :nth-child(3){
+            animation-delay: .4s;
+        }
+
+    }
+}
+
+.c-loader--hide {
+    opacity: 0;
+}
+
+.c-loader__content{
+    width: 40vh;
+    max-width: 100px;
+    aspect-ratio: 1/1;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.c-loader__content svg {
+    animation: fly 1s cubic-bezier(0.000, 0.280, 0.385, 1.000);
+}
+
+@keyframes fly {
+    0% {
+        transform: translate3d(0, 25px, 0) rotate(-5deg);
+    }
+    100% {
+        transform: translate3d(0, 0, 0) rotate(0);
+    }
+}
+
+@keyframes blink {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    } 
+}

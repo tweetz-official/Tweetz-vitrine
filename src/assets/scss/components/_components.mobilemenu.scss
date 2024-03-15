@@ -16,7 +16,7 @@
 
   box-sizing: border-box;
   width: 100%;
-  min-height: 100lvh;
+  min-height: 100dvh;
 
   padding: calc(24 / 16 * 1rem);
 
@@ -37,7 +37,7 @@
 }
 
 .c-mobilenav {
-  margin-top: 40vh;
+  margin-top: 40svh;
   list-style: none;
   padding: 0;
   gap: calc(24 / 16 * 1rem);

@@ -12,6 +12,12 @@ permalink: index.html
 
 
 {% block content %}
+    <div class="c-loader js-loader">
+        <div class="c-loader__content">
+            {% include "svg/logo/logo-icon.svg" %}
+            <p>Fly with us<span>.</span><span>.</span><span>.</span></p>
+        </div>
+    </div>
     <main>
         {# Hero #}
         <section class="c-hero">
@@ -31,10 +37,10 @@ permalink: index.html
                         </div>
                     </div>
                     <div class="c-hero__illu">
-                        <spline-viewer loading="eager" class="c-hero__spline js-spline js-spline--phones" url="https://prod.spline.design/ALwGgs47WruzU4wp/scene.splinecode"></spline-viewer>
+                        <spline-viewer loading="eager" loading-anim-type="none" class="c-hero__spline js-spline js-spline--phones" url="https://prod.spline.design/ALwGgs47WruzU4wp/scene.splinecode"></spline-viewer>
                         <div class="c-hero__gradient-container">
-                            <spline-viewer loading="eager" class="c-hero__gradient js-spline js-spline--gradient" url="https://prod.spline.design/j2Y6LkRM57uXpjNS/scene.splinecode"></spline-viewer>
-                            <spline-viewer loading="eager" class="c-hero__gradient c-hero__gradient--shadow js-spline js-spline--gradient" url="https://prod.spline.design/j2Y6LkRM57uXpjNS/scene.splinecode"></spline-viewer>
+                            <spline-viewer loading="eager" loading-anim-type="none" class="c-hero__gradient js-spline js-spline--gradient" url="https://prod.spline.design/j2Y6LkRM57uXpjNS/scene.splinecode"></spline-viewer>
+                            <spline-viewer loading="eager" loading-anim-type="none" class="c-hero__gradient c-hero__gradient--shadow js-spline js-spline--gradient" url="https://prod.spline.design/j2Y6LkRM57uXpjNS/scene.splinecode"></spline-viewer>
                         </div>
                     </div>
                 </div>
@@ -48,7 +54,7 @@ permalink: index.html
                 <div class="c-image-text l-grid">
                     <div class="c-image-text__media">
                         <div class="c-image-text__image-container">
-                            <img class="o-fluidimage c-image-text__image" src="/assets/img/img-text/phone.jpg" alt="Homme scrollant sur son téléphone">
+                            <img loading="lazy" class="o-fluidimage c-image-text__image" src="/assets/img/img-text/phone.jpg" alt="Homme scrollant sur son téléphone">
                         </div>
                     </div>
                     <div class="c-image-text__text">
@@ -62,7 +68,7 @@ permalink: index.html
             <div class="c-image-text c-image-text--invert l-grid">
                 <div class="c-image-text__media">
                     <div class="c-image-text__image-container">
-                        <img class="o-fluidimage c-image-text__image" src="/assets/img/img-text/girl-coocking.jpg" alt="Femme cuisinant en se filmant">
+                        <img loading="lazy" class="o-fluidimage c-image-text__image" src="/assets/img/img-text/girl-coocking.jpg" alt="Femme cuisinant en se filmant">
                     </div>
                 </div>
                 <div class="c-image-text__text">
@@ -113,7 +119,7 @@ permalink: index.html
                         </div>
                     </div> #}
                     <div class="c-image-text__image-container">
-                        <img class="o-fluidimage c-image-text__image" src="/assets/img/img-text/sportif-coach.jpg" alt="Fille coach sportif">
+                        <img loading="lazy" class="o-fluidimage c-image-text__image" src="/assets/img/img-text/sportif-coach.jpg" alt="Fille coach sportif">
                     </div>
                 </div>
                 <div class="c-image-text__text">
@@ -156,7 +162,7 @@ permalink: index.html
                 </div>
 
                 <div class="c-image-cta">
-                    <img class="c-image-cta__image" src="/assets/img/image-cta/home.jpg" alt="Femme souriant à la camera"/>
+                    <img  loading="lazy" class="c-image-cta__image" src="/assets/img/image-cta/home.jpg" alt="Femme souriant à la camera"/>
                     <div class="c-image-cta__content">
                         <h2 class="c-image-cta__title">Prêt à créer ?</h2>
                         <p class="c-image-cta__desc">Vous êtes un créateur passionné ? Découvrez notre espace dédié aux créateurs et partagez votre talent avec le monde entier.</p>

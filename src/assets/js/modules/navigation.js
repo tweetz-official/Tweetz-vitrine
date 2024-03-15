@@ -16,6 +16,7 @@ const init = () => {
         event.preventDefault();
         mobileMenu.classList.toggle(classActive);
         elBody.classList.toggle(classBodyScroll);
+        document.documentElement.classList.toggle(classBodyScroll);
       },
       false
     );

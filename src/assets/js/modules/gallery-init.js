@@ -1,6 +1,13 @@
 //init-cards.js
 //  TODO - dynamic state only if window is smaller than the gallery
-const allCardGalleries = document.querySelectorAll(".c-gallery-section__gallery");
+const allCardGalleries = document.querySelectorAll(
+    ".c-gallery-section__gallery"
+);
+
+const cardSpacing = 20;
+let cardWidth = 300;
+let galleryWidth;
+let scrollOffset = cardWidth + cardSpacing * 2;
 
 function addFooter(parent, gallery) {
     // add footer to the gallery
@@ -15,7 +22,6 @@ function addFooter(parent, gallery) {
     const nextButton = parent.querySelector(".next");
     const footer = parent.querySelector(".c-gallery-section__footer");
 
-    let scrollOffset = cardWidth + 40;
 
     nextButton.addEventListener("click", () => {
         let newCurrentScrollPosition =
@@ -33,7 +39,7 @@ function addFooter(parent, gallery) {
         );
 
         gallery.style.transform = `translate3d(${newCurrentScrollPosition}px, 0, 0)`;
-        gallery.style.transition = "transform 0.5s var(--ease-in-out)";
+        gallery.style.transition = "transform 0.5s ease-in-out";
         gallery.dataset.scrollPosition = -newCurrentScrollPosition;
     });
 
@@ -50,7 +56,7 @@ function addFooter(parent, gallery) {
         newCurrentScrollPosition = Math.max(potentialScrollPosition, 0);
 
         gallery.style.transform = `translate3d(-${newCurrentScrollPosition}px, 0, 0)`;
-        gallery.style.transition = "transform 0.5s var(--ease-in-out)";
+        gallery.style.transition = "transform 0.5s ease-in-out";
         gallery.dataset.scrollPosition = newCurrentScrollPosition;
     });
 
@@ -62,19 +68,20 @@ const init = () => {
     //  make big lists scrollable
     allCardGalleries.forEach((gallery) => {
         // if more than two children, make changes to the parent
-        const parent = gallery.closest(".c-gallery-section");
-        const scroll = gallery.closest(".js-gallery-section__scroll");
+        const parent = gallery.parentElement;
 
         if (parent.classList.contains("c-gallery-section--footer")) {
             addFooter(parent, gallery);
         }
 
-        let galleryWidth = gallery.offsetWidth;
-        let cardWidth = gallery.firstElementChild.offsetWidth;
+        galleryWidth = gallery.offsetWidth;
+        cardWidth = gallery.firstElementChild.offsetWidth;
+        scrollOffset = cardWidth + cardSpacing * 2;
 
         const updateSizes = () => {
             galleryWidth = gallery.offsetWidth;
             cardWidth = gallery.firstElementChild.offsetWidth;
+            scrollOffset = cardWidth + cardSpacing * 2;
         };
 
         updateSizes();
@@ -123,11 +130,29 @@ const init = () => {
             if (!isDragging) return;
             isDragging = false;
 
-            // Store the final scroll position in the dataset
-            gallery.dataset.scrollPosition = currentTranslateX;
+            const minDragDistance = cardWidth + (cardSpacing * 2);
 
-            // Re-enable the transition after dragging
-            gallery.style.transition = "transform 0.5s var(--ease-in-out)";
+            // Adjust currentTranslateX to align with card width boundaries
+            let finalScrollPosition = currentTranslateX;
+            let dragDistance = initialScrollPosition - currentTranslateX;
+
+            // Check if the drag distance is less than a card's width and adjust accordingly
+            if (Math.abs(dragDistance) < minDragDistance) {
+                if (dragDistance > 0) {
+                    finalScrollPosition = initialScrollPosition - minDragDistance;
+                    gallery.style.transition =  "transform 0.5s ease-in-out";
+                } else {
+                    finalScrollPosition = initialScrollPosition + minDragDistance;
+                    gallery.style.transition = "transform 0.5s ease-in-out";
+                }
+            }
+
+            finalScrollPosition = Math.max(Math.min(finalScrollPosition, galleryWidth - scrollOffset), 0);
+
+            // Update the gallery's transform and dataset
+            gallery.style.transform = `translate3d(-${finalScrollPosition}px, 0, 0)`;
+            gallery.dataset.scrollPosition = finalScrollPosition;
+            gallery.style.transition = "transform 0.5s ease-in-out";
         }
     });
 };
