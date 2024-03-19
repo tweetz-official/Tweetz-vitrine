@@ -1,6 +1,7 @@
 //TODO paralax effect in .img__container
 
 .c-image-text {
+    height: fit-content;
     grid-template-areas:
         "image"
         "text";
@@ -102,6 +103,7 @@
 
 .c-image-text__text {
     grid-area: text;
+    width: 100%;
 
     @include breakpoint(medium) {
         font-size: calc(18 / 16 * 1rem);
