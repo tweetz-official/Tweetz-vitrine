@@ -3,27 +3,27 @@
 // -------------------------------------
 
 :root {
-  --c-pagesection__deco-size: calc(10vw + 35px);
+  --c-pagesection__deco-size: calc(5vw + 35px);
 
   @include breakpoint(xlarge) {
-    --c-pagesection__deco-size: calc(192px + 35px);
+    --c-pagesection__deco-size: calc(96px + 35px);
   }
 }
 
 .c-pagesection {
+  --padding : calc(60 / 16 * 1rem);
+
   position: relative;
-  padding-top: calc(60 / 16 * 1rem);
-  padding-bottom: calc(60 / 16 * 1rem);
+  padding-top: var(--padding);
+  padding-bottom: var(--padding);
   background-color: var(--color-white);
 
   @include breakpoint(medium) {
-    padding-top: calc(84 / 16 * 1rem);
-    padding-bottom: calc(84 / 16 * 1rem);
+    --padding : calc(84 / 16 * 1rem);
   }
 
   @include breakpoint(large) {
-    padding-top: calc(96 / 16 * 1rem);
-    padding-bottom: calc(96 / 16 * 1rem);
+    --padding: calc(96 / 16 * 1rem);
   }
 
 
@@ -55,7 +55,7 @@
 
 .c-pagesection--deco{
   border-radius: 0 var(--c-pagesection__deco-size) var(--c-pagesection__deco-size) 0;
-  padding: calc( var(--c-pagesection__deco-size) + 24px )0;
+  padding: calc( var(--c-pagesection__deco-size) + var(--padding) ) 0;
 }
 
 .c-pagesection--deco + .c-pagesection--dark{
