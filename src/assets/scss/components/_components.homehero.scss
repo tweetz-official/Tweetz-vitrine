@@ -1,19 +1,21 @@
 
 .c-hero{
     position: relative;
-
     --bottom: var(--c-pagesection__deco-size);
 }
 
 .c-hero__content{
-    // pace grid items centred
+    min-height: 72lvh;
     height: 100%;
-    place-items: center;
+
+    row-gap: 24px;
 }
 
 .c-hero__text{
     font-size: calc(20/16 * 1rem);
     text-wrap: pretty;
+
+    align-self: center;
 
     @include breakpoint(medium){
         margin-bottom: 20%;
@@ -31,13 +33,16 @@
 }
 
 .c-hero__video{
-    --height: 40lvh;
-    
     position: relative;
     aspect-ratio: 1/1.6;
-    height: var(--height);
+    width: fit-content;
+
+    translate: 0 var(--c-pagesection__deco-size);
+
+    align-self: flex-end;
+    justify-self: center;
     
-    border-radius: calc(var(--height) * 0.123) calc(var(--height) * 0.123) 0 0;
+    border-radius: 19% 19% 0 0 / 12.3% 12.3% 0 0;
     overflow: hidden;
     
     isolation: isolate;
@@ -47,14 +52,12 @@
     
     pointer-events: none;
 
-    @include breakpoint(medium){
-        --height: 45lvh;
-        translate: 10% 0;
+    @include breakpoint(large){
+        max-height: 920px;
     }
 
-    @include breakpoint(large){
-        --height: 70lvh;
-        max-height: 920px;
+    @include breakpoint(xlarge){
+        translate: 0 0;
     }
 }
 
