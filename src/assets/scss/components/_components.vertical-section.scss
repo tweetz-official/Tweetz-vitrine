@@ -2,6 +2,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
     gap: var(--gap);
 }
 
@@ -12,12 +13,14 @@
 }
 
 .c-vertical-section__titles{
-    h2, h3, h4, h5{
+    width: 100%;
+
+    p{
         text-align: center;
     }
-
-    .c-h2{
-        margin-bottom: 0;
+    
+    h2, h3, h4, h5{
+        text-align: center;
     }
 }
 

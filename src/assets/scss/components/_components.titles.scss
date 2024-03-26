@@ -38,17 +38,18 @@
 }
 
 .c-h2 {
-  font-size: calc(26 / 16 * 1rem);
+  font-size: calc(36 / 16 * 1rem);
   margin-bottom: calc(18 / 16 * 1rem);
   font-weight: 550;
+  line-height: 1;
   letter-spacing: calc(1em / 100 * -3);
 
   @include breakpoint(medium) {
-    font-size: calc(31 / 16 * 1rem);
+    font-size: calc(42 / 16 * 1rem);
   }
 
   @include breakpoint(large) {
-    font-size: calc(37 / 16 * 1rem);
+    font-size: calc(54 / 16 * 1rem);
   }
 }
 
