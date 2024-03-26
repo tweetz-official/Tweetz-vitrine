@@ -9,24 +9,26 @@
 .c-h5 {
   font-weight: 600;
   line-height: 1.2;
+  letter-spacing: calc(1em / 100 * -3);
+
   font-family: var(--fontstack-alt);
   color: var(--color-dark);
-
-  span{
-    color: var(--color-primary);
-  }
 }
 
 .c-h1 {
-  font-size: clamp(calc(31 / 16 * 1rem) , 3.5vw, calc(54 / 16 * 1rem));
+  font-size: clamp(calc(42 / 16 * 1rem) , 5vw, calc(72/ 16 * 1rem));
   margin-bottom: calc(18 / 16 * 1rem);
+  line-height: 1;
   
   // leeter spacing - 3% of font-size
-  letter-spacing: calc(1em / 100 * -3);
+  letter-spacing: calc(1em / 100 * -4);
+
+  color: var(--color-primary);
 
   & span {
     display: block;
     color: var(--color-primary);
+    color: var(--color-dark);
     font-size: clamp(calc(42 / 16 * 1rem) , 5.5vw, calc(82 / 16 * 1rem));
   }
 }
@@ -39,7 +41,7 @@
   font-size: calc(26 / 16 * 1rem);
   margin-bottom: calc(18 / 16 * 1rem);
   font-weight: 550;
-  letter-spacing: calc(1em / 100 * -2);
+  letter-spacing: calc(1em / 100 * -3);
 
   @include breakpoint(medium) {
     font-size: calc(31 / 16 * 1rem);
@@ -53,7 +55,6 @@
 .c-h3 {
   font-size: calc(22 / 16 * 1rem);
   margin-bottom: calc(18 / 16 * 1rem);
-  letter-spacing: calc(1em / 100 * -2);
 
   @include breakpoint(medium) {
     font-size: calc(26 / 16 * 1rem);
@@ -68,7 +69,6 @@
 .c-h4 {
   font-size: calc(18 / 16 * 1rem);
   margin-bottom: calc(18 / 16 * 1rem);
-  letter-spacing: calc(1em / 100 * -2);
   
   @include breakpoint(medium) {
     font-size: calc(22 / 16 * 1rem);

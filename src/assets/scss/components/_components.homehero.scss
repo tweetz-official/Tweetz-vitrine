@@ -4,6 +4,7 @@
     --bottom: var(--c-pagesection__deco-size);
 }
 
+
 .c-hero__content{
     min-height: 72lvh;
     height: 100%;
@@ -16,10 +17,24 @@
     text-wrap: pretty;
 
     align-self: center;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
 
     @include breakpoint(medium){
-        margin-bottom: 20%;
+        margin-bottom: 10vh;
     }
+}
+
+.c-hero__logo{
+    margin-bottom: 6px;
+}
+.c-hero__logo > svg{
+    fill: var(--color-dark);
+}
+
+.c-hero__description{
+    font-size: calc(22/16 * 1rem);
 }
 
 .c-hero__buttons{
@@ -48,7 +63,7 @@
     isolation: isolate;
     z-index: -1;
     
-    box-shadow: 0 41px 80px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 41px 80px rgba(0, 0, 0, 0.3);
     
     pointer-events: none;
 

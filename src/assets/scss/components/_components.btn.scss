@@ -11,6 +11,7 @@
     font-weight: 400;
     text-decoration: none;
     
+    will-change: transform;
     
     color: var(--color-white);
     background: var(--color-primary);
@@ -24,7 +25,7 @@
     &:hover,
     &:focus {
         filter: var(--brand-drop-shadow--hover);
-        transform: scale(1.05);
+        transform: scale(1.025);
     }
 
 }

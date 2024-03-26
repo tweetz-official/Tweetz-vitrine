@@ -16,8 +16,6 @@
   @include breakpoint(medium) {
     justify-content: flex-end;
   }
-
-
 }
 
 .c-socialmedia__link {
@@ -29,6 +27,8 @@
   height: 42px;
   padding: 9px;
   box-sizing: border-box;
+
+  will-change: scale;
 
   background-color: var(--color-primary);
   border-radius: 50%;
