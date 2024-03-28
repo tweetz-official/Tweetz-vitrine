@@ -86,14 +86,14 @@
 }
 
 .c-h5 {
-  font-size: calc(18 / 16 * 1rem);
-  margin-bottom: calc(6 / 16 * 1rem);
+  font-size: calc(22 / 16 * 1rem);
+  margin-bottom: calc(8 / 16 * 1rem);
   color: var(--color-secondary);
   font-family: var(--fontstack-main);
   font-weight: 400;
 
   @include breakpoint(large) {
-    font-size: calc(22 / 16 * 1rem);
+    font-size: calc(26 / 16 * 1rem);
   }
 }
 
