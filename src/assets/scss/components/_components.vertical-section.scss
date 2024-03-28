@@ -18,6 +18,11 @@
     p{
         text-align: center;
         text-wrap: pretty;
+        font-size: calc(18 / 16 * 1rem);
+
+        @include breakpoint(medium){
+            font-size: calc(20 / 16 * 1rem);
+        }
     }
     
     h2, h3, h4, h5{
