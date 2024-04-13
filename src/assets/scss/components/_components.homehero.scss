@@ -10,6 +10,12 @@
     height: 100%;
 
     row-gap: 24px;
+
+    margin-top: 10vh;
+
+    @include breakpoint(medium){
+        margin-top: 0;
+    }
 }
 
 .c-hero__text{

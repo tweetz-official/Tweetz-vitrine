@@ -19,6 +19,21 @@
   @include breakpoint(xlarge) {
     padding: calc(60 / 16 * 1rem) 0;
   }
+
+
+  .c-logo {
+    
+    .c-logo__text{
+      display: none;
+    }
+
+    @include breakpoint(medium) {
+      .c-logo__text{
+        display: block;
+      }
+    }
+    
+  }
 }
 
 .c-siteheader__content {
