@@ -3,12 +3,12 @@
 .c-image-text {
     height: fit-content;
     grid-template-areas:
-        "image"
-        "text";
+        "text"
+        "image";
     place-items: center;
     gap: var(--gap);
 
-    --move-gap: calc( var(--l-container__padding) + 1px);
+    --move-gap: calc(var(--l-container__padding) + 1px);
 
 
     @include breakpoint(medium) {
@@ -45,11 +45,11 @@
     }
 }
 
-.c-image-text--protect-image{
+.c-image-text--protect-image {
 
     gap: var(--gap);
-    
-    .c-image-text__media{
+
+    .c-image-text__media {
         transform: translate3d(0, 0, 0);
         aspect-ratio: auto;
 
@@ -105,7 +105,7 @@
     grid-area: text;
     width: 100%;
 
-    .c-link{
+    .c-link {
         font-size: calc(18 / 16 * 1rem);
     }
 
@@ -113,21 +113,21 @@
         margin-bottom: 12px;
         font-size: 18px;
     }
-    
+
     @include breakpoint(medium) {
 
         p {
             margin-bottom: 12px;
             font-size: calc(22 / 16 * 1rem);
         }
-        
-        
-        .c-link{
+
+
+        .c-link {
             font-size: calc(22 / 16 * 1rem);
         }
     }
 
-    
+
 }
 
 .c-image-text__media-deco {
