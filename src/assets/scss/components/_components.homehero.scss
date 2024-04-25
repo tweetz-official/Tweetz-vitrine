@@ -55,7 +55,7 @@
 
 .c-hero__video{
     position: relative;
-    aspect-ratio: 1/1.6;
+    aspect-ratio: 902/1440;
     width: fit-content;
     max-width: 500px;
 
@@ -70,7 +70,8 @@
     isolation: isolate;
     z-index: -1;
     
-    box-shadow: 0 41px 80px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 80px 80px rgba(0, 0, 0, 0.3);
+    background-color: #F2F1F5;
     
     pointer-events: none;
 

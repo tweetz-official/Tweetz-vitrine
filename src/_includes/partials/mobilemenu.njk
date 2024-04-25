@@ -19,7 +19,7 @@
         {% endif %}
       {% endif %}
       <li class="c-mainnav__item">
-        <a class="c-mainnav__link {{ currentClass }} {{ additionnalClasses }}" {{ currentAria }} href="{{ navItem.url }}">{{ navItem.label }}</a>
+        <a class="c-mainnav__link {{ currentClass }} {{ additionnalClasses }}" {{ currentAria }} href="{{ navItem.url }}" title="{{ navItem.label }}">{{ navItem.label }}</a>
       </li>
       {% if loop.last %}
       </ul>
@@ -31,7 +31,7 @@
     <ul class="c-socialmedia">
       {% for item in socialmedia %}
         <li class="c-socialmedia__item">
-          <a class="c-socialmedia__link" href="{{ item.url }}" aria-label="{{ item.name }}">{% include "svg/socials/" ~ item.icon %}</a>
+          <a class="c-socialmedia__link" href="{{ item.url }}" aria-label="{{ item.name }} title="{{ item.name }}">{% include "svg/socials/" ~ item.icon %}</a>
         </li>
       {% endfor %}
     </ul>
