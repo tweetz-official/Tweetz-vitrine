@@ -1,3 +1,5 @@
+const site = require('./site');
+
 module.exports = [
     {   
         label: "Je suis créateur", 
@@ -5,9 +7,9 @@ module.exports = [
         url: "/creator/",
     },
     {   
-        label: "Rejoindre la beta", 
-        trigger: "beta", 
-        url: "/#beta",
+        label: "Démarrer",
+        trigger: "App",
+        url: site.urlApp,
         isPrimary: true,
     },
     
