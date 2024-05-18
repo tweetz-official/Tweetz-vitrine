@@ -37,7 +37,14 @@
 .c-btn--secondary {
     border-color: var(--color-primary);
     color: var(--color-primary);
-    background: transparent;
+    background: var(--color-white);
+    filter: unset;
+
+
+    &:hover,
+    &:focus {
+        filter: unset;
+    }
 }
 
 .c-btn--small {

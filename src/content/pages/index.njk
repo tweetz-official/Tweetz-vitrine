@@ -6,7 +6,7 @@ permalink: index.html
 {% set activeSection = "home" %}
 {% set metaTitle = "Welcome" %}
 {% set metaDescription = "Tweetz description" %}
-{% set metaImage = site.url ~ "/assets/img/metaimg.jpg" %}
+{% set metaImage = site.url ~ "./assets/img/metaimg.jpg" %}
 
 {% block content %}
     <div class="c-loader js-loader">
@@ -33,14 +33,14 @@ permalink: index.html
                         <p class="c-hero__description">Faites revivre le gazouillis et apportez votre créativité !</p>
 
                         <div class="c-hero__buttons">
-                            <a href="/#beta" class="c-btn c-btn--secondary">Rejoindre la beta</a>
+                            <a href="{{ site.urlApp }}" class="c-btn c-btn--secondary">Démarrer</a>
                             {# <a href="mailto:{{ site.email }}" class="c-btn c-btn--secondary">Nous contacter</a> #}
                         </div>
                     </div>
                     <div class="c-hero__video">
-                        <video class="c-hero__video-element" autoplay="" muted="" loop="" playsinline="" poster="assets/img/hero/hero-img-v2.jpg" >
-                            <source src="assets/img/hero/hero-video-v2.webm" type="video/webm">
-                            <source src="assets/img/hero/hero-video-v2.mp4" type="video/mp4">
+                        <video class="c-hero__video-element" autoplay="" muted="" loop="" playsinline="" poster="./assets/img/hero/hero-img-v2.jpg" >
+                            <source src="./assets/img/hero/hero-video-v2.webm" type="video/webm">
+                            <source src="./assets/img/hero/hero-video-v2.mp4" type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
                     </div>
@@ -53,14 +53,14 @@ permalink: index.html
                     <div class="c-image-text c-image-text--protect-image l-grid">
                         <div class="c-image-text__media">
                             <div class="c-image-text__image-container">
-                                <img loading="lazy" class="o-fluidimage c-image-text__image" src="/assets/img/img-text/connection-page.jpg" alt="Connextion page screenshot">
+                                <img loading="lazy" class="o-fluidimage c-image-text__image" src="./assets/img/img-text/connection-page.jpg" alt="Connextion page screenshot">
                             </div>
                         </div>
                         <div class="c-image-text__text">
                             <h2 class="c-h2">Votre premier envol sur Tweetz</h2>
                             <p>Inscrivez-vous gratuitement en toute simplicité. Développez votre influence en créant du contenu qui vous ressemble.
                              </p>
-                            <a href="#beta" class="c-link">Rejoindre la beta {% include "svg/arrow-right.svg" %} </a>
+                            <a href="{{site.urlApp}}" class="c-link">Démarrer {% include "svg/arrow-right.svg" %} </a>
 
                         </div>
                     </div>
@@ -68,7 +68,7 @@ permalink: index.html
                     <div class="c-image-text c-image-text--invert l-grid">
                         <div class="c-image-text__media ">
                             <div class="c-image-text__image-container">
-                                <img loading="lazy" class="o-fluidimage c-image-text__image" src="/assets/img/img-text/girl-coocking.jpg" alt="Femme cuisinant en se filmant">
+                                <img loading="lazy" class="o-fluidimage c-image-text__image" src="./assets/img/img-text/girl-coocking.jpg" alt="Femme cuisinant en se filmant">
                             </div>
                         </div>
                         <div class="c-image-text__text">
@@ -83,7 +83,7 @@ permalink: index.html
                     <div class="c-image-text c-image-text--protect-image l-grid">
                         <div class="c-image-text__media">
                             <div class="c-image-text__image-container">
-                                <img class="o-fluidimage c-image-text__image" src="/assets/img/post.jpg" alt="Post screenshot">
+                                <img class="o-fluidimage c-image-text__image" src="./assets/img/post.jpg" alt="Post screenshot">
                             </div>
                          </div>
                         <div class="c-image-text__text">
@@ -95,13 +95,13 @@ permalink: index.html
                     <div class="c-image-text c-image-text--invert l-grid">
                         <div class="c-image-text__media">
                             <div class="c-image-text__image-container">
-                                <img loading="lazy" class="o-fluidimage c-image-text__image" src="/assets/img/img-text/fan.jpg" alt="Femme sur son téléphone">
+                                <img loading="lazy" class="o-fluidimage c-image-text__image" src="./assets/img/img-text/fan.jpg" alt="Femme sur son téléphone">
                             </div>
                         </div>
                         <div class="c-image-text__text">
                             <h2 class="c-h2">Atteignez chaque fan à chaque Tweetz</h2>
                             <p>Peu importe ce que vous faites, soyez simplement vous-même. Votre public est là pour vous, et vous seul.</p>
-                            <a href="/" class="c-link">Je suis créateur {% include "svg/arrow-right.svg" %}
+                            <a href="`/creator" class="c-link">Je suis créateur {% include "svg/arrow-right.svg" %}
                             </a>
                         </div>
                     </div>
@@ -115,14 +115,14 @@ permalink: index.html
                     <div class="c-image-text l-grid">
                         <div class="c-image-text__media">
                             <div class="c-image-text__image-container">
-                                <img loading="lazy" class="o-fluidimage c-image-text__image" src="/assets/img/img-text/sportif-coach.jpg" alt="Fille coach sportif">
+                                <img loading="lazy" class="o-fluidimage c-image-text__image" src="./assets/img/img-text/sportif-coach.jpg" alt="Fille coach sportif">
                             </div>
                         </div>
                         <div class="c-image-text__text">
                             <h2 class="c-h2">Qui sommes-nous ?</h2>
                             <p>Tweetz est une nouvelle destination offrant aux utilisateurs et aux créateurs en tout genre l’opportunité de façonner une communauté à leur image. <br>Notre mission est d'inspirer la créativité et de transformer votre passion en une activité durable.
                             </p>
-                            <a href="/" class="c-link">Je suis créateur {% include "svg/arrow-right.svg" %}
+                            <a href="/creator" class="c-link">Je suis créateur {% include "svg/arrow-right.svg" %}
                             </a>
                         </div>
                     </div>
@@ -138,7 +138,7 @@ permalink: index.html
                         <div class="c-vertical-section__titles l-container--narrow">
                             <h2 class="c-h2">Boostez votre croissance</h2>
                             <p>Tweetz favorise non seulement le développement créatif, mais aussi votre activité professionnelle. Accédez à des analyses détaillées sur votre audience, découvrez des outils de gestion pour vous aider à construire une activité florissante.</p>
-                            <a href="/#beta" class="c-btn">Rejoindre la beta</a>
+                            <a href="{{ site.urlApp }}" class="c-btn">Démarrer</a>
                         </div>
                     </div>
 
@@ -161,7 +161,7 @@ permalink: index.html
                         </div>
 
                         <div class="c-image-cta">
-                            <img  loading="lazy" class="c-image-cta__image" src="/assets/img/image-cta/home.jpg" alt="Femme souriant à la camera"/>
+                            <img  loading="lazy" class="c-image-cta__image" src="./assets/img/image-cta/home.jpg" alt="Femme souriant à la camera"/>
                             <div class="c-image-cta__content">
                                 <h2 class="c-image-cta__title">Prêt à créer ?</h2>
                                 <p class="c-image-cta__desc">Vous êtes un créateur passionné ? Découvrez notre espace dédié aux créateurs et partagez votre talent avec le monde entier.</p>
