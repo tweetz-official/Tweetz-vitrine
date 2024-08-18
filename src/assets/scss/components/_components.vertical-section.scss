@@ -1,4 +1,4 @@
-.c-vertical-section{
+.c-vertical-section {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -6,39 +6,54 @@
     gap: var(--gap);
 }
 
-.c-vertical-section--no-margin{
-    h2, h3, h4, h5{
+.c-vertical-section--no-margin {
+
+    h2,
+    h3,
+    h4,
+    h5 {
         margin-bottom: 0;
     }
 }
 
-.c-vertical-section__titles{
+.c-vertical-section__titles {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
     max-width: 840px;
 
-    p{
+    p {
         text-align: center;
         text-wrap: pretty;
         font-size: calc(18 / 16 * 1rem);
 
-        @include breakpoint(medium){
+        @include breakpoint(medium) {
             font-size: calc(20 / 16 * 1rem);
         }
     }
-    
-    h2, h3, h4, h5{
+
+    h2,
+    h3,
+    h4,
+    h5 {
         text-align: center;
         text-wrap: pretty;
     }
 }
 
-.c-vertical-section__text{
+.c-vertical-section__text {
     text-align: center;
 
-    @include breakpoint(medium){
+    @include breakpoint(medium) {
         font-size: calc(18 / 16 * 1rem);
+    }
+}
+
+.c-text--big {
+    font-size: calc(18 / 16 * 1rem);
+
+    @include breakpoint(medium) {
+        font-size: calc(20 / 16 * 1rem);
     }
 }

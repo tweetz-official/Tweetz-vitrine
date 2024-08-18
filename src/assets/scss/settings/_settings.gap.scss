@@ -6,6 +6,8 @@
   --gap : 30px;
 
   --gap-large : calc(var(--gap) * 2);
+  
+  --gap-small : calc(var(--gap) / 4);
 
   @include breakpoint(medium) {
     --gap : 36px;

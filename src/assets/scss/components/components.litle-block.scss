@@ -1,0 +1,35 @@
+.c-litle-block-container{
+    width: auto;
+    justify-content: center;
+}
+
+
+.c-litle-block{
+    max-width: 400px;
+}
+
+.c-litle-block--center p{
+    text-align: center;
+}
+
+.c-litle-block .c-h4{
+    display: flex;
+    flex-direction: column;
+}
+
+.c-litle-block .c-h4[data-number]{
+    align-items: center;
+}
+
+.c-litle-block .c-h4[data-number]::before{
+    content: "." attr(data-number);
+    font-family: var(--fontstack-alt);
+    font-size: 4.5rem;
+    font-weight: 700;
+    // -webkit-text-stroke: 2px var(--color-primary);
+    // color: transparent;
+
+    color: var(--color-primary);
+    filter: var(--brand-drop-shadow);
+
+}
