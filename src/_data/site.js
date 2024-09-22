@@ -7,6 +7,6 @@ module.exports = {
   urlApp : "https://tweetz.com/app/login",
   baseUrl: "/",
   author: "Tweetz",
-  email: "hello@tweetz.com",
+  email: "contact@tweetz.com",
   buildTime: new Date(),
 };
