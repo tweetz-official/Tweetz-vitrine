@@ -32,10 +32,6 @@
         background-color: var(--color-dark);
         opacity: 0.6;
         z-index: 1;
-        
-        @include breakpoint(medium){
-            opacity: 0.4;
-        }
     }
 }
 
