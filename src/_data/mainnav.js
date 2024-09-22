@@ -7,7 +7,7 @@ module.exports = [
         url: "/creator/",
     },
     {   
-        label: "Démarrer",
+        label: "Rejoindre la beta",
         trigger: "App",
         url: site.urlApp,
         isPrimary: true,
