@@ -1,6 +1,6 @@
 <br/>
 <div align="center">
-<img src="https://github.com/tweetz-official/Tweetz/blob/main/Docs/img/readme/tweetz.jpg" alt="Logo" width="100" height="100">
+<img src="https://github.com/tweetz-official/Tweetz/blob/main/Assets/tweetz.jpg" alt="Logo" width="100" height="100">
 </a>
 <h3 align="center">Tweetz</h3>
 <p align="center">
@@ -16,7 +16,7 @@ best place created & developped for creators
 
  ## About The Project
 
-![Product Screenshot](https://github.com/tweetz-official/Tweetz/blob/main/Docs/img/readme/tweetz.jpg)
+![Product Screenshot](https://github.com/tweetz-official/Tweetz/blob/main/Assets/tweetz.jpg)
 
 Tweetz is a content-sharing and creator-support platform that makes it easy to create and exchange content with your community. Our aim is to provide a complete ecosystem for our creators and artists, enabling them to develop a new business and make a living from their passion.
  ### Built With
