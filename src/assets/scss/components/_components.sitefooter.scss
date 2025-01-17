@@ -59,12 +59,21 @@
 }
 
 .c-sitefooter__footer{
+  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 24px;
+
+  @include breakpoint(medium){
+    flex-direction: row;
+    justify-content: space-between;
+
+  }
 }
 
 .c-sitefooter__link{
-  color: var(--color-grey-1);
+  color: var(--color-grey-5);
+  text-decoration: underline;
   font-weight: 350;
 }
 
@@ -72,10 +81,15 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  align-self: stretch;
   
   ul{
     list-style: none;
     display: flex;
   }
 }
+
+.c-copyright{
+  margin: 0;
+  padding: 0;
+}
+
