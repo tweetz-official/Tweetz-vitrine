@@ -1,0 +1,70 @@
+---
+permalink: /tweetz-it/index.html
+---
+
+{% extends "layouts/base.njk" %}
+{% set currentSection = "tweetz-it" %}
+{% set metaTitle = "Tweetz It" %}
+{% set metaDescription = "Avec tweetz.it, transformez vos liens en passerelles directes vers vos applications mobiles. 
+Simplifiez l’expérience utilisateur en redirigeant instantanément votre audience vers le bon contenu, sans détour." %}
+{% set metaImage = site.url ~ "/assets/img/metaimg.jpg" %}
+
+{% block content %}
+  <div class="container">
+    <!-- Section Hero -->
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Explosez votre conversion !</h1>
+        <p class="subtitle">grâce aux liens directs vers les apps mobiles.</p>
+        
+        <div class="cta-group">
+          <div class="url-input">
+            <input class="c-input" type="text" placeholder="https://tweetz.it">
+          </div>
+          <button class="c-btn">Commencer gratuitement</button>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <style>
+    .container {
+      max-width: 1440px;
+      margin: 0 auto;
+    }
+    
+    .hero {
+      text-align: center;
+      padding: 90px 0;
+    }
+    
+    .hero h1 {
+      color: #E0295D;
+      font-size: 72px;
+      font-family: 'Chillax Variable';
+      font-weight: 600;
+      line-height: 72px;
+    }
+    
+    .subtitle {
+      color: #102542;
+      font-size: 30px;
+      opacity: 0.8;
+    }
+    
+    .cta-group {
+      margin-top: 42px;
+    }
+    
+    .url-input {
+      margin-bottom: 12px;
+    }
+    
+    
+    .main-image {
+      border-radius: 20px;
+      overflow: hidden;
+      position: relative;
+    }
+  </style>
+{% endblock %}
