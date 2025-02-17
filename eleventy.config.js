@@ -10,7 +10,6 @@ const dates = require("./src/_11ty/filters/dates.js");
 module.exports = function (eleventyConfig) {
     // collections
 
-
     // filters
     eleventyConfig.addFilter("limit", limit);
     eleventyConfig.addFilter("dateISO", dates.dateISO);
@@ -33,6 +32,7 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy({ "./src/static": "/" });
     eleventyConfig.addPassthroughCopy("./src/assets/img");
     eleventyConfig.addPassthroughCopy("./src/assets/fonts");
+    eleventyConfig.addPassthroughCopy("src/assets/js");
 
     // server config
     eleventyConfig.setServerOptions({

@@ -1,7 +1,7 @@
 .c-input {
-    width: 700px;
-    height: 49px;
-    padding: 14px 38px;
+    width: min(500px, 90%); // Réduit de 700px à 500px max, et 90% sur mobile
+    height: 45px; // Réduit de 49px à 45px
+    padding: 12px 24px; // Réduit le padding
     background-color: white;
     border-radius: 150px;
     border: 1px solid rgba(0, 0, 0, 0.10);
@@ -23,5 +23,19 @@
     &:focus {
         outline: none;
         border-color: rgba(0, 0, 0, 0.20);
+    }
+
+    @media (max-width: 768px) {
+        width: 90%;
+        height: 42px;
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+
+    @media (max-width: 480px) {
+        width: 95%;
+        height: 40px;
+        padding: 8px 16px;
+        font-size: 13px;
     }
 }

@@ -1,0 +1,405 @@
+.tweetz-hero {
+  padding: 6rem 2rem;
+  text-align: center;
+  background-color: var(--color-bg);
+  position: relative;
+  overflow: hidden;
+
+  &__content {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+  }
+
+  &__title {
+    font-size: 4rem;
+    font-weight: 700;
+    color: var(--color-text-heading);
+    margin-bottom: 1rem;
+    line-height: 1.2;
+
+    @media (max-width: 768px) {
+      font-size: 3rem;
+    }
+  }
+
+  &__subtitle {
+    font-size: 1.5rem;
+    color: var(--color-text-muted);
+    margin-bottom: 2.5rem;
+  }
+
+  &__cta {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    .url-input {
+      flex: 1;
+      max-width: 400px;
+      min-width: 280px;
+    }
+  }
+}
+
+.media {
+  margin-top: 2rem;
+  position: relative;
+  width: 90%;
+  min-height: 500px;
+  height: 90vh;
+  max-height: 810px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border-radius: clamp(10px, 2vw, 20px);
+  padding: clamp(1rem, 3vw, 3rem);
+
+  // Background image
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/assets/img/tweetz-it/bg.png');
+    background-size: cover;
+    background-position: center;
+    z-index: 0;
+  }
+
+  // Container for devices
+  .devices-container {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: clamp(2rem, 5vw, 4rem); // Ajusté pour meilleur espacement
+    z-index: 2;
+  }
+
+  // MacBook styling
+  .media-macbook {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    z-index: 1;
+    width: min(65%, 800px); // Légèrement plus large
+    transform: rotate(-4deg) translateX(-3%); // Ajusté la translation
+    transition: all 0.3s ease;
+
+    .macbook-screen {
+      position: absolute;
+      top: 3.8%;
+      left: 11.5%;
+      width: 77%;
+      height: 82%;
+      overflow: hidden;
+      border-radius: 4px; // Plus arrondi
+      z-index: 1;
+      background: #0a0a0a; // Noir plus doux
+
+      video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transform: scale(1.01); // Évite les bordures blanches
+        display: block; // Forcer l'affichage en bloc
+        opacity: 1; // S'assurer que la vidéo est visible
+      }
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+      position: relative;
+      z-index: 2;
+      pointer-events: none; // Permet de cliquer à travers l'image
+    }
+  }
+
+  // iPhone styling
+  .media-iphone {
+    position: absolute;
+    right: 10%;
+    bottom: -10%;
+    width: 25%;
+    max-width: 300px;
+    z-index: 2;
+    position: relative;
+    width: min(28%, 300px); // Légèrement plus large
+    transform: rotate(15deg) translateX(5%);
+    transition: all 0.3s ease;
+    margin-top: -3%; // Réduit le décalage vertical
+
+    img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+    }
+
+    @media (max-width: 768px) {
+      right: 5%;
+      width: 30%;
+    }
+  }
+
+  // Tablettes
+  @media (max-width: 1024px) {
+    height: auto;
+    min-height: auto;
+    aspect-ratio: 16/9;
+
+    .devices-container {
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 3rem; // Plus d'espace entre les éléments
+    }
+
+    .media-macbook {
+      width: min(80%, 600px);
+      transform: rotate(0);
+    }
+
+    .media-iphone {
+      width: min(35%, 250px);
+      transform: rotate(0);
+      margin: 0;
+    }
+  }
+
+  // Mobile
+  @media (max-width: 768px) {
+    min-height: 500px; // Ajout d'une hauteur minimale
+    margin: 2rem auto;
+    padding: 2rem 1rem;
+    width: 95%;
+
+    .devices-container {
+      min-height: 450px; // Assure une hauteur minimale
+      flex-direction: column;
+      gap: 0; // Réduit l'espace entre les éléments
+      position: relative; // Pour le positionnement absolu de l'iPhone
+    }
+
+    .media-macbook {
+      width: 100%;
+      max-width: 320px;
+      margin: 0 auto;
+      transform: none;
+    }
+
+    .media-iphone {
+      position: relative; // Change de absolute à relative
+      width: 45%;
+      max-width: 180px;
+      margin: -4rem auto 0; // Ajuste la marge négative
+      transform: none;
+      z-index: 3; // S'assure que l'iPhone est au-dessus
+    }
+  }
+
+  @media (max-width: 480px) {
+    min-height: 450px;
+
+    .devices-container {
+      min-height: 400px;
+    }
+
+    .media-macbook {
+      max-width: 280px;
+    }
+
+    .media-iphone {
+      width: 40%;
+      max-width: 150px;
+      margin: -3rem auto 0; // Réduit légèrement la marge négative
+    }
+  }
+
+  // Petits écrans
+  @media (max-width: 480px) {
+    .media-macbook {
+      max-width: 300px;
+      width: 85%;
+      max-width: 300px;
+
+      .macbook-screen {
+        top: 4%;
+        left: 12%;
+        width: 76%;
+        height: 81%;
+      }
+    }
+
+    .media-iphone {
+      width: 40%;
+      max-width: 150px;
+      width: 50%;
+      max-width: 160px;
+    }
+  }
+
+  // Support orientation paysage sur mobile
+  @media (max-height: 500px) and (orientation: landscape) {
+    height: auto;
+    min-height: 100vh;
+    
+    .devices-container {
+      flex-direction: row;
+      padding: 2rem 0;
+    }
+  }
+
+  // Breakpoints plus précis et optimisés
+  @media (max-width: 1440px) {
+    width: 95%;
+    min-height: 450px;
+    
+    .devices-container {
+      gap: clamp(1rem, 3vw, 3rem);
+    }
+
+    .media-macbook {
+      width: min(60%, 700px);
+    }
+
+    .media-iphone {
+      width: min(25%, 250px);
+    }
+  }
+
+  @media (max-width: 1024px) {
+    min-height: 400px;
+    aspect-ratio: 16/10;
+    padding: clamp(1rem, 2vw, 2rem);
+
+    .devices-container {
+      gap: clamp(1.5rem, 4vw, 3rem);
+    }
+
+    .media-macbook {
+      width: min(70%, 550px);
+      transform: rotate(-2deg) translateX(-2%);
+    }
+
+    .media-iphone {
+      width: min(30%, 220px);
+      transform: rotate(10deg) translateX(3%);
+      margin-top: -2%;
+    }
+  }
+
+  @media (max-width: 768px) {
+    aspect-ratio: 4/3;
+    padding: 1rem;
+
+    .devices-container {
+      flex-direction: column;
+      gap: 1rem;
+      padding: 1.5rem 0;
+    }
+
+    .media-macbook {
+      width: min(85%, 400px);
+      transform: rotate(0);
+    }
+
+    .media-iphone {
+      width: min(45%, 180px);
+      transform: rotate(0);
+      margin: 0;
+    }
+  }
+
+  @media (max-width: 480px) {
+    aspect-ratio: 1/1;
+    
+    .devices-container {
+      padding: 1rem 0;
+    }
+
+    .media-macbook {
+      width: 90%;
+      max-width: 300px;
+
+      .macbook-screen {
+        top: 4%;
+        left: 12%;
+        width: 76%;
+        height: 81%;
+      }
+    }
+
+    .media-iphone {
+      width: 40%;
+      max-width: 140px;
+    }
+  }
+
+  // Optimisation pour les appareils en mode paysage
+  @media (max-height: 600px) and (orientation: landscape) {
+    height: auto;
+    min-height: 100vh;
+    aspect-ratio: unset;
+    padding: 2rem;
+    
+    .devices-container {
+      flex-direction: row;
+      gap: 2rem;
+      padding: 1rem 0;
+    }
+
+    .media-macbook {
+      width: min(55%, 500px);
+      transform: rotate(-2deg);
+    }
+
+    .media-iphone {
+      width: min(25%, 200px);
+      transform: rotate(8deg);
+      margin-top: 0;
+    }
+  }
+
+  // Support écrans haute résolution
+  @media (min-width: 1920px) {
+    max-width: 1600px;
+    min-height: 600px;
+
+    .devices-container {
+      gap: 5rem;
+    }
+
+    .media-macbook {
+      width: min(65%, 900px);
+    }
+
+    .media-iphone {
+      width: min(28%, 350px);
+    }
+  }
+}
+
+.url-input {
+  margin-bottom: 12px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 0 1rem;
+
+  @media (max-width: 768px) {
+    margin-bottom: 10px;
+  }
+}
