@@ -6,6 +6,11 @@ module.exports = [
         trigger: "creator", 
         url: "/creator/",
     },
+    {
+        label: "Tweetz It",
+        trigger: "tweetz-it",
+        url: "/tweetz-it/",
+    },
     {   
         label: "Rejoindre la beta",
         trigger: "App",

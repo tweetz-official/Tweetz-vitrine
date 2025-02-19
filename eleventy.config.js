@@ -10,7 +10,6 @@ const dates = require("./src/_11ty/filters/dates.js");
 module.exports = function (eleventyConfig) {
     // collections
 
-
     // filters
     eleventyConfig.addFilter("limit", limit);
     eleventyConfig.addFilter("dateISO", dates.dateISO);
@@ -24,15 +23,31 @@ module.exports = function (eleventyConfig) {
         trim: true,
     });
 
-    // // ignores
-    // eleventyConfig.ignores.add("src/assets/**/*");
-    // eleventyConfig.watchIgnores.add("src/assets/**/*");
-
-    // passthrough copy
+    // Unique passthrough configuration
     eleventyConfig.setServerPassthroughCopyBehavior("copy");
     eleventyConfig.addPassthroughCopy({ "./src/static": "/" });
-    eleventyConfig.addPassthroughCopy("./src/assets/img");
     eleventyConfig.addPassthroughCopy("./src/assets/fonts");
+    eleventyConfig.addPassthroughCopy("src/assets/js");
+    eleventyConfig.addPassthroughCopy("src/assets/scss/components/Temp/*.css");
+
+    // Gestion des assets avec les vidéos problématiques
+    eleventyConfig.addPassthroughCopy(
+        {
+            "./src/assets/img": "assets/img",
+            "./src/assets/videos": "assets/videos",
+        },
+        {
+            filter: (path) => {
+                const skipVideos = [
+                    // "reccord-app.mp4",
+                    // "reccord-app.webm",
+                    "hero-video-v2.mp4",
+                    "hero-video-v2.webm",
+                ];
+                return !skipVideos.some((video) => path.includes(video));
+            },
+        }
+    );
 
     // server config
     eleventyConfig.setServerOptions({
