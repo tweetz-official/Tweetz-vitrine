@@ -33,6 +33,7 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy("./src/assets/img");
     eleventyConfig.addPassthroughCopy("./src/assets/fonts");
     eleventyConfig.addPassthroughCopy("src/assets/js");
+    eleventyConfig.addPassthroughCopy("src/assets/js/input-redirect.js");
 
     // Copier les fichiers CSS
     eleventyConfig.addPassthroughCopy("src/assets/scss/components/Temp/*.css");
