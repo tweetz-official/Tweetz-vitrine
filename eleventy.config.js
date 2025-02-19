@@ -39,8 +39,8 @@ module.exports = function (eleventyConfig) {
         {
             filter: (path) => {
                 const skipVideos = [
-                    "reccord-app.mp4",
-                    "reccord-app.webm",
+                    // "reccord-app.mp4",
+                    // "reccord-app.webm",
                     "hero-video-v2.mp4",
                     "hero-video-v2.webm",
                 ];
