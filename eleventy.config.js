@@ -34,6 +34,9 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy("./src/assets/fonts");
     eleventyConfig.addPassthroughCopy("src/assets/js");
 
+    // Copier les fichiers CSS
+    eleventyConfig.addPassthroughCopy("src/assets/scss/components/Temp/*.css");
+
     // server config
     eleventyConfig.setServerOptions({
         watch: ["./dist/assets/css/**/*.css", "./dist/assets/js/**/*.js"],
