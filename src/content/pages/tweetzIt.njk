@@ -547,14 +547,13 @@ Simplifiez l’expérience utilisateur en redirigeant instantanément votre audi
       </div>
     </div>
 
-  {# Conteneur pour les deux vues #}
   <div id="paradiseContent">
     <div id="simpleView" style="display: none;">
-      {% include "partials/paradisSimple-tweetzit.njk" %}
-    </div>
-    <div id="enferView">
-      {% include "partials/paradisEnfer-tweetzit.njk" %}
-    </div>
+  {% include "partials/paradisSimple-tweetzit.njk" %}
+</div>
+<div id="enferView">
+  {% include "partials/paradisEnfer-tweetzit.njk" %}
+</div>
   </div>
 </div>
 
@@ -564,7 +563,6 @@ document.addEventListener('DOMContentLoaded', function() {
   const simpleView = document.getElementById('simpleView');
   const enferView = document.getElementById('enferView');
 
-  // État initial
   toggle.checked = false;
   simpleView.style.display = 'none';
   enferView.style.display = 'block';
@@ -581,28 +579,43 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 // paradis responsive
-function handleEnferResponsive() {
-    const mobile = document.querySelector('.enfer-mobile');
-    const desktop = document.querySelector('.enfer-desktop');
+// function handleEnferResponsive() {
+//     const mobileEnfer = document.querySelector('.enfer-mobile');
+//     const desktopEnfer = document.querySelector('.enfer-desktop');
+//     const desktopSimple = document.querySelector('.simple-desktop');
+//     const mobileSimple = document.querySelector('.simple-mobile');
     
-    function toggleView() {
-      if (window.innerWidth <= 500) {
-        mobile.style.display = 'block';
-        desktop.style.display = 'none';
-      } else {
-        mobile.style.display = 'none';
-        desktop.style.display = 'block';
-      }
-    }
+//     function toggleView() {
+//       if (window.innerWidth <= 500) {
+//         mobileEnfer.style.display = 'block';
+//         desktopEnfer.style.display = 'none';
+        
+//         mobileSimple.style.display = 'block';
+//         desktopSimple.style.display = 'none';
+//       } else if (window.innerWidth > 500) {
+//         mobileSimple.style.display = 'none';
+//         desktopSimple.style.display = 'block';
+        
+//         mobileEnfer.style.display = 'none';
+//         desktopEnfer.style.display = 'block';
+//       }
+//     }
 
-    toggleView();
+//     toggleView();
   
-    window.addEventListener('resize', toggleView);
-  }
+//     window.addEventListener('resize', toggleView);
+//   }
   
-  document.addEventListener('DOMContentLoaded', handleEnferResponsive);
+//   document.addEventListener('DOMContentLoaded', handleEnferResponsive);
 </script>
-
+  <div class="l-container">
+    <div class="l-flex l-flex--column l-flex--l-gap">
+      <div class="c-vertical-section">
+        {% include "partials/bento-grid-tweetz-it.njk" %}
+      </div>
+    </div>
+  </div>
+    
   {% include "partials/faq.njk" %}
 
 {% endblock %}

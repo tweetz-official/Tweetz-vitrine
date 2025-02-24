@@ -184,3 +184,27 @@
   .toggle-switch__input:checked + .toggle-switch__track {
     background-color: #E0295D; 
   }
+
+.enfer-mobile{
+  display: none;
+}
+.simple-mobile{
+  display: none !important;
+}
+
+@media (max-width: 500px) {
+  
+  .enfer-mobile{
+    display: block;
+  }
+  .simple-mobile{
+    display: block !important;
+  }
+  .simple-desktop{
+    display: none !important;
+  }
+  .enfer-desktop{
+    display: none;
+  }
+  
+}
