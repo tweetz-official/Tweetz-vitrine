@@ -74,6 +74,9 @@
   }
 }
 
+.c-bento-grid__media img {
+  width: 100%;
+}
 
 @include breakpoint(medium) {
   .c-bento-grid {
