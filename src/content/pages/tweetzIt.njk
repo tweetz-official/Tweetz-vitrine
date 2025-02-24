@@ -578,6 +578,28 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 });
+
+// paradis responsive
+function handleEnferResponsive() {
+    const mobile = document.querySelector('.enfer-mobile');
+    const desktop = document.querySelector('.enfer-desktop');
+    
+    function toggleView() {
+      if (window.innerWidth <= 500) {
+        mobile.style.display = 'block';
+        desktop.style.display = 'none';
+      } else {
+        mobile.style.display = 'none';
+        desktop.style.display = 'block';
+      }
+    }
+
+    toggleView();
+  
+    window.addEventListener('resize', toggleView);
+  }
+  
+  document.addEventListener('DOMContentLoaded', handleEnferResponsive);
 </script>
 
   {% include "partials/faq.njk" %}
