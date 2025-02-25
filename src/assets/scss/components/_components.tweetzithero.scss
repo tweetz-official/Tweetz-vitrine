@@ -47,7 +47,7 @@
 
     @media (max-width: 768px) {
       max-width: 100%;
-      padding: 0 1rem;
+      //padding: 0 1rem;
     }
   }
 }
@@ -109,6 +109,10 @@
     gap: clamp(1rem, 4vw, 4rem);
     align-items: center;
     justify-content: center;
+
+    img {
+      width: 100%;
+    }
 
     @media (max-width: 1024px) {
       grid-template-columns: 1fr;

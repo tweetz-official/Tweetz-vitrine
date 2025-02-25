@@ -355,7 +355,7 @@ Simplifiez l’expérience utilisateur en redirigeant instantanément votre audi
         <p>Adaptez votre stratégie et gardez une longueur d’avance</p>
       </div>
     </div>
-    <a href="https://tweetz.com/app/signup" title="Commencer gratuitement">Commencer gratuitement</a>
+    <a href="https://tweetz.com/app/signup" title="Commencer gratuitement" class="c-btn">Commencer gratuitement</a>
   </div>
   <div class="container">
   <div class="cards">
@@ -366,9 +366,7 @@ Simplifiez l’expérience utilisateur en redirigeant instantanément votre audi
       <div class="cards__card-content">
         <h3 arial-level="3" role="heading">Créateurs de contenu</h3>
         <p>
-          Découvrez une variété de recettes faciles à réaliser, parfaites pour les
-          débutants en cuisine. Profitez de conseils pratiques pour améliorer vos
-          compétences et savourez le plaisir de cuisiner au quotidien.
+          Créateurs de contenu : Augmentez votre portée en simplifiant l'accès à vos contenus sur diverses plateformes.
         </p>
       </div>
       <div class="cards__card-icons">
@@ -484,9 +482,7 @@ Simplifiez l’expérience utilisateur en redirigeant instantanément votre audi
       <div class="cards__card-content">
         <h3 arial-level="3" role="heading">Artistes musicaux</h3>
         <p>
-          Découvrez une variété de recettes faciles à réaliser, parfaites pour les
-          débutants en cuisine. Profitez de conseils pratiques pour améliorer vos
-          compétences et savourez le plaisir de cuisiner au quotidien.
+          Partagez votre musique directement sur les plateformes de streaming préférées de vos fans.
         </p>
       </div>
       <div class="cards__card-icons">
@@ -513,9 +509,7 @@ Simplifiez l’expérience utilisateur en redirigeant instantanément votre audi
       <div class="cards__card-content">
         <h3 arial-level="3" role="heading">E-commerçants</h3>
         <p>
-          Découvrez une variété de recettes faciles à réaliser, parfaites pour les
-          débutants en cuisine. Profitez de conseils pratiques pour améliorer vos
-          compétences et savourez le plaisir de cuisiner au quotidien.
+          Facilitez l'achat en redirigeant les clients vers des produits ou services spécifiques, avec leur compte déjà connecté.
         </p>
       </div>
       <div class="cards__card-icons">
@@ -535,7 +529,7 @@ Simplifiez l’expérience utilisateur en redirigeant instantanément votre audi
   </div>
   <div class="paradise">
     <div class="paradise__header">
-      <div class="paradise__title">Le paradis avec tweetz.it</div>
+      <div class="paradise__title">L'enfer avec tweetz.it</div>
       <div class="paradise__actions">
         <div class="toggle-switch">
           <input type="checkbox" id="paradiseToggle" class="toggle-switch__input">
@@ -562,18 +556,22 @@ document.addEventListener('DOMContentLoaded', function() {
   const toggle = document.getElementById('paradiseToggle');
   const simpleView = document.getElementById('simpleView');
   const enferView = document.getElementById('enferView');
+  const title = document.querySelector('.paradise__title');
 
   toggle.checked = false;
   simpleView.style.display = 'none';
   enferView.style.display = 'block';
+  title.textContent = "L'enfer avec tweetz-it";
 
   toggle.addEventListener('change', function() {
     if (this.checked) {
       simpleView.style.display = 'block';
       enferView.style.display = 'none';
+      title.textContent = "Le paradis avec tweetz-it";
     } else {
       simpleView.style.display = 'none';
       enferView.style.display = 'block';
+      title.textContent = "L'enfer avec tweetz-it";
     }
   });
 });
