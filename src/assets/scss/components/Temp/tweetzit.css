@@ -46,6 +46,7 @@
     position: relative;
     overflow: hidden;
     padding: 5rem 0;
+    margin: 5rem 0;
     background: transparent;
   }
   
@@ -142,6 +143,10 @@
     color: rgba(0, 0, 0, 0.6);
     margin-top: 0;
   }
+
+  .cards__card-content h3 {
+    margin-top: 1rem;
+  }
   
   .cards__card-icons {
     display: flex;
@@ -154,7 +159,7 @@
   }
   
   .container {
-    max-width: min(1440px, 95%);
+    max-width: min(1440px, 90%);
     margin: 0 auto;
     padding: 0 1rem;
     display: flex;
@@ -259,7 +264,7 @@
     
 
     .points {
-      margin-bottom: 12rem;
+      margin-bottom: 10rem;
       gap: 5rem;
     }
     
@@ -289,9 +294,17 @@
     width: min(800px, 90%);
     gap: 80px;
   }
+
+  .cards {
+    gap: 4rem;
+  }
 }
 
 @media (max-width: 1024px) {
+  .paradise {
+    width: 90%;
+  }
+  
   .paradise__content {
     padding: 2rem 1rem;
   }
@@ -322,6 +335,7 @@
 
   .paradise {
     padding: 1rem;
+    width: 90%;
   }
 
   .paradise__title {
@@ -362,6 +376,10 @@
 
   .points {
     gap: 3rem;
+  }
+
+  .cards {
+    gap: 10rem;
   }
 }
 
