@@ -233,9 +233,8 @@
   
   .point h3 {
     margin-top: 0;
+    font-size: 1.5rem;
   }
-  
-  
   
   @media (max-width: 768px) {
 
@@ -269,7 +268,7 @@
     }
     
     .container {
-      margin-top: 8rem;
+      margin-top: 12rem;
     }
   }
   
@@ -361,7 +360,7 @@
   }
 
   .centered-text {
-    width: 100%;
+    width: 90%;
     gap: 30px;
   }
 
