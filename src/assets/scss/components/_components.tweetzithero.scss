@@ -173,7 +173,7 @@
   // iPhone styling
   .media-iphone {
     position: absolute;
-    right: 10%;
+    right: 12%;
     bottom: -10%;
     width: 25%;
     max-width: 300px;
@@ -185,7 +185,7 @@
     margin-top: -3%; 
 
     img {
-      width: 100%;
+      width: 150%;
       height: auto;
       object-fit: contain;
     }
@@ -204,6 +204,7 @@
     }
 
     @media (max-width: 480px) {
+      right: 10%;
       width: 40%;
       max-width: 150px;
       margin: -1.5rem auto 1rem;
