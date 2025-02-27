@@ -58,7 +58,7 @@
   .logos__track {
     display: flex;
     width: fit-content;
-    animation: slideLogos 120s linear infinite;
+    animation: slideLogos 100s linear infinite;
   }
   
   .logos__track:hover {
@@ -68,7 +68,7 @@
   .logos__group {
     display: flex;
     align-items: center;
-    gap: 4rem;
+    justify-content: space-between;
     padding: 0 2rem;
   }
   
@@ -132,7 +132,7 @@
   }
   
   .cards__card-image img {
-    width: 100%;
+    margin: 0 auto;
     height: auto;
     margin-top: -150px;
     display: block;
@@ -234,6 +234,52 @@
   .point h3 {
     margin-top: 0;
     font-size: 1.5rem;
+  }
+
+  .point p {
+    font-size: 1rem;
+  }
+
+  .who {
+    text-align: center;
+    margin: 8rem auto;
+    width: 90%;
+  }
+
+  .who h2 {
+    font-size: 3rem;
+    font-family: "Chillax", sans-serif;
+    font-weight: 600;
+  }
+
+  .transform {
+    text-align: center;
+    width: 90%;
+    margin: 8rem auto;
+  }
+
+  .transform h2 {
+    font-family: "Chillax", sans-serif;
+    font-size: 3rem;
+    font-weight: 600;
+    color: #102542;
+  }
+
+  .transform p {
+    font-size: 1rem;
+    margin: 3rem 0;
+  }
+
+  .contact {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    transition: ease-in-out 0.3s;
+    z-index: 1;
+  }
+
+  .contact:hover {
+    transform: scale(1.1);
   }
   
   @media (max-width: 768px) {
