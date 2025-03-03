@@ -204,7 +204,7 @@
     max-width: 740px;
     text-align: center;
     color: #102542;
-    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-size: clamp(2rem, 5vw, 3rem);
     font-family: "Chillax", sans-serif;
     font-weight: 600;
     line-height: 1.2;
@@ -252,6 +252,10 @@
     font-weight: 600;
   }
 
+  .who p {
+    font-size: 1.5rem;
+  }
+
   .transform {
     text-align: center;
     width: 90%;
@@ -266,7 +270,7 @@
   }
 
   .transform p {
-    font-size: 1rem;
+    font-size: 1.5rem;
     margin: 3rem 0;
   }
 
@@ -275,11 +279,90 @@
     bottom: 2rem;
     right: 2rem;
     transition: ease-in-out 0.3s;
-    z-index: 1;
+    z-index: 3;
   }
 
   .contact:hover {
     transform: scale(1.1);
+  }
+
+  .premium {
+    margin: 0 auto;
+    text-align: center;
+    width: 90%;
+  }
+
+  .premium h2 {
+    font-family: "Chillax", sans-serif;
+    font-size: 3rem;
+    font-weight: 600;
+  }
+
+  .offer {
+    background-color: #E0295D;
+    color: #fff;
+    font-weight: 600;
+    width: fit-content;
+    padding: 0 1rem;
+    border-radius: 1rem;
+    margin: 2rem auto;
+    font-family: "Chillax", sans-serif;
+    box-shadow: 0 0 30px rgba(224, 41, 93, 0.5);
+  }
+
+  .formulae {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .free {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border: 1px solid black;
+    border-radius: 1rem;
+    width: 25%;
+    position: relative;
+  }
+
+  .free p:first-child {
+    font-size: 2rem;
+    font-weight: 600;
+    color: transparent;
+    background: linear-gradient(to right,#e0295d,darkorchid);
+    background-clip: text;
+  }
+
+  .free span {
+    font-size: 3rem;
+    color: #000;
+  }
+
+  .discount {
+    position: absolute;
+    font-size: 1.5rem;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #E0295D;
+    color: #fff;
+    border-radius: 1rem;
+    padding: 0 1rem;
+    font-weight: 600;
+  }
+
+  .advantages {
+    display: flex;
+    align-items: center;
+  }
+
+  .advantages p {
+    margin: 0 0 0 1rem;
+    font-weight: 500;
   }
   
   @media (max-width: 768px) {
@@ -309,7 +392,7 @@
     
 
     .points {
-      margin-bottom: 10rem;
+      margin-bottom: 6rem;
       gap: 5rem;
     }
     
