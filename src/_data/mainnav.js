@@ -7,7 +7,7 @@ module.exports = [
         url: "/creator/",
     },
     {
-        label: "Tweetz it",
+        label: "tweetz it",
         trigger: "tweetz-it",
         url: "/tweetz-it/",
     },
