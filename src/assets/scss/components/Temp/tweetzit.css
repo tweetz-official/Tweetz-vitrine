@@ -247,7 +247,7 @@
   }
 
   .who h2 {
-    font-size: 3rem;
+    font-size: clamp(2rem, 5vw, 3rem);
     font-family: "Chillax", sans-serif;
     font-weight: 600;
   }
@@ -298,12 +298,16 @@
     font-weight: 600;
   }
 
+  .premium > p {
+    font-size: 1.5rem;
+  }
+
   .offer {
     background-color: #E0295D;
     color: #fff;
     font-weight: 600;
     width: fit-content;
-    padding: 0 1rem;
+    padding: 0.5rem 2rem;
     border-radius: 1rem;
     margin: 2rem auto;
     font-family: "Chillax", sans-serif;
@@ -315,17 +319,19 @@
     justify-content: center;
     flex-wrap: wrap;
     gap: 2rem;
-    margin-bottom: 2rem;
+    margin-bottom: 4rem;
   }
 
   .free {
-    padding: 2rem;
+    padding: 3rem;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    border: 1px solid black;
+    text-align: left;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     border-radius: 1rem;
-    width: 25%;
+    min-width: 20rem;
+    max-width: 25rem;
     position: relative;
   }
 
@@ -340,6 +346,10 @@
   .free span {
     font-size: 3rem;
     color: #000;
+  }
+
+  .free p:nth-child(3) {
+    font-weight: 600;
   }
 
   .discount {
@@ -361,8 +371,49 @@
   }
 
   .advantages p {
-    margin: 0 0 0 1rem;
+    margin: 0 0 0.5rem 1rem;
     font-weight: 500;
+  }
+
+  .advantages:last-of-type {
+    margin-bottom: 2rem;
+  }
+
+  .premium__btn {
+    color: #fff;
+    background: #E0295D;
+    padding: 0.5rem 2rem;
+    border-radius: 0.5rem;
+    margin: auto auto 0;
+    transition: ease-in-out 0.3s;
+  }
+
+  .premium__btn:hover {
+    transform: scale(1.05);
+  }
+
+  .partners {
+    padding: 4rem 0;
+  }
+
+  .partners h3 {
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-family: "Chillax", sans-serif;
+  }
+
+  .partners__card {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+  }
+
+  .partners img {
+    border-radius: 50%;
+  }
+
+  .partners p {
+    font-weight: 600;
   }
   
   @media (max-width: 768px) {
