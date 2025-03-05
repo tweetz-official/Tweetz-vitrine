@@ -335,6 +335,10 @@
     position: relative;
   }
 
+  .price {
+    font-weight: 500;
+  }
+
   .free p:first-child {
     font-size: 2rem;
     font-weight: 600;
