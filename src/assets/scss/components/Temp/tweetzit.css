@@ -264,7 +264,7 @@
 
   .transform h2 {
     font-family: "Chillax", sans-serif;
-    font-size: 3rem;
+    font-size: clamp(2rem, 5vw, 3rem);
     font-weight: 600;
     color: #102542;
   }
@@ -294,7 +294,7 @@
 
   .premium h2 {
     font-family: "Chillax", sans-serif;
-    font-size: 3rem;
+    font-size: clamp(2rem, 5vw, 3rem);
     font-weight: 600;
   }
 
