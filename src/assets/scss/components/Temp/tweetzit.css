@@ -146,6 +146,7 @@
 
   .cards__card-content h3 {
     margin-top: 1rem;
+    color : #102542;
   }
   
   .cards__card-icons {
@@ -234,6 +235,7 @@
   .point h3 {
     margin-top: 0;
     font-size: 1.5rem;
+    color: #102542;
   }
 
   .point p {
@@ -250,6 +252,7 @@
     font-size: clamp(2rem, 5vw, 3rem);
     font-family: "Chillax", sans-serif;
     font-weight: 600;
+    color: #102542;
   }
 
   .who p {
@@ -291,9 +294,13 @@
     padding: 4rem 0;
   }
 
-  .partners h3 {
+  .partners h2 {
     font-size: clamp(2rem, 5vw, 3rem);
     font-family: "Chillax", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #102542;
   }
 
   .partners__card {
