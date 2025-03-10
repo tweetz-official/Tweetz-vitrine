@@ -32,10 +32,11 @@
     flex-wrap: wrap;
     gap: 2rem;
     margin-bottom: 4rem;
+    padding-top: 2rem;
   }
 
-  .free {
-    padding: 3rem;
+  .Card__premium {
+    padding: 2rem;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -51,7 +52,7 @@
     font-weight: 500;
   }
 
-  .free p:first-child {
+  .Card__premium p:first-child {
     font-size: 2rem;
     font-weight: 600;
     color: transparent;
@@ -59,12 +60,12 @@
     background-clip: text;
   }
 
-  .free span {
+  .Card__premium span {
     font-size: 3rem;
     color: #000;
   }
 
-  .free p:nth-child(3) {
+  .Card__premium p:nth-child(3) {
     font-weight: 600;
   }
 

@@ -6,8 +6,16 @@
     <div class="offer">
         Offre de lancement
     </div>
+    <div class="toggle-switch-premium">
+        <input type="checkbox" id="paradiseToggle-premium" class="toggle-switch__input-premium">
+        <label for="paradiseToggle-premium" class="toggle-switch__track-premium">
+            <span class="toggle-text-premium--left">Mensuel</span>
+            <span class="toggle-text-premium--rigth">Annuel -20%</span>
+            <span class="toggle-switch__thumb-premium" id="toggle-switch"></span>
+        </label>
+      </div>
     <div class="formulae">
-        <div class="free">
+        <div class="Card__premium" id="premium__free">
             <p>Gratuit</p>
             <p><span class="price">0€</span> / mois</p>
             <p>Boostez vos conversions avec notre formule premium !</p>
@@ -45,7 +53,7 @@
                 Commencer gratuitement
             </a>
         </div>
-        <div class="free">
+        <div class="Card__premium" id="premium__monthly">
             <p>Mensuel</p>
             <p><span class="price">12.99€</span> / mois htva</p>
             <p>Boostez vos conversions avec notre formule premium !</p>
@@ -95,7 +103,7 @@
                 Commencer
             </a>
         </div>
-        <div class="free">
+        <div class="Card__premium" id="premium__year">
             <p>Annuel</p>
             <p><span class="price">119.99€</span> / an htva</p>
             <p>Boostez vos conversions avec notre formule premium !</p>
@@ -154,3 +162,31 @@
         </div>
     </div>
 </div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const toggle = document.getElementById('paradiseToggle-premium');
+      const free = document.getElementById('premium__free');
+      const monthly = document.getElementById('premium__monthly');
+      const year = document.getElementById('premium__year');
+      const toggleSwitch = document.getElementById('toggle-switch');
+      const thumbWhenChecked = document.querySelector('.toggle-switch__input-premium:checked + .toggle-switch__track-premium .toggle-switch__thumb-premium');
+    
+      toggle.checked = false;
+      year.style.display = 'none';
+      monthly.style.display = 'block';
+    
+      toggle.addEventListener('change', function() {
+        if (this.checked) {
+            year.style.display = 'block';
+          monthly.style.display = 'none';
+        //   toggleSwitch.style.width = "90px";
+        //     thumbWhenChecked.style.transform = "translateX(132px)";
+        } else {
+            year.style.display = 'none';
+          monthly.style.display = 'block';
+        }
+      });
+    });
+    
+    </script>
