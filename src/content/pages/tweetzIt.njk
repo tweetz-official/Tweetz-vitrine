@@ -558,63 +558,6 @@ Simplifiez l’expérience utilisateur en redirigeant instantanément votre audi
 </div>
   </div>
 </div>
-
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-  const toggle = document.getElementById('paradiseToggle');
-  const simpleView = document.getElementById('simpleView');
-  const enferView = document.getElementById('enferView');
-  const title = document.querySelector('.paradise__title');
-
-  toggle.checked = false;
-  simpleView.style.display = 'none';
-  enferView.style.display = 'block';
-  title.textContent = "L'enfer sans tweetz-it";
-
-  toggle.addEventListener('change', function() {
-    if (this.checked) {
-      simpleView.style.display = 'block';
-      enferView.style.display = 'none';
-      title.textContent = "Le paradis avec tweetz-it";
-    } else {
-      simpleView.style.display = 'none';
-      enferView.style.display = 'block';
-      title.textContent = "L'enfer sans tweetz-it";
-    }
-  });
-});
-
-// paradis responsive
-// function handleEnferResponsive() {
-//     const mobileEnfer = document.querySelector('.enfer-mobile');
-//     const desktopEnfer = document.querySelector('.enfer-desktop');
-//     const desktopSimple = document.querySelector('.simple-desktop');
-//     const mobileSimple = document.querySelector('.simple-mobile');
-    
-//     function toggleView() {
-//       if (window.innerWidth <= 500) {
-//         mobileEnfer.style.display = 'block';
-//         desktopEnfer.style.display = 'none';
-        
-//         mobileSimple.style.display = 'block';
-//         desktopSimple.style.display = 'none';
-//       } else if (window.innerWidth > 500) {
-//         mobileSimple.style.display = 'none';
-//         desktopSimple.style.display = 'block';
-        
-//         mobileEnfer.style.display = 'none';
-//         desktopEnfer.style.display = 'block';
-//       }
-//     }
-
-//     toggleView();
-  
-//     window.addEventListener('resize', toggleView);
-//   }
-  
-//   document.addEventListener('DOMContentLoaded', handleEnferResponsive);
-</script>
-
 <div class="transform">
   <h2>
     Transformez chaque clic en conversion
@@ -635,7 +578,7 @@ document.addEventListener('DOMContentLoaded', function() {
   </div>
 
   {% include "partials/premium.njk" %}
-  
+
   {% include "partials/partener-tweetz-it.njk" %}
     
   {% include "partials/faq.njk" %}
@@ -658,5 +601,32 @@ document.addEventListener('DOMContentLoaded', function() {
       </svg>
     </a>
   </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const toggle = document.getElementById('paradiseToggle');
+      const simpleView = document.getElementById('simpleView');
+      const enferView = document.getElementById('enferView');
+      const title = document.querySelector('.paradise__title');
+    
+      toggle.checked = false;
+      simpleView.style.display = 'none';
+      enferView.style.display = 'block';
+      title.textContent = "L'enfer sans tweetz-it";
+    
+      toggle.addEventListener('change', function() {
+        if (this.checked) {
+          simpleView.style.display = 'block';
+          enferView.style.display = 'none';
+          title.textContent = "Le paradis avec tweetz-it";
+        } else {
+          simpleView.style.display = 'none';
+          enferView.style.display = 'block';
+          title.textContent = "L'enfer sans tweetz-it";
+        }
+      });
+    });
+    
+    </script>
 
 {% endblock %}
