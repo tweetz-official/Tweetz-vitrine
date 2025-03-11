@@ -185,6 +185,22 @@
   
   .url-input {
     margin-bottom: 12px;
+    position: relative;
+  }
+
+  .url-input a {
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+    background: #E0295D;
+    color: #fff;
+    position: absolute;
+    right: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .url-input a:hover {
+    background: rgba(224, 41, 93, 0.8);
   }
   
   .main-image {
@@ -461,6 +477,10 @@
 
   .cards {
     gap: 10rem;
+  }
+
+  .cards__card-image img {
+    width: 100%;
   }
 }
 
