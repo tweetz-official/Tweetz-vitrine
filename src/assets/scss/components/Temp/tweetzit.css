@@ -146,6 +146,7 @@
 
   .cards__card-content h3 {
     margin-top: 1rem;
+    color : #102542;
   }
   
   .cards__card-icons {
@@ -184,6 +185,22 @@
   
   .url-input {
     margin-bottom: 12px;
+    position: relative;
+  }
+
+  .url-input a {
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+    background: #E0295D;
+    color: #fff;
+    position: absolute;
+    right: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .url-input a:hover {
+    background: rgba(224, 41, 93, 0.8);
   }
   
   .main-image {
@@ -234,6 +251,7 @@
   .point h3 {
     margin-top: 0;
     font-size: 1.5rem;
+    color: #102542;
   }
 
   .point p {
@@ -250,6 +268,7 @@
     font-size: clamp(2rem, 5vw, 3rem);
     font-family: "Chillax", sans-serif;
     font-weight: 600;
+    color: #102542;
   }
 
   .who p {
@@ -286,123 +305,18 @@
     transform: scale(1.1);
   }
 
-  .premium {
-    margin: 0 auto;
-    text-align: center;
-    width: 90%;
-  }
-
-  .premium h2 {
-    font-family: "Chillax", sans-serif;
-    font-size: clamp(2rem, 5vw, 3rem);
-    font-weight: 600;
-  }
-
-  .premium > p {
-    font-size: 1.5rem;
-  }
-
-  .offer {
-    background-color: #E0295D;
-    color: #fff;
-    font-weight: 600;
-    width: fit-content;
-    padding: 0.5rem 2rem;
-    border-radius: 1rem;
-    margin: 2rem auto;
-    font-family: "Chillax", sans-serif;
-    box-shadow: 0 0 30px rgba(224, 41, 93, 0.5);
-  }
-
-  .formulae {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 2rem;
-    margin-bottom: 4rem;
-  }
-
-  .free {
-    padding: 3rem;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    text-align: left;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-    border-radius: 1rem;
-    min-width: 20rem;
-    max-width: 25rem;
-    position: relative;
-  }
-
-  .price {
-    font-weight: 500;
-  }
-
-  .free p:first-child {
-    font-size: 2rem;
-    font-weight: 600;
-    color: transparent;
-    background: linear-gradient(to right,#e0295d,darkorchid);
-    background-clip: text;
-  }
-
-  .free span {
-    font-size: 3rem;
-    color: #000;
-  }
-
-  .free p:nth-child(3) {
-    font-weight: 600;
-  }
-
-  .discount {
-    position: absolute;
-    font-size: 1.5rem;
-    top: 0;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: #E0295D;
-    color: #fff;
-    border-radius: 1rem;
-    padding: 0 1rem;
-    font-weight: 600;
-  }
-
-  .advantages {
-    display: flex;
-    align-items: center;
-  }
-
-  .advantages p {
-    margin: 0 0 0.5rem 1rem;
-    font-weight: 500;
-  }
-
-  .advantages:last-of-type {
-    margin-bottom: 2rem;
-  }
-
-  .premium__btn {
-    color: #fff;
-    background: #E0295D;
-    padding: 0.5rem 2rem;
-    border-radius: 0.5rem;
-    margin: auto auto 0;
-    transition: ease-in-out 0.3s;
-  }
-
-  .premium__btn:hover {
-    transform: scale(1.05);
-  }
 
   .partners {
     padding: 4rem 0;
   }
 
-  .partners h3 {
+  .partners h2 {
     font-size: clamp(2rem, 5vw, 3rem);
     font-family: "Chillax", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #102542;
   }
 
   .partners__card {
@@ -563,6 +477,10 @@
 
   .cards {
     gap: 10rem;
+  }
+
+  .cards__card-image img {
+    width: 100%;
   }
 }
 

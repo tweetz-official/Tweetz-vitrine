@@ -17,20 +17,20 @@ Simplifiez l’expérience utilisateur en redirigeant instantanément votre audi
     <!-- Section Hero -->
     <div class="tweetz-hero">
       <div class="tweetz-hero__content">
-        <h1 class="tweetz-hero__title">Convertissez mieux et en toute simplicité</h1>
-        <p class="tweetz-hero__subtitle">Grâce aux liens directs vers les apps mobiles</p>
-        
+        <h1 class="tweetz-hero__title">Les liens qui redirigent directement dans les apps mobiles</h1>
+        <p class="tweetz-hero__subtitle">Transformez chaque clic en conversion, sans frictions et sans détour.</p>
         <div class="tweetz-hero__cta">
           <div class="url-input">
             <input class="c-input" type="text" placeholder="https://tweetz.it">
+            <a href="https://tweetz.com/app/signup">Cr&eacute;er</a>
           </div>
           <a href="https://tweetz.com/app/signup">
-            <button class="c-btn">Commencez gratuitement</button>
+            <button class="c-btn">Créer mon lien gratuitement</button>
           </a>
         </div>
       </div>
     </div>
-    <div class="media">
+    {# <div class="media">
       <div class="devices-container">
         {# <div class="media-macbook">
           <div class="macbook-screen">
@@ -46,20 +46,20 @@ Simplifiez l’expérience utilisateur en redirigeant instantanément votre audi
               <source src="{{ '/assets/videos/tweetz-it-demo.webm' | url }}" type="video/webm">
               <p>Votre navigateur ne prend pas en charge les vidéos HTML5.</p>
             </video>
-          </div> #}
+          </div>
           <img src="{{ '/assets/img/tweetz-it/macbook2.png' | url }}" alt="MacBook Pro 16">
         </div>
         <div class="media-iphone">
           <img src="{{ '/assets/img/tweetz-it/iphone.png' | url }}" alt="iPhone 12 Pro">
         </div>
       </div>
-    </div>
+    </div> #}
 
   
 
     <div class="centered-text">
       <div class="centered-text__content">
-        <h2 class="centered-text__title">Emmenez vos utilisateurs là où ils doivent être, instantanément.</h2>
+        <h2 class="centered-text__title">Emmenez vos utilisateurs directement là où ils doivent être.</h2>
         <p class="centered-text__description">
           Nos liens permettent de rediriger vos utilisateurs directement vers le contenu le plus pertinent de n'importe quelle application.
           <br/><br/>
@@ -68,7 +68,8 @@ Simplifiez l’expérience utilisateur en redirigeant instantanément votre audi
       </div>
     </div>
 
-    {# section 3 - Logos #}
+    {# section 2 - Logos #}
+
     <div class="logos">
       <div class="logos__slider">
         <div class="logos__track">
@@ -265,6 +266,32 @@ Simplifiez l’expérience utilisateur en redirigeant instantanément votre audi
       </div>
     </div>
 
+    {# section 3 #}
+
+    <div class="paradise">
+      <div class="paradise__header">
+        <div class="paradise__title">L'enfer sans tweetz.it</div>
+        <div class="paradise__actions">
+          <div class="toggle-switch">
+            <input type="checkbox" id="paradiseToggle" class="toggle-switch__input">
+            <label for="paradiseToggle" class="toggle-switch__track">
+              <span class="toggle-switch__thumb"></span>
+            </label>
+          </div>
+          <div class="paradise__subtitle">Clique et simplifie tout ça !</div>
+        </div>
+      </div>
+  
+    <div id="paradiseContent">
+      <div id="simpleView" style="display: none;">
+    {% include "partials/paradisSimple-tweetzit.njk" %}
+  </div>
+  <div id="enferView">
+    {% include "partials/paradisEnfer-tweetzit.njk" %}
+  </div>
+    </div>
+  </div>
+
   {# section 4 #}
 
   <div class="section">
@@ -289,7 +316,7 @@ Simplifiez l’expérience utilisateur en redirigeant instantanément votre audi
           </defs>
         </svg>
         <h3 arial-level="3" role="heading">Cr&eacute;er</h3>
-        <p>Générez un lien court et optimisé en quelques secondes</p>
+        <p>Générez un lien court et optimisé en quelques secondes pour lʼapp mobile choisie.</p>
       </div>
       <div class="point">
         <svg width="145" height="136" viewBox="0 0 145 100" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -310,7 +337,8 @@ Simplifiez l’expérience utilisateur en redirigeant instantanément votre audi
           </defs>
           </svg>
         <h3 arial-level="3" role="heading">Partager</h3>
-        <p>Diffusez-le sur vos réseaux sociaux</p>
+        <p>Diffusez-le sur vos réseaux sociaux et gardez vos utilisateurs connectés sans
+          friction.</p>
       </div>
       <div class="point">
         <svg width="144" height="134" viewBox="0 0 144 100" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -331,7 +359,8 @@ Simplifiez l’expérience utilisateur en redirigeant instantanément votre audi
           </defs>
           </svg>
         <h3 arial-level="3" role="heading">Analyser</h3>
-        <p>Obtenez des insights en temps réel sur vos utilisateurs</p>
+        <p>Suivez lʼimpact en temps réel de vos clics et identifiez vos liens les plus
+          performants.</p>
       </div>
       <div class="point">
         <svg width="149" height="136" viewBox="0 0 149 100" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -352,17 +381,21 @@ Simplifiez l’expérience utilisateur en redirigeant instantanément votre audi
           </defs>
           </svg>
         <h3>Anticiper</h3>
-        <p>Adaptez votre stratégie et gardez une longueur d’avance</p>
+        <p>Adaptez votre stratégie en fonction des résultats et gardez toujours une longueur
+          dʼavance.</p>
       </div>
     </div>
     <a href="https://tweetz.com/app/signup" title="Commencer gratuitement" class="c-btn">G&eacute;n&eacute;rer un lien</a>
   </div>
+
+  {# section 5 #}
+
   <div class="who">
     <h2>
       On a tous une bonne raison de choisir Tweetz
     </h2>
     <p>
-      Facilitez la connexion avec votre communauté, là où ça compte vraiment.
+      Facilitez lʼinteraction avec votre communauté, là où ça compte vraiment.
     </p>
   </div>
   <div class="container">
@@ -535,85 +568,6 @@ Simplifiez l’expérience utilisateur en redirigeant instantanément votre audi
     </div>
   </div>
   </div>
-  <div class="paradise">
-    <div class="paradise__header">
-      <div class="paradise__title">L'enfer sans tweetz.it</div>
-      <div class="paradise__actions">
-        <div class="toggle-switch">
-          <input type="checkbox" id="paradiseToggle" class="toggle-switch__input">
-          <label for="paradiseToggle" class="toggle-switch__track">
-            <span class="toggle-switch__thumb"></span>
-          </label>
-        </div>
-        <div class="paradise__subtitle">Clique et simplifie tout ça !</div>
-      </div>
-    </div>
-
-  <div id="paradiseContent">
-    <div id="simpleView" style="display: none;">
-  {% include "partials/paradisSimple-tweetzit.njk" %}
-</div>
-<div id="enferView">
-  {% include "partials/paradisEnfer-tweetzit.njk" %}
-</div>
-  </div>
-</div>
-
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-  const toggle = document.getElementById('paradiseToggle');
-  const simpleView = document.getElementById('simpleView');
-  const enferView = document.getElementById('enferView');
-  const title = document.querySelector('.paradise__title');
-
-  toggle.checked = false;
-  simpleView.style.display = 'none';
-  enferView.style.display = 'block';
-  title.textContent = "L'enfer sans tweetz-it";
-
-  toggle.addEventListener('change', function() {
-    if (this.checked) {
-      simpleView.style.display = 'block';
-      enferView.style.display = 'none';
-      title.textContent = "Le paradis avec tweetz-it";
-    } else {
-      simpleView.style.display = 'none';
-      enferView.style.display = 'block';
-      title.textContent = "L'enfer sans tweetz-it";
-    }
-  });
-});
-
-// paradis responsive
-// function handleEnferResponsive() {
-//     const mobileEnfer = document.querySelector('.enfer-mobile');
-//     const desktopEnfer = document.querySelector('.enfer-desktop');
-//     const desktopSimple = document.querySelector('.simple-desktop');
-//     const mobileSimple = document.querySelector('.simple-mobile');
-    
-//     function toggleView() {
-//       if (window.innerWidth <= 500) {
-//         mobileEnfer.style.display = 'block';
-//         desktopEnfer.style.display = 'none';
-        
-//         mobileSimple.style.display = 'block';
-//         desktopSimple.style.display = 'none';
-//       } else if (window.innerWidth > 500) {
-//         mobileSimple.style.display = 'none';
-//         desktopSimple.style.display = 'block';
-        
-//         mobileEnfer.style.display = 'none';
-//         desktopEnfer.style.display = 'block';
-//       }
-//     }
-
-//     toggleView();
-  
-//     window.addEventListener('resize', toggleView);
-//   }
-  
-//   document.addEventListener('DOMContentLoaded', handleEnferResponsive);
-</script>
 
 <div class="transform">
   <h2>
@@ -635,6 +589,8 @@ document.addEventListener('DOMContentLoaded', function() {
   </div>
 
   {% include "partials/premium.njk" %}
+
+  {% include "partials/partener-tweetz-it.njk" %}
     
   {% include "partials/faq.njk" %}
 
@@ -656,5 +612,41 @@ document.addEventListener('DOMContentLoaded', function() {
       </svg>
     </a>
   </div>
+
+
+
+  {# code ici... #}
+
+
+
+
+  {# !!! laissez ce script en bas svp !!! #}
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const toggle = document.getElementById('paradiseToggle');
+      const simpleView = document.getElementById('simpleView');
+      const enferView = document.getElementById('enferView');
+      const title = document.querySelector('.paradise__title');
+    
+      toggle.checked = false;
+      simpleView.style.display = 'none';
+      enferView.style.display = 'block';
+      title.textContent = "L'enfer sans tweetz-it";
+    
+      toggle.addEventListener('change', function() {
+        if (this.checked) {
+          simpleView.style.display = 'block';
+          enferView.style.display = 'none';
+          title.textContent = "Le paradis avec tweetz-it";
+        } else {
+          simpleView.style.display = 'none';
+          enferView.style.display = 'block';
+          title.textContent = "L'enfer sans tweetz-it";
+        }
+      });
+    });
+    
+    </script>
 
 {% endblock %}
