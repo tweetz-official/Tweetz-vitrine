@@ -1,0 +1,34 @@
+.partners {
+    padding: 4rem 0;
+
+    h2 {
+        font-size: clamp(2rem, 5vw, 3rem);
+        font-family: "Chillax", sans-serif;
+        font-weight: 600;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #102542;
+      }
+
+    &__card {   
+        display: flex;
+        justify-content: center;
+        gap: 3rem;
+        flex-wrap: wrap;
+
+        div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            
+            img {
+                border-radius: 50%;
+            }
+        
+            p {
+                font-weight: 600;
+            }
+        }
+    }
+  }

@@ -20,6 +20,10 @@
     height: auto; 
     padding: 2rem 1rem; 
     margin-bottom: 2rem;
+
+    h2 {
+      font-size: clamp(2rem, 5vw, 3rem);
+    }
   }
   
   .faq__title-wrapper {

@@ -59,7 +59,7 @@ Simplifiez l’expérience utilisateur en redirigeant instantanément votre audi
 
     <div class="centered-text">
       <div class="centered-text__content">
-        <h2 class="centered-text__title">Emmenez vos utilisateurs directement là où ils doivent être.</h2>
+        <h2 class="centered-text__title">Emmenez vos utilisateurs là où ils doivent être.</h2>
         <p class="centered-text__description">
           Nos liens permettent de rediriger vos utilisateurs directement vers le contenu le plus pertinent de n'importe quelle application.
           <br/><br/>
@@ -271,6 +271,7 @@ Simplifiez l’expérience utilisateur en redirigeant instantanément votre audi
     <div class="paradise">
       <div class="paradise__header">
         <div class="paradise__title">L'enfer sans tweetz.it</div>
+        <p class="paradise__description">50% du public qui est perdu sans même en avoir conscience.</p>
         <div class="paradise__actions">
           <div class="toggle-switch">
             <input type="checkbox" id="paradiseToggle" class="toggle-switch__input">
@@ -628,6 +629,7 @@ Simplifiez l’expérience utilisateur en redirigeant instantanément votre audi
       const simpleView = document.getElementById('simpleView');
       const enferView = document.getElementById('enferView');
       const title = document.querySelector('.paradise__title');
+      const description = document.querySelector('.paradise__description');
     
       toggle.checked = false;
       simpleView.style.display = 'none';
@@ -639,10 +641,12 @@ Simplifiez l’expérience utilisateur en redirigeant instantanément votre audi
           simpleView.style.display = 'block';
           enferView.style.display = 'none';
           title.textContent = "Le paradis avec tweetz-it";
+          description.textContent = "Sur 100 clics, vous sauvez 80 utilisateurs.";
         } else {
           simpleView.style.display = 'none';
           enferView.style.display = 'block';
           title.textContent = "L'enfer sans tweetz-it";
+          description.textContent = "50% du public qui est perdu sans même en avoir conscience.";
         }
       });
     });
