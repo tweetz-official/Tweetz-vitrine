@@ -2,37 +2,38 @@
     margin: 0 auto;
     text-align: center;
     width: 90%;
-  }
 
-  .premium h2 {
-    font-family: "Chillax", sans-serif;
-    font-size: clamp(2rem, 5vw, 3rem);
-    font-weight: 600;
+    h2 {
+      font-family: "Chillax", sans-serif;
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 600;
+      color: #102542;
+    }
+
+    .offer {
+      background-color: #E0295D;
+      color: #fff;
+      font-weight: 600;
+      width: fit-content;
+      padding: 0.5rem 2rem;
+      border-radius: 1rem;
+      margin: 2rem auto;
+      font-family: "Chillax", sans-serif;
+      box-shadow: 0 0 30px rgba(224, 41, 93, 0.5);
+    }
+
+    .formulae {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 2rem;
+      margin-bottom: 4rem;
+      padding-top: 2rem;
+    }
   }
 
   .premium > p {
     font-size: 1.5rem;
-  }
-
-  .offer {
-    background-color: #E0295D;
-    color: #fff;
-    font-weight: 600;
-    width: fit-content;
-    padding: 0.5rem 2rem;
-    border-radius: 1rem;
-    margin: 2rem auto;
-    font-family: "Chillax", sans-serif;
-    box-shadow: 0 0 30px rgba(224, 41, 93, 0.5);
-  }
-
-  .formulae {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 2rem;
-    margin-bottom: 4rem;
-    padding-top: 2rem;
   }
 
   .Card__premium {
@@ -46,54 +47,59 @@
     min-width: 20rem;
     max-width: 25rem;
     position: relative;
-  }
 
-  .price {
-    font-weight: 500;
-  }
+    p:first-child {
+      font-size: 2rem;
+      font-weight: 600;
+      color: transparent;
+      background: linear-gradient(to right,#e0295d,darkorchid);
+      background-clip: text;
+    }
 
-  .Card__premium p:first-child {
-    font-size: 2rem;
-    font-weight: 600;
-    color: transparent;
-    background: linear-gradient(to right,#e0295d,darkorchid);
-    background-clip: text;
-  }
+    p:nth-child(3) {
+      font-weight: 600;
+    }
 
-  .Card__premium span {
-    font-size: 3rem;
-    color: #000;
-  }
+    .discount {
+      position: absolute;
+      font-size: 1.5rem;
+      top: 0;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: #E0295D;
+      color: #fff;
+      border-radius: 1rem;
+      padding: 0 1rem;
+      font-weight: 600;
+    }
 
-  .Card__premium p:nth-child(3) {
-    font-weight: 600;
-  }
+    .price {
+      font-size: 3rem;
+      color: #000;
+      font-weight: 500;
+    }
 
-  .discount {
-    position: absolute;
-    font-size: 1.5rem;
-    top: 0;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: #E0295D;
-    color: #fff;
-    border-radius: 1rem;
-    padding: 0 1rem;
-    font-weight: 600;
-  }
-
-  .advantages {
-    display: flex;
-    align-items: center;
-  }
-
-  .advantages p {
-    margin: 0 0 0.5rem 1rem;
-    font-weight: 500;
+    .advantages {
+      display: flex;
+      
+      svg {
+        position: relative;
+        top: 4px;
+      }
+  
+      p {
+        margin: 0 0 0.5rem 1rem;
+        font-weight: 500;
+      }
+    }
   }
 
   .advantages:last-of-type {
     margin-bottom: 2rem;
+  }
+
+  #premium__monthly .advantages:last-of-type p, #premium__year .advantages:last-of-type p {
+    font-weight: 700;
   }
 
   .premium__btn {

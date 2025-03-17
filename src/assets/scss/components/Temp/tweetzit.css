@@ -304,35 +304,6 @@
   .contact:hover {
     transform: scale(1.1);
   }
-
-
-  .partners {
-    padding: 4rem 0;
-  }
-
-  .partners h2 {
-    font-size: clamp(2rem, 5vw, 3rem);
-    font-family: "Chillax", sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #102542;
-  }
-
-  .partners__card {
-    display: flex;
-    justify-content: center;
-    gap: 3rem;
-    flex-wrap: wrap;
-  }
-
-  .partners img {
-    border-radius: 50%;
-  }
-
-  .partners p {
-    font-weight: 600;
-  }
   
   @media (max-width: 768px) {
 

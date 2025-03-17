@@ -1,19 +1,20 @@
 .tweetz-hero {
-  padding: 6rem 2rem;
+  padding: 10rem 2rem 6rem;
   text-align: center;
   background-color: var(--color-bg);
   position: relative;
   overflow: hidden;
+  height: 50vh;
 
   &__content {
-    max-width: 800px;
+    max-width: 900px;
     margin: 0 auto;
     position: relative;
     z-index: 2;
   }
 
   &__title {
-    font-size: 4rem;
+    font-size: 3rem;
     font-weight: 700;
     color: var(--color-text-heading);
     margin-bottom: 1rem;
@@ -44,6 +45,10 @@
     .url-input {
       width: 100%;
       max-width: 500px;
+    }
+
+    a .c-btn {
+      margin-top: 1rem;
     }
 
     @media (max-width: 768px) {
