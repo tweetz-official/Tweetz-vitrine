@@ -12,7 +12,7 @@ module.exports = [
         url: "/tweetz-it/",
     },
     {   
-        label: "Rejoindre la beta",
+        label: "Connexion",
         trigger: "App",
         url: site.urlApp,
         isPrimary: true,
