@@ -1,6 +1,11 @@
 document.addEventListener("DOMContentLoaded", function () {
     const langSelect = document.getElementById("lang");
+    const supportedLanguages = ['en','fr','es']; // Langues supportées
     let currentLang = localStorage.getItem("lang") || navigator.language;
+
+    if (!supportedLanguages.includes(currentLang)) {
+        supportedLanguages[0]; // Langue par défaut
+    }
 
     // Charger les traductions depuis le fichier JSON
     fetch("/assets/js/translations.json")
@@ -20,15 +25,13 @@ document.addEventListener("DOMContentLoaded", function () {
                 document.querySelectorAll('[data-i18n]').forEach(function (element) {
                     const key = element.getAttribute('data-i18n');
                     if (translations[lang] && translations[lang][key]) {
-                        element.textContent = translations[lang][key];
+                        element.innerHTML = translations[lang][key]; // innerHTML pour interpréter le HTML
                     }
                 });
             }
 
-            // Appliquer la langue actuelle
             updateTexts(currentLang);
 
-            // Gérer le changement de langue
             langSelect.addEventListener("change", function () {
                 const newLang = this.value;
                 if (translations[newLang]) {
