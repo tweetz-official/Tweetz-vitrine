@@ -22,10 +22,10 @@ Simplifiez l’expérience utilisateur en redirigeant instantanément votre audi
         <div class="tweetz-hero__cta">
           <div class="url-input">
             <input class="c-input" type="text" placeholder="https://tweetz.it">
-            <a href="https://tweetz.com/app/signup">Cr&eacute;er</a>
+            <a href="https://tweetz.com/app/signup" data-i18n="create"="">Cr&eacute;er</a>
           </div>
           <a href="https://tweetz.com/app/signup">
-            <button class="c-btn">Créer mon lien gratuitement</button>
+            <button class="c-btn" data-i18n="create_free">Créer mon lien gratuitement</button>
           </a>
         </div>
       </div>
@@ -59,12 +59,8 @@ Simplifiez l’expérience utilisateur en redirigeant instantanément votre audi
 
     <div class="centered-text">
       <div class="centered-text__content">
-        <h2 class="centered-text__title">Emmenez vos utilisateurs là où ils doivent être.</h2>
-        <p class="centered-text__description">
-          Nos liens permettent de rediriger vos utilisateurs directement vers le contenu le plus pertinent de n'importe quelle application.
-          <br/><br/>
-          L'objectif ? Créer une expérience fluide sans perte d'utilisateurs.
-        </p>
+        <h2 class="centered-text__title" data-i18n="subhero_title"></h2>
+        <p class="centered-text__description" data-i18n="subhero_content"></p>
       </div>
     </div>
 
@@ -270,8 +266,8 @@ Simplifiez l’expérience utilisateur en redirigeant instantanément votre audi
 
     <div class="paradise">
       <div class="paradise__header">
-        <div class="paradise__title">L'enfer sans tweetz.it</div>
-        <p class="paradise__description">50% du public qui est perdu sans même en avoir conscience.</p>
+        <div class="paradise__title" data-i18n="paradise_title"></div>
+        <p class="paradise__description" data-i18n="paradise_content"></p>
         <div class="paradise__actions">
           <div class="toggle-switch">
             <input type="checkbox" id="paradiseToggle" class="toggle-switch__input">
@@ -279,24 +275,28 @@ Simplifiez l’expérience utilisateur en redirigeant instantanément votre audi
               <span class="toggle-switch__thumb"></span>
             </label>
           </div>
-          <div class="paradise__subtitle">Clique et simplifie tout ça !</div>
+          <div class="paradise__subtitle" data-i18n="simplify"></div>
         </div>
       </div>
   
     <div id="paradiseContent">
       <div id="simpleView" style="display: none;">
-    {% include "partials/paradisSimple-tweetzit.njk" %}
-  </div>
-  <div id="enferView">
-    {% include "partials/paradisEnfer-tweetzit.njk" %}
-  </div>
+        {% include "partials/paradisSimple-tweetzit.njk" %}
+        {% include "partials/paradisSimple-tweetzit-en.njk" %}
+        {% include "partials/paradisSimple-tweetzit-es.njk" %}
+      </div>
+      <div id="enferView">
+        {% include "partials/paradisEnfer-tweetzit.njk" %}
+        {% include "partials/paradisEnfer-tweetzit-en.njk" %}
+        {% include "partials/paradisEnfer-tweetzit-es.njk" %}
+      </div>
     </div>
   </div>
 
   {# section 4 #}
 
   <div class="section">
-    <h2 arial-level="2" role="heading">Comment &ccedil;a fonctionne&nbsp;?</h2>
+    <h2 arial-level="2" role="heading" data-i18n="how_it_work"></h2>
     <div class="points">
       <div class="point">
         <svg width="131" height="136" viewBox="0 0 131 100" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -316,8 +316,8 @@ Simplifiez l’expérience utilisateur en redirigeant instantanément votre audi
           </filter>
           </defs>
         </svg>
-        <h3 arial-level="3" role="heading">Cr&eacute;er</h3>
-        <p>Générez un lien court et optimisé en quelques secondes pour lʼapp mobile choisie.</p>
+        <h3 arial-level="3" role="heading" data-i18n="create_title"></h3>
+        <p data-i18n="create_content"></p>
       </div>
       <div class="point">
         <svg width="145" height="136" viewBox="0 0 145 100" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -337,9 +337,8 @@ Simplifiez l’expérience utilisateur en redirigeant instantanément votre audi
           </filter>
           </defs>
           </svg>
-        <h3 arial-level="3" role="heading">Partager</h3>
-        <p>Diffusez-le sur vos réseaux sociaux et gardez vos utilisateurs connectés sans
-          friction.</p>
+        <h3 arial-level="3" role="heading" data-i18n="share_title"></h3>
+        <p data-i18n="share_content"></p>
       </div>
       <div class="point">
         <svg width="144" height="134" viewBox="0 0 144 100" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -359,9 +358,8 @@ Simplifiez l’expérience utilisateur en redirigeant instantanément votre audi
           </filter>
           </defs>
           </svg>
-        <h3 arial-level="3" role="heading">Analyser</h3>
-        <p>Suivez lʼimpact en temps réel de vos clics et identifiez vos liens les plus
-          performants.</p>
+        <h3 arial-level="3" role="heading" data-i18n="analyse_title"></h3>
+        <p data-i18n="analyse_content"></p>
       </div>
       <div class="point">
         <svg width="149" height="136" viewBox="0 0 149 100" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -381,23 +379,18 @@ Simplifiez l’expérience utilisateur en redirigeant instantanément votre audi
           </filter>
           </defs>
           </svg>
-        <h3>Anticiper</h3>
-        <p>Adaptez votre stratégie en fonction des résultats et gardez toujours une longueur
-          dʼavance.</p>
+        <h3 data-i18n="anticipate_title"></h3>
+        <p data-i18n="anticipate_content"></p>
       </div>
     </div>
-    <a href="https://tweetz.com/app/signup" title="Commencer gratuitement" class="c-btn">G&eacute;n&eacute;rer un lien</a>
+    <a href="https://tweetz.com/app/signup" title="Commencer gratuitement" class="c-btn" data-i18n="generate_link"></a>
   </div>
 
   {# section 5 #}
 
   <div class="who">
-    <h2>
-      On a tous une bonne raison de choisir Tweetz
-    </h2>
-    <p>
-      Facilitez lʼinteraction avec votre communauté, là où ça compte vraiment.
-    </p>
+    <h2 data-i18n="reason_title"></h2>
+    <p data-i18n="reason_content"></p>
   </div>
   <div class="container">
   <div class="cards">
@@ -406,10 +399,8 @@ Simplifiez l’expérience utilisateur en redirigeant instantanément votre audi
         <img src="../../assets/img/image.png" alt="creator image" />
       </div>
       <div class="cards__card-content">
-        <h3 arial-level="3" role="heading">Créateurs de contenu</h3>
-        <p>
-          Boostez votre engagement en dirigeant directement votre audience vers l’application de votre choix ! Simplifiez l’accès de vos dernières vidéos, chaînes de streaming, stories ou lives.
-        </p>
+        <h3 arial-level="3" role="heading" data-i18n="creator_title"></h3>
+        <p data-i18n="creator_content"></p>
       </div>
       <div class="cards__card-icons">
         <svg
@@ -522,10 +513,8 @@ Simplifiez l’expérience utilisateur en redirigeant instantanément votre audi
         <img src="../../assets/img/image2.png" alt="creator image" />
       </div>
       <div class="cards__card-content">
-        <h3 arial-level="3" role="heading">Artistes musicaux</h3>
-        <p>
-          Facilitez l'accès à vos titres et albums préférés et offrez une expérience d’écoute fluide à votre audience. Transformez chaque clic en un stream comptabilisé pour maximiser votre visibilité dans l’algorithme.
-        </p>
+        <h3 arial-level="3" role="heading" data-i18n="musical_artists"></h3>
+        <p data-i18n="musical_artists_content"></p>
       </div>
       <div class="cards__card-icons">
         <svg width="32" height="33" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -549,10 +538,8 @@ Simplifiez l’expérience utilisateur en redirigeant instantanément votre audi
         <img src="../../assets/img/ecommerce2.png" alt="creator image"/>
       </div>
       <div class="cards__card-content">
-        <h3 arial-level="3" role="heading">E-commerçants</h3>
-        <p>
-          Sécurisez vos commissions en évitant la perte des cookies d’affiliation sur les navigateurs. Maximisez vos ventes en éliminant les frictions inutiles et en redirigeant vos clients directement vers l’application mobile, sans confusion.
-        </p>
+        <h3 arial-level="3" role="heading" data-i18n="merchants_title"></h3>
+        <p data-i18n="merchants_content"></p>
       </div>
       <div class="cards__card-icons">
         <svg width="32" height="33" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -571,14 +558,9 @@ Simplifiez l’expérience utilisateur en redirigeant instantanément votre audi
   </div>
 
 <div class="transform">
-  <h2>
-    Transformez chaque clic en conversion
-  </h2>
-  <p>
-    Simplifiez l’expérience utilisateur en redirigeant instantanément  
-    votre audience vers le bon contenu, sans détour.
-  </p>
-  <a href="https://tweetz.com/app/signup" class="c-btn">Commencez gratuitement</a>
+  <h2 data-i18n="transform_title"></h2>
+  <p data-i18n="transform_content"></p>
+  <a href="https://tweetz.com/app/signup" class="c-btn" data-i18n="start_free"></a>
 </div>
 
   <div class="l-container">
@@ -614,12 +596,7 @@ Simplifiez l’expérience utilisateur en redirigeant instantanément votre audi
     </a>
   </div>
 
-
-
   {# code ici... #}
-
-
-
 
   {# !!! laissez ce script en bas svp !!! #}
 
@@ -628,26 +605,151 @@ Simplifiez l’expérience utilisateur en redirigeant instantanément votre audi
       const toggle = document.getElementById('paradiseToggle');
       const simpleView = document.getElementById('simpleView');
       const enferView = document.getElementById('enferView');
+      const enferViewFr = document.querySelector('.enfer-desktop');
+      const enferViewEn = document.querySelector('.enfer-desktop-en');
+      const enferViewEs = document.querySelector('.enfer-desktop-es');
+      const enferMobile = document.querySelector('.enfer-mobile');
+      const enferMobileEn = document.querySelector('.enfer-mobile-en');
+      const enferMobileEs = document.querySelector('.enfer-mobile-es');
+      const simpleViewFr = document.querySelector('.simple-desktop');
+      const simpleViewEn = document.querySelector('.simple-desktop-en');
+      const simpleViewEs = document.querySelector('.simple-desktop-es');
+      const simpleMobileFr = document.querySelector('.simple-mobile');
+      const simpleMobileEn = document.querySelector('.simple-mobile-en');
+      const simpleMobileEs = document.querySelector('.simple-mobile-es');
       const title = document.querySelector('.paradise__title');
       const description = document.querySelector('.paradise__description');
+      const lang = document.getElementById('lang');
+      const mediaQuery = window.matchMedia("(max-width: 500px)");
+
+    // Récupérer l'état sauvegardé du toggle et de la langue
+    let savedLang = localStorage.getItem("selectedLang") || document.documentElement.lang || "en";
+    let savedToggleState = localStorage.getItem("toggleState") === "true";
     
-      toggle.checked = false;
-      simpleView.style.display = 'none';
-      enferView.style.display = 'block';
-      title.textContent = "L'enfer sans tweetz-it";
-    
-      toggle.addEventListener('change', function() {
-        if (this.checked) {
+      toggle.checked = savedToggleState;
+      lang.value = savedLang;
+      document.documentElement.lang = savedLang;
+      enferView.style.display = "block";
+      simpleMobileFr.style.display = "none";
+      simpleMobileEn.style.display = "none";
+      simpleMobileEs.style.display = "none";
+
+      function updateSVG(lang) {
+        document.querySelectorAll('.svg-lang').forEach(svg => svg.style.display = "none");
+        let svgToShow = document.getElementById(`svg-${lang}`);
+        if (svgToShow) svgToShow.style.display = "block";
+      }
+
+      function handleMediaQueryChange(event) {
+        let currentLang = document.documentElement.lang || "en";
+
+        if (event.matches) {
+          
+          if (currentLang === "en") {
+            enferMobile.style.display = "none";
+            enferMobileEn.style.display = "block";
+          }
+          if (currentLang === "es") {
+            enferMobile.style.display = "none";
+            enferMobileEs.style.display = "block";
+          }
+
+          if (toggle.checked) {
+
+            simpleMobileFr.style.display = "block";
+
+            if (currentLang === "en") {
+              simpleMobileFr.style.display = "none";
+              simpleMobileEn.style.display = "block";
+            }
+
+            if (currentLang === "es") {
+              simpleMobileFr.style.display = "none";
+              simpleMobileEs.style.display = "block";
+            }
+          }
+        }
+      }
+
+      // Charger le fichier JSON
+      function loadTranslations(lang) {
+        fetch("../assets/js/translations.json")
+      .then((response) => response.json())
+      .then((translations) => {
+        const data = translations[lang] || translations["en"]; // Si la langue n'existe pas => "en"
+
+        function updateText() {
+
+          if (toggle.checked) {
           simpleView.style.display = 'block';
           enferView.style.display = 'none';
-          title.textContent = "Le paradis avec tweetz-it";
-          description.textContent = "Sur 100 clics, vous sauvez 80 utilisateurs.";
+          simpleViewEn.style.display = 'none';
+          simpleViewEs.style.display = 'none';
+          title.textContent = data.paradise_title;
+          description.textContent = data.paradise_content;
+
+          if (lang === 'fr') {
+            simpleViewFr.style.display = "block";
+          }
+
+          if (lang === 'en') {
+            simpleViewEn.style.display = 'block';
+            simpleViewFr.style.display = 'none';
+          }
+
+          if (lang === 'es') {
+            simpleViewEs.style.display = 'block';
+            simpleViewFr.style.display = 'none';
+          }
         } else {
           simpleView.style.display = 'none';
           enferView.style.display = 'block';
-          title.textContent = "L'enfer sans tweetz-it";
-          description.textContent = "50% du public qui est perdu sans même en avoir conscience.";
+          title.textContent = data.enfer_title;
+          description.textContent = data.enfer_content;
+
+          if (lang === 'fr') {
+            enferViewFr.style.display = "block";
+            enferViewEn.style.display = "none";
+            enferViewEs.style.display = "none";
+          }
+
+          if (lang === 'en') {
+            enferViewFr.style.display = "none";
+            enferViewEn.style.display = "block";
+            enferViewEs.style.display = "none";
+          }
+
+          if(lang === 'es') {
+            enferViewFr.style.display = "none";
+            enferViewEn.style.display = "none";
+            enferViewEs.style.display = "block";
+          }
         }
+        handleMediaQueryChange(mediaQuery);
+        }
+
+        updateText();
+        toggle.addEventListener('change', updateText);
+      })
+      .catch((error) => console.log('Erreur de chargement des traductions :', error));
+      }
+
+      mediaQuery.addEventListener("change", handleMediaQueryChange);
+      handleMediaQueryChange(mediaQuery);
+
+      // Détection de la langue initiale dans la balise <html>
+      let currentLang = document.documentElement.lang || "en";
+      lang.value = currentLang;
+      loadTranslations(currentLang);
+
+      // Changement de langue avec le select
+      lang.addEventListener("change", function() {
+        location.reload();
+        let newLang = this.value;
+        document.documentElement.lang = newLang;
+        localStorage.setItem("selectedLang", newLang);
+        updateSVG(newLang);
+        loadTranslations(newLang);
       });
     });
     
