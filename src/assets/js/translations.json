@@ -1,5 +1,7 @@
 {
     "fr": {
+        "creator": "Je suis créateur",
+        "App": "Connexion",
         "hero_title": "Les liens qui redirigent directement dans les apps mobile",
         "hero_content": "Transformez chaque clic en conversion, sans frictions et sans détour.",
         "create": "Créer",
@@ -86,9 +88,12 @@
         "question_eight_content": "Vous pouvez utiliser jusqu'à 5 liens simultanément gratuitement, avec clics illimités et 5 QR codes également avec scans illimités.",
         "question_nine_title": "tweetz.it est-il compatible avec toutes les apps, outils et appareils ?",
         "question_nine_content": "Oui, tweetz.it est compatible avec tous les appareils (iOS, Android, macOS, Windows, Chrome, Linux) et fonctionne avec tous vos réseaux sociaux, plateformes de streaming, sites e-commerce et outils.",
-        "needhelp": "Besoin d'aide ?"
+        "needhelp": "Besoin d'aide ?",
+        "support": "Site support"
     },
     "en": {
+        "creator": "I am a creator",
+        "App": "Connection",
         "hero_title": "Links that redirect directly into mobile apps",
         "hero_content": "Turn every click into a conversion, without friction and detours.",
         "create": "Create",
@@ -175,9 +180,12 @@
         "question_eight_content": "You can use up to 5 links simultaneously for free, with unlimited clicks and 5 QR codes also with unlimited scans.",
         "question_nine_title": "tweetz.it is compatible with all apps, tools and devices?",
         "question_nine_content": "Yes, tweetz.it is compatible with all devices (iOS, Android, macOS, Windows, Chrome, Linux) and works with all your social networks, streaming platforms, e-commerce sites and tools.",
-        "needhelp": "Need help?"
+        "needhelp": "Need help?",
+        "support": "Support website"
     },
     "es": {
+        "creator": "Yo soy un creador",
+        "App": "Conexión",
         "hero_title": "Los enlaces que redirigen directamente a las aplicaciones móviles",
         "hero_content": "Convierte cada clic en una conversión sin fricción ni desvíos.",
         "create": "Crear",
@@ -264,6 +272,7 @@
         "question_eight_content": "Puedes usar hasta 5 enlaces simultáneamente de forma gratuita, con clics ilimitados y 5 códigos QR también con escaneos ilimitados.",
         "question_nine_title": "tweetz.it es compatible con todas las apps, herramientas y dispositivos?",
         "question_nine_content": "Sí, tweetz.it es compatible con todos los dispositivos (iOS, Android, macOS, Windows, Chrome, Linux) y funciona con todas sus redes sociales, plataformas de streaming, sitios de comercio electrónico y herramientas.",
-        "needhelp": "Necesita ayuda?"
+        "needhelp": "Necesita ayuda?",
+        "support": "Sitio de soporte"
     }
 }

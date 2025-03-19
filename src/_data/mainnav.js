@@ -2,8 +2,8 @@ const site = require('./site');
 
 module.exports = [
     {   
-        label: "Je suis créateur", 
-        trigger: "creator", 
+        label: "Je suis créateur",
+        trigger: "creator",
         url: "/creator/",
     },
     {
