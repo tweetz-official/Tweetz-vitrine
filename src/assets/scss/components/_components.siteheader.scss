@@ -23,6 +23,19 @@
   #lang {
     border: none;
     background: transparent;
+    margin: 0 1rem 0 auto;
+    color: gray;
+  }
+
+  .after-content::after {
+    content: "";
+    border: .5px solid rgba($color: #000, $alpha: 0.2);
+  }
+
+  @media (max-width: 800px) {
+    .after-content::after {
+      border: none;
+    }
   }
 
   .c-logo {
