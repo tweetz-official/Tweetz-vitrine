@@ -630,9 +630,6 @@ Simplifiez l’expérience utilisateur en redirigeant instantanément votre audi
       lang.value = savedLang;
       document.documentElement.lang = savedLang;
       enferView.style.display = "block";
-      simpleMobileFr.style.display = "none";
-      simpleMobileEn.style.display = "none";
-      simpleMobileEs.style.display = "none";
 
       function updateSVG(lang) {
         document.querySelectorAll('.svg-lang').forEach(svg => svg.style.display = "none");
@@ -642,9 +639,9 @@ Simplifiez l’expérience utilisateur en redirigeant instantanément votre audi
 
       function handleMediaQueryChange(event) {
         let currentLang = document.documentElement.lang || "en";
-
+        
         if (event.matches) {
-          
+
           if (currentLang === "en") {
             enferMobile.style.display = "none";
             enferMobileEn.style.display = "block";
@@ -683,47 +680,22 @@ Simplifiez l’expérience utilisateur en redirigeant instantanément votre audi
           if (toggle.checked) {
           simpleView.style.display = 'block';
           enferView.style.display = 'none';
-          simpleViewEn.style.display = 'none';
-          simpleViewEs.style.display = 'none';
           title.textContent = data.paradise_title;
           description.textContent = data.paradise_content;
 
-          if (lang === 'fr') {
-            simpleViewFr.style.display = "block";
-          }
-
-          if (lang === 'en') {
-            simpleViewEn.style.display = 'block';
-            simpleViewFr.style.display = 'none';
-          }
-
-          if (lang === 'es') {
-            simpleViewEs.style.display = 'block';
-            simpleViewFr.style.display = 'none';
-          }
+          simpleViewFr.style.display = lang === "fr" ? "block" : "none";
+          simpleViewEn.style.display = lang === "en" ? "block" : "none";
+          simpleViewEs.style.display = lang === "es" ? "block" : "none";
+          
         } else {
           simpleView.style.display = 'none';
           enferView.style.display = 'block';
           title.textContent = data.enfer_title;
           description.textContent = data.enfer_content;
 
-          if (lang === 'fr') {
-            enferViewFr.style.display = "block";
-            enferViewEn.style.display = "none";
-            enferViewEs.style.display = "none";
-          }
-
-          if (lang === 'en') {
-            enferViewFr.style.display = "none";
-            enferViewEn.style.display = "block";
-            enferViewEs.style.display = "none";
-          }
-
-          if(lang === 'es') {
-            enferViewFr.style.display = "none";
-            enferViewEn.style.display = "none";
-            enferViewEs.style.display = "block";
-          }
+          enferViewFr.style.display = lang === 'fr' ? "block" : "none";
+          enferViewEn.style.display = lang === 'en' ? "block" : "none";
+          enferViewEs.style.display = lang === 'es' ? "block" : "none";
         }
         handleMediaQueryChange(mediaQuery);
         }
