@@ -18,7 +18,7 @@
   .toggle-switch__track {
     position: absolute;
     cursor: pointer;
-    background-color: #fff; 
+    background-color: var(--color-grey-11); 
     border: 2px solid #E0295D; 
     border-radius: 93.07px;
     top: 0;
@@ -86,7 +86,7 @@
     content: "";
     height: 37.23px;
     width: 121px;
-    left: 3.72px;
+    left: 2.5px;
     bottom: 1.72px;
     background-color: #E0295D; 
     border-radius: 20px;
@@ -96,8 +96,9 @@
   .toggle-text-premium--rigth{
     z-index: 1;
     position : absolute;
+    top: 50%;
+    transform: translateY(-50%);
     right : 10px;
-    top : 5px;
     color : #E0295D;
     font-weight: 600;
   }
@@ -106,7 +107,8 @@
     z-index: 1;
     position : absolute;
     left : 28.5px;
-    top : 4.5px;
+    top : 50%;
+    transform: translateY(-50%);
     color : #fff;
     font-weight: 600;
   }
