@@ -17,7 +17,7 @@
         {% endif %}
       {% endif %}
       <li class="c-mainnav__item">
-        <a class="c-mainnav__link {{ currentClass }} {{ additionnalClasses }}" {{ currentAria }} href="{{ navItem.url }}" title="{{ navItem.label }}">{{ navItem.label }}</a>
+        <a class="c-mainnav__link {{ currentClass }} {{ additionnalClasses }}" {{ currentAria }} href="{{ navItem.url }}" title="{{ navItem.label }}" data-i18n="{{ navItem.trigger }}">{{ navItem.label }}</a>
       </li>
       {% if loop.last %}
       </ul>

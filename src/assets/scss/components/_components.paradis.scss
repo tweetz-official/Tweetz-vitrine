@@ -136,8 +136,20 @@
 .enfer-mobile{
   display: none;
 }
+.enfer-mobile-en{
+  display: none;
+}
+.enfer-mobile-es{
+  display: none;
+}
 .simple-mobile{
-  display: none !important;
+  display: none;
+}
+.simple-mobile-en{
+  display: none;
+}
+.simple-mobile-es{
+  display: none;
 }
 
 @media (max-width: 500px) {
@@ -146,13 +158,25 @@
     display: block;
   }
   .simple-mobile{
-    display: block !important;
+    display: block;
   }
   .simple-desktop{
     display: none !important;
   }
+  .simple-desktop-en{
+    display: none !important;
+  }
+  .simple-desktop-es{
+    display: none !important;
+  }
   .enfer-desktop{
-    display: none;
+    display: none !important;
+  }
+  .enfer-desktop-en{
+    display: none !important;
+  }
+  .enfer-desktop-es{
+    display: none !important;
   }
   
 }

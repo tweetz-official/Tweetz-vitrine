@@ -2,8 +2,8 @@ const site = require('./site');
 
 module.exports = [
     {   
-        label: "Je suis créateur", 
-        trigger: "creator", 
+        label: "Je suis créateur",
+        trigger: "creator",
         url: "/creator/",
     },
     {
@@ -12,7 +12,7 @@ module.exports = [
         url: "/tweetz-it/",
     },
     {   
-        label: "Rejoindre la beta",
+        label: "Connexion",
         trigger: "App",
         url: site.urlApp,
         isPrimary: true,
