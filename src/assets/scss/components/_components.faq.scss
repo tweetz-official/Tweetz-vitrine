@@ -110,8 +110,11 @@
   }
   
   .faq__answer {
-    display: none;
-    padding: 0 2rem 2rem 3.5rem;
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.5s ease-in-out;
+    opacity: 0;
+    padding: 0 1rem 0 3.5rem;
     color: #6F6C90;
     font-size: 18px;
     font-family: "Switzer", sans-serif;
@@ -119,7 +122,9 @@
   }
   
   .faq .active .faq__answer {
-    display: block;
+    max-height: 300px;
+    padding: 0 1rem 1rem 3.5rem;
+    opacity: 1;
   }
   
   .faq .active .faq__icon-wrapper {

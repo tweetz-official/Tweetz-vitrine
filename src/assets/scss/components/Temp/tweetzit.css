@@ -33,7 +33,7 @@
   .centered-text__description {
     text-align: center;
     color: black;
-    font-size: 24px;
+    font-size: 1.3rem;
     font-family: "Switzer", sans-serif;
     font-weight: 400;
     word-wrap: break-word;
@@ -102,7 +102,7 @@
   .cards__card {
     padding: 2rem;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px,
-      rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+    rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
     width: 20rem;
     height: auto;
     border-radius: 30px;
@@ -127,6 +127,11 @@
     height: auto;
     margin-top: -150px;
     display: block;
+    max-width: 100%;
+  }
+
+  .cards__card-content {
+    padding-bottom: 2rem;
   }
   
   .cards__card-content p {
@@ -136,14 +141,16 @@
   }
 
   .cards__card-content h3 {
-    margin-top: 1rem;
+    margin: 1rem 0 0.5rem;
     color : #102542;
   }
   
   .cards__card-icons {
     display: flex;
-    justify-content: center;
-    margin: 1rem;
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
   }
   
   .cards__card-icons svg {
@@ -252,7 +259,7 @@
 
   .who {
     text-align: center;
-    margin: 8rem auto;
+    margin: 10rem auto;
     width: 90%;
   }
 
@@ -265,7 +272,7 @@
   }
 
   .who p {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
 
   .transform {
@@ -283,7 +290,7 @@
   }
 
   .transform p {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     margin: 3rem 0;
   }
 
