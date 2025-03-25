@@ -26,6 +26,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     const key = element.getAttribute('data-i18n');
                     if (translations[lang] && translations[lang][key]) {
                         element.innerHTML = translations[lang][key]; // innerHTML pour interpréter le HTML
+                        element.setAttribute("title", translations[lang][key]);
                     }
                 });
             }

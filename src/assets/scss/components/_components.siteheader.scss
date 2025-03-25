@@ -20,11 +20,19 @@
     padding: calc(60 / 16 * 1rem) 0;
   }
 
+  .lang-select {
+    position: relative;
+    display: flex;
+    gap: 1rem;
+    margin-left: auto;
+  }
+
   #lang {
-    border: none;
-    background: transparent;
-    margin: 0 1rem 0 auto;
-    color: gray;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    cursor: pointer;
   }
 
   .after-content::after {
