@@ -23,6 +23,25 @@
   }
 }
 
+.lang-select {
+  position: relative;
+  display: flex;
+  gap: 1rem;
+  margin-left: auto;
+}
+
+#lang {
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  cursor: pointer;
+}
+
+.after-content::after {
+  content: "";
+  border: .5px solid rgba($color: #000, $alpha: 0.2);
+}
 
 .c-sitefooter__nav,
 .c-sitefooter__footer{

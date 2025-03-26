@@ -3,17 +3,6 @@
   <div class="l-container">
     <div class="c-siteheader__nav">
       {% include "partials/logo.njk" %}
-      <div class="lang-select">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-          <path d="M5 8L11 14M4 14L10 8L12 5M2 5H14M7 2H8M22 22L17 12L12 22M14 18H20" stroke="#555" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-        <select id="lang">
-          <option value="fr">French</option>
-          <option value="en">English</option>
-          <option value="es">Spanish</option>
-        </select>
-        <div class="after-content"></div>
-      </div>
       {% include "partials/mainnav.njk" %}
       <a class="c-siteheader__menu js-navtrigger" href="#footernav">{% include "partials/hamburger.njk" %}</a>
     </div>
