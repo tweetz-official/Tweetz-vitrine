@@ -29,11 +29,11 @@ permalink: index.html
                 <div class="c-hero__content l-grid l-grid--2cols@medium">
                     <div class="c-hero__text">
                         <div class="c-hero__logo">{% include "svg/logo/logo-text.svg" %}</div>
-                        <h1 class="c-hero__title c-h1">Créez selon votre propre vision</h1>
-                        <p class="c-hero__description">Faites revivre le gazouillis et libérez votre créativité !</p>
+                        <h1 class="c-hero__title c-h1" data-i18n="p1_hero_title"></h1>
+                        <p class="c-hero__description" data-i18n="p1_hero_content"></p>
 
                         <div class="c-hero__buttons">
-                            <a href="{{ site.urlApp }}" class="c-btn c-btn--secondary">Rejoindre la beta</a>
+                            <a href="{{ site.urlApp }}" class="c-btn c-btn--secondary" data-i18n="App"></a>
                             {# <a href="mailto:{{ site.email }}" class="c-btn c-btn--secondary">Nous contacter</a> #}
                         </div>
                     </div>
@@ -57,12 +57,10 @@ permalink: index.html
                             </div>
                         </div>
                         <div class="c-image-text__text">
-                            <h2 class="c-h2">Votre premier envol sur Tweetz</h2>
-                            <p>Inscrivez-vous gratuitement et en toute simplicité. Développez votre influence en créant du contenu qui vous ressemble.
-                             </p>
-                            <a href="{{site.urlApp}}" class="c-link">Rejoindre la beta {% include "svg/arrow-right.svg" %}
+                            <h2 class="c-h2" data-i18n="p1_flight_title"></h2>
+                            <p data-i18n="p1_flight_content"></p>
+                            <a href="{{site.urlApp}}" class="c-link" data-i18n="App"> {% include "svg/arrow-right.svg" %}
                             </a>
-
                         </div>
                     </div>
 
@@ -77,8 +75,8 @@ permalink: index.html
                             </div>
                         </div>
                         <div class="c-image-text__text">
-                            <h2 class="c-h2">Suivez vos créateurs favoris</h2>
-                            <p>Obtenez des contenus conçus exclusivement pour vous et créez des souvenirs inoubliables avec les créateurs que vous admirez le plus en démarrant une relation unique.</p>
+                            <h2 class="c-h2" data-i18n="p1_follow_title">s</h2>
+                            <p data-i18n="p1_follow_content"></p>
                         </a>
                     </div>
                 </div>
@@ -90,8 +88,8 @@ permalink: index.html
                         </div>
                     </div>
                     <div class="c-image-text__text">
-                        <h2 class="c-h2">Exprimez vos idées</h2>
-                        <p>Trouvez des personnes animées par la même passion que vous, partagez vos expériences et créez de nouveaux liens.</p>
+                        <h2 class="c-h2" data-i18n="p1_ideas_title"></h2>
+                        <p data-i18n="p1_ideas_content"></p>
                     </div>
                 </div>
 
@@ -102,9 +100,9 @@ permalink: index.html
                         </div>
                     </div>
                     <div class="c-image-text__text">
-                        <h2 class="c-h2">Atteignez chaque fan à chaque Tweetz</h2>
-                        <p>Peu importe ce que vous faites, soyez simplement vous-même. Votre public est là pour vous et vous seul.</p>
-                        <a href="`/creator" class="c-link">Je suis créateur {% include "svg/arrow-right.svg" %}
+                        <h2 class="c-h2" data-i18n="p1_fan_title"></h2>
+                        <p data-i18n="p1_fan_content"></p>
+                        <a href="`/creator" class="c-link" data-i18n="App">{% include "svg/arrow-right.svg" %}
                         </a>
                     </div>
                 </div>
@@ -122,24 +120,24 @@ permalink: index.html
                         </div>
                     </div>
                     <div class="c-image-text__text">
-                        <h2 class="c-h2">Qui sommes-nous ?</h2>
-                        <p>Tweetz est un réseau social où les créateurs de tout horizon peuvent façonner une communauté à leurs images, en partageant librement leurs passions. C’est un endroit où ils peuvent s’exprimer de façon libre en donnant vie à ce qui les anime le plus.</p>
-                        <a href="/creator" class="c-link">Je suis créateur {% include "svg/arrow-right.svg" %}</a>
+                        <h2 class="c-h2" data-i18n="p1_who_title"></h2>
+                        <p data-i18n="p1_who_content"></p>
+                        <a href="/creator" class="c-link" data-i18n="App">{% include "svg/arrow-right.svg" %}</a>
                     </div>
                 </div>
 
                 <div class="c-vertical-section">
                     <div class="c-vertical-section__titles l-container--narrow">
-                        <h2 class="c-h2">Plusieurs chemins vers la rentabilité</h2>
-                        <p>Construisez une activité durable sans publicité. En partant des abonnements pour offrir des avantages permanents aux messages privés jusqu'à la vente de vidéos personnalisées, explorez les différentes sources de revenus.</p>
+                        <h2 class="c-h2" data-i18n="p1_path_title"></h2>
+                        <p data-i18n="p1_path_content"></p>
                     </div>
 
                     {% include "partials/bento-grid.njk" %}
 
                     <div class="c-vertical-section__titles l-container--narrow">
-                        <h2 class="c-h2">Boostez votre croissance</h2>
-                        <p>Tweetz favorise non seulement le développement créatif, mais aussi votre activité professionnelle. Accédez à des analyses détaillées sur votre audience et découvrez nos outils de gestion pour vous aider à construire une activité florissante.</p>
-                        <a href="{{ site.urlApp }}" class="c-btn">Rejoindre la beta</a>
+                        <h2 class="c-h2" data-i18n="p2_boost_title"></h2>
+                        <p data-i18n="p2_boost_content"></p>
+                        <a href="{{ site.urlApp }}" class="c-btn" data-i18n="App"></a>
                     </div>
                 </div>
 
@@ -151,37 +149,37 @@ permalink: index.html
 
                 <div class="c-vertical-section">
                     <div class="c-vertical-section__titles l-container--narrow" id="parrainage">
-                        <h2 class="c-h2">Votre réseau, c'est de l'or !</h2>
-                        <p> Devenez ambassadeur et transformez votre réseau en source de revenus en invitant les talents autour de vous à rejoindre l’aventure Tweetz. Profitez de chaque nouvelle inscription pour augmenter vos gains.</p>
+                        <h2 class="c-h2" data-i18n="p1_network_title"></h2>
+                        <p data-i18n="p1_network_content"></p>
                     </div>
 
                     <div class="l-flex l-flex--column l-flex--s-gap">
-                        <h3 class="c-h3">Comment cela fonctionne-t-il ?</h3>
+                        <h3 class="c-h3" data-i18n="p1_network_how"></h3>
 
                         <div class="l-flex c-litle-block-container l-flex--s-gap l-flex--wrap">
                             <div class="c-litle-block c-litle-block--center">
-                                <h4 class="c-h4 c-h4--font-main" data-number="1">Invitez des Créateurs</h4>
-                                <p>Présentez Tweetz autour de vous et partagez votre lien de parrainage avec le plus grand nombre de créateurs. </p>
+                                <h4 class="c-h4 c-h4--font-main" data-number="1" data-i18n="p1_network_title_one"></h4>
+                                <p data-i18n="p1_network_content_one"></p>
                             </div>
                             <div class="c-litle-block c-litle-block--center">
-                                <h4 class="c-h4 c-h4--font-main" data-number="2">Gagnez avec eux</h4>
-                                <p>Inscrivez un créateur et gagnez 15 % de tous les revenus générés par ses ventes de contenus, à vie, payés par Tweetz.</p>
+                                <h4 class="c-h4 c-h4--font-main" data-number="2" data-i18n="p1_network_title_two"></h4>
+                                <p data-i18n="p1_network_content_two"></p>
                             </div>
                             <div class="c-litle-block c-litle-block--center">
-                                <h4 class="c-h4 c-h4--font-main" data-number="3">Suivez et Gérez</h4>
-                                <p>Suivez les performances de vos talents, gérez vos créateurs et partagez leurs succès.</p>
+                                <h4 class="c-h4 c-h4--font-main" data-number="3" data-i18n="p1_network_title_three"></h4>
+                                <p data-i18n="p1_network_content_three"></p>
                             </div>
                         </div>
 
-                        <a style="margin: 42px 0" href="https://calendly.com/tweetz-creators/30min?month=2025-01" target="_blank" class="c-btn">Réserver un appel</a>
+                        <a style="margin: 42px 0" href="https://calendly.com/tweetz-creators/30min?month=2025-01" target="_blank" class="c-btn" data-i18n="p1_network_call"></a>
                     </div>
 
                     <div class="c-image-cta">
                         <img  loading="lazy" class="c-image-cta__image" src="/assets/img/image-cta/home.jpg" alt="Femme souriant à la camera"/>
                         <div class="c-image-cta__content">
-                            <h2 class="c-image-cta__title">Prêt à créer ?</h2>
-                            <p class="c-image-cta__desc">Vous êtes un créateur passionné ? Découvrez notre espace dédié aux créateurs et partagez votre talent avec le monde entier.</p>
-                            <a href="/creator" class="c-btn">Je suis créateur</a>
+                            <h2 class="c-image-cta__title" data-i18n="p2_create_title"></h2>
+                            <p class="c-image-cta__desc" data-i18n="p1_create_content"></p>
+                            <a href="/creator" class="c-btn" data-i18n="creator"></a>
                         </div>
                     </div>
                 </div>

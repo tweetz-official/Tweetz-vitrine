@@ -20,6 +20,11 @@
     padding: calc(60 / 16 * 1rem) 0;
   }
 
+  @media (max-width: 800px) {
+    .after-content::after {
+      border: none;
+    }
+  }
 
   .c-logo {
     

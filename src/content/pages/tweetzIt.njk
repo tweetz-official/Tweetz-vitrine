@@ -17,15 +17,15 @@ Simplifiez l’expérience utilisateur en redirigeant instantanément votre audi
     <!-- Section Hero -->
     <div class="tweetz-hero">
       <div class="tweetz-hero__content">
-        <h1 class="tweetz-hero__title">Les liens qui redirigent directement dans les apps mobiles</h1>
-        <p class="tweetz-hero__subtitle">Transformez chaque clic en conversion, sans frictions et sans détour.</p>
+        <h1 class="tweetz-hero__title" data-i18n="hero_title"></h1>
+        <p class="tweetz-hero__subtitle" data-i18n="hero_content"></p>
         <div class="tweetz-hero__cta">
           <div class="url-input">
             <input class="c-input" type="text" placeholder="https://tweetz.it">
-            <a href="https://tweetz.com/app/signup">Cr&eacute;er</a>
+            <a href="https://tweetz.com/app/signup" data-i18n="create"="">Cr&eacute;er</a>
           </div>
-          <a href="https://tweetz.com/app/signup">
-            <button class="c-btn">Créer mon lien gratuitement</button>
+          <a href="https://tweetz.com/app/signup" class="c-btn" data-i18n="create_free">
+            Créer mon lien gratuitement
           </a>
         </div>
       </div>
@@ -59,12 +59,8 @@ Simplifiez l’expérience utilisateur en redirigeant instantanément votre audi
 
     <div class="centered-text">
       <div class="centered-text__content">
-        <h2 class="centered-text__title">Emmenez vos utilisateurs là où ils doivent être.</h2>
-        <p class="centered-text__description">
-          Nos liens permettent de rediriger vos utilisateurs directement vers le contenu le plus pertinent de n'importe quelle application.
-          <br/><br/>
-          L'objectif ? Créer une expérience fluide sans perte d'utilisateurs.
-        </p>
+        <h2 class="centered-text__title" data-i18n="subhero_title"></h2>
+        <p class="centered-text__description" data-i18n="subhero_content"></p>
       </div>
     </div>
 
@@ -270,8 +266,8 @@ Simplifiez l’expérience utilisateur en redirigeant instantanément votre audi
 
     <div class="paradise">
       <div class="paradise__header">
-        <div class="paradise__title">L'enfer sans tweetz.it</div>
-        <p class="paradise__description">50% du public qui est perdu sans même en avoir conscience.</p>
+        <div class="paradise__title" data-i18n="paradise_title"></div>
+        <p class="paradise__description" data-i18n="paradise_content"></p>
         <div class="paradise__actions">
           <div class="toggle-switch">
             <input type="checkbox" id="paradiseToggle" class="toggle-switch__input">
@@ -279,24 +275,28 @@ Simplifiez l’expérience utilisateur en redirigeant instantanément votre audi
               <span class="toggle-switch__thumb"></span>
             </label>
           </div>
-          <div class="paradise__subtitle">Clique et simplifie tout ça !</div>
+          <div class="paradise__subtitle" data-i18n="simplify"></div>
         </div>
       </div>
   
     <div id="paradiseContent">
       <div id="simpleView" style="display: none;">
-    {% include "partials/paradisSimple-tweetzit.njk" %}
-  </div>
-  <div id="enferView">
-    {% include "partials/paradisEnfer-tweetzit.njk" %}
-  </div>
+        {% include "partials/paradisSimple-tweetzit.njk" %}
+        {% include "partials/paradisSimple-tweetzit-en.njk" %}
+        {% include "partials/paradisSimple-tweetzit-es.njk" %}
+      </div>
+      <div id="enferView">
+        {% include "partials/paradisEnfer-tweetzit.njk" %}
+        {% include "partials/paradisEnfer-tweetzit-en.njk" %}
+        {% include "partials/paradisEnfer-tweetzit-es.njk" %}
+      </div>
     </div>
   </div>
 
   {# section 4 #}
 
   <div class="section">
-    <h2 arial-level="2" role="heading">Comment &ccedil;a fonctionne&nbsp;?</h2>
+    <h2 arial-level="2" role="heading" data-i18n="how_it_work"></h2>
     <div class="points">
       <div class="point">
         <svg width="131" height="136" viewBox="0 0 131 100" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -316,8 +316,8 @@ Simplifiez l’expérience utilisateur en redirigeant instantanément votre audi
           </filter>
           </defs>
         </svg>
-        <h3 arial-level="3" role="heading">Cr&eacute;er</h3>
-        <p>Générez un lien court et optimisé en quelques secondes pour lʼapp mobile choisie.</p>
+        <h3 arial-level="3" role="heading" data-i18n="create_title"></h3>
+        <p data-i18n="create_content"></p>
       </div>
       <div class="point">
         <svg width="145" height="136" viewBox="0 0 145 100" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -337,9 +337,8 @@ Simplifiez l’expérience utilisateur en redirigeant instantanément votre audi
           </filter>
           </defs>
           </svg>
-        <h3 arial-level="3" role="heading">Partager</h3>
-        <p>Diffusez-le sur vos réseaux sociaux et gardez vos utilisateurs connectés sans
-          friction.</p>
+        <h3 arial-level="3" role="heading" data-i18n="share_title"></h3>
+        <p data-i18n="share_content"></p>
       </div>
       <div class="point">
         <svg width="144" height="134" viewBox="0 0 144 100" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -359,9 +358,8 @@ Simplifiez l’expérience utilisateur en redirigeant instantanément votre audi
           </filter>
           </defs>
           </svg>
-        <h3 arial-level="3" role="heading">Analyser</h3>
-        <p>Suivez lʼimpact en temps réel de vos clics et identifiez vos liens les plus
-          performants.</p>
+        <h3 arial-level="3" role="heading" data-i18n="analyse_title"></h3>
+        <p data-i18n="analyse_content"></p>
       </div>
       <div class="point">
         <svg width="149" height="136" viewBox="0 0 149 100" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -381,23 +379,18 @@ Simplifiez l’expérience utilisateur en redirigeant instantanément votre audi
           </filter>
           </defs>
           </svg>
-        <h3>Anticiper</h3>
-        <p>Adaptez votre stratégie en fonction des résultats et gardez toujours une longueur
-          dʼavance.</p>
+        <h3 data-i18n="anticipate_title"></h3>
+        <p data-i18n="anticipate_content"></p>
       </div>
     </div>
-    <a href="https://tweetz.com/app/signup" title="Commencer gratuitement" class="c-btn">G&eacute;n&eacute;rer un lien</a>
+    <a href="https://tweetz.com/app/signup" title="Commencer gratuitement" class="c-btn" data-i18n="generate_link"></a>
   </div>
 
   {# section 5 #}
 
   <div class="who">
-    <h2>
-      On a tous une bonne raison de choisir Tweetz
-    </h2>
-    <p>
-      Facilitez lʼinteraction avec votre communauté, là où ça compte vraiment.
-    </p>
+    <h2 data-i18n="reason_title"></h2>
+    <p data-i18n="reason_content"></p>
   </div>
   <div class="container">
   <div class="cards">
@@ -406,10 +399,8 @@ Simplifiez l’expérience utilisateur en redirigeant instantanément votre audi
         <img src="../../assets/img/image.png" alt="creator image" />
       </div>
       <div class="cards__card-content">
-        <h3 arial-level="3" role="heading">Créateurs de contenu</h3>
-        <p>
-          Boostez votre engagement en dirigeant directement votre audience vers l’application de votre choix ! Simplifiez l’accès de vos dernières vidéos, chaînes de streaming, stories ou lives.
-        </p>
+        <h3 arial-level="3" role="heading" data-i18n="creator_title"></h3>
+        <p data-i18n="creator_content"></p>
       </div>
       <div class="cards__card-icons">
         <svg
@@ -522,10 +513,8 @@ Simplifiez l’expérience utilisateur en redirigeant instantanément votre audi
         <img src="../../assets/img/image2.png" alt="creator image" />
       </div>
       <div class="cards__card-content">
-        <h3 arial-level="3" role="heading">Artistes musicaux</h3>
-        <p>
-          Facilitez l'accès à vos titres et albums préférés et offrez une expérience d’écoute fluide à votre audience. Transformez chaque clic en un stream comptabilisé pour maximiser votre visibilité dans l’algorithme.
-        </p>
+        <h3 arial-level="3" role="heading" data-i18n="musical_artists"></h3>
+        <p data-i18n="musical_artists_content"></p>
       </div>
       <div class="cards__card-icons">
         <svg width="32" height="33" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -549,10 +538,8 @@ Simplifiez l’expérience utilisateur en redirigeant instantanément votre audi
         <img src="../../assets/img/ecommerce2.png" alt="creator image"/>
       </div>
       <div class="cards__card-content">
-        <h3 arial-level="3" role="heading">E-commerçants</h3>
-        <p>
-          Sécurisez vos commissions en évitant la perte des cookies d’affiliation sur les navigateurs. Maximisez vos ventes en éliminant les frictions inutiles et en redirigeant vos clients directement vers l’application mobile, sans confusion.
-        </p>
+        <h3 arial-level="3" role="heading" data-i18n="merchants_title"></h3>
+        <p data-i18n="merchants_content"></p>
       </div>
       <div class="cards__card-icons">
         <svg width="32" height="33" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -571,14 +558,9 @@ Simplifiez l’expérience utilisateur en redirigeant instantanément votre audi
   </div>
 
 <div class="transform">
-  <h2>
-    Transformez chaque clic en conversion
-  </h2>
-  <p>
-    Simplifiez l’expérience utilisateur en redirigeant instantanément  
-    votre audience vers le bon contenu, sans détour.
-  </p>
-  <a href="https://tweetz.com/app/signup" class="c-btn">Commencez gratuitement</a>
+  <h2 data-i18n="transform_title"></h2>
+  <p data-i18n="transform_content"></p>
+  <a href="https://tweetz.com/app/signup" class="c-btn" data-i18n="start_free"></a>
 </div>
 
   <div class="l-container">
@@ -596,12 +578,12 @@ Simplifiez l’expérience utilisateur en redirigeant instantanément votre audi
   {% include "partials/faq.njk" %}
 
   <div class="contact">
-    <a href="https://wa.me/32491633251?text=Bonjour..." title="Nous contacter" tabindex="0" target="_blank">
+    <a href="https://wa.me/32491633251?text=Bonjour..." title="Contact us" tabindex="0" target="_blank">
       <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50" fill="none">
         <g clip-path="url(#clip0_3_4)">
           <path d="M1.16161 50C0.880848 50 0.607717 49.889 0.405156 49.6841C0.138128 49.4141 0.0351314 49.0219 0.135458 48.6553L3.38596 36.7855C1.36226 33.1261 0.295293 28.9864 0.296819 24.7841C0.302541 11.1179 11.4239 0 25.0889 0C31.7169 0.00267029 37.9448 2.58446 42.6258 7.26891C47.306 11.9537 49.8825 18.1812 49.8806 24.8039C49.8745 38.4705 38.7531 49.5892 25.0889 49.5892C25.0889 49.5892 25.0786 49.5892 25.0782 49.5892C21.0869 49.5876 17.1299 48.6149 13.6067 46.7724L1.43131 49.9653C1.34204 49.9886 1.25125 50 1.16161 50Z" fill="#E5E5E5"/>
           <path d="M1.16156 48.9359L4.52765 36.6439C2.45131 33.0462 1.35916 28.9653 1.36069 24.7844C1.36603 11.705 12.0098 1.0639 25.0889 1.0639C31.4358 1.06657 37.3932 3.53697 41.8732 8.02075C46.3528 12.5045 48.819 18.4646 48.8167 24.8035C48.811 37.8825 38.1657 48.5251 25.0889 48.5251C25.0881 48.5251 25.0893 48.5251 25.0889 48.5251H25.0786C21.1075 48.5236 17.2058 47.5276 13.7402 45.6374L1.16156 48.9359ZM14.3227 41.3432L15.0433 41.7701C18.0706 43.5668 21.5416 44.517 25.0813 44.5189H25.0889C35.9585 44.5189 44.8056 35.6734 44.8102 24.8019C44.8121 19.5335 42.7628 14.5793 39.0393 10.8528C35.3154 7.12621 30.3643 5.07276 25.0961 5.07047C14.2178 5.07047 5.37108 13.9148 5.36689 24.7859C5.36536 28.5113 6.40754 32.1391 8.38203 35.2786L8.85124 36.0248L6.85844 43.3001L14.3227 41.3432Z" fill="white"/>
-          <path d="M1.98669 48.1079L5.23643 36.2407C3.23143 32.7678 2.17743 28.8276 2.17857 24.7921C2.18353 12.1654 12.4592 1.89282 25.0847 1.89282C31.2126 1.89549 36.964 4.28044 41.288 8.60898C45.6131 12.9375 47.9934 18.6912 47.9911 24.81C47.9858 37.437 37.7098 47.7108 25.0858 47.7108C25.0847 47.7108 25.0862 47.7108 25.0858 47.7108H25.0755C21.2421 47.7092 17.4751 46.7472 14.1296 44.9238L1.98669 48.1079Z" fill="#64B161"/>
+          <path d="M1.98669 48.1079L5.23643 36.2407C3.23143 32.7678 2.17743 28.8276 2.17857 24.7921C2.18353 12.1654 12.4592 1.89282 25.0847 1.89282C31.2126 1.89549 36.964 4.28044 41.288 8.60898C45.6131 12.9375 47.9934 18.6912 47.9911 24.81C47.9858 37.437 37.7098 47.7108 25.0858 47.7108C25.0847 47.7108 25.0862 47.7108 25.0858 47.7108H25.0755C21.2421 47.7092 17.4751 46.7472 14.1296 44.9238L1.98669 48.1079Z" fill="#E0295D"/>
           <path d="M1.16156 48.9359L4.52765 36.6439C2.45131 33.0462 1.35916 28.9653 1.36069 24.7844C1.36603 11.705 12.0098 1.0639 25.0889 1.0639C31.4358 1.06657 37.3932 3.53697 41.8732 8.02075C46.3528 12.5045 48.819 18.4646 48.8167 24.8035C48.811 37.8825 38.1657 48.5251 25.0889 48.5251C25.0881 48.5251 25.0893 48.5251 25.0889 48.5251H25.0786C21.1075 48.5236 17.2058 47.5276 13.7402 45.6374L1.16156 48.9359ZM14.3227 41.3432L15.0433 41.7701C18.0706 43.5668 21.5416 44.517 25.0813 44.5189H25.0889C35.9585 44.5189 44.8056 35.6734 44.8102 24.8019C44.8121 19.5335 42.7628 14.5793 39.0393 10.8528C35.3154 7.12621 30.3643 5.07276 25.0961 5.07047C14.2178 5.07047 5.37108 13.9148 5.36689 24.7859C5.36536 28.5113 6.40754 32.1391 8.38203 35.2786L8.85124 36.0248L6.85844 43.3001L14.3227 41.3432Z" fill="white"/>
           <path fill-rule="evenodd" clip-rule="evenodd" d="M19.1585 14.8678C18.7145 13.8805 18.2468 13.8607 17.8241 13.8435C17.4785 13.8287 17.0829 13.8294 16.6881 13.8294C16.2929 13.8294 15.6505 13.9782 15.1073 14.5714C14.5637 15.1646 13.0317 16.5989 13.0317 19.516C13.0317 22.4335 15.1565 25.2522 15.4529 25.6482C15.7493 26.0438 19.5545 32.2213 25.5805 34.5979C30.5888 36.5731 31.6077 36.1802 32.6949 36.0814C33.7821 35.9826 36.2025 34.6471 36.6965 33.2627C37.1909 31.8784 37.1909 30.692 37.0425 30.4436C36.8941 30.1968 36.4989 30.0484 35.9061 29.752C35.3133 29.4556 32.3985 28.0209 31.8549 27.8233C31.3113 27.6253 30.9161 27.5269 30.5209 28.1205C30.1254 28.7133 28.9901 30.0484 28.6441 30.4436C28.2981 30.84 27.9521 30.8896 27.3593 30.5928C26.7665 30.2956 24.8569 29.67 22.5917 27.6501C20.8293 26.0788 19.6392 24.1379 19.2932 23.5444C18.9476 22.9515 19.2874 22.6586 19.5537 22.3347C20.0332 21.7514 20.8377 20.7028 21.0353 20.3076C21.2329 19.9116 21.1341 19.5656 20.9861 19.2688C20.8377 18.9724 19.6853 16.0404 19.1585 14.8678Z" fill="white"/>
         </g>
@@ -614,12 +596,7 @@ Simplifiez l’expérience utilisateur en redirigeant instantanément votre audi
     </a>
   </div>
 
-
-
   {# code ici... #}
-
-
-
 
   {# !!! laissez ce script en bas svp !!! #}
 
@@ -628,26 +605,123 @@ Simplifiez l’expérience utilisateur en redirigeant instantanément votre audi
       const toggle = document.getElementById('paradiseToggle');
       const simpleView = document.getElementById('simpleView');
       const enferView = document.getElementById('enferView');
+      const enferViewFr = document.querySelector('.enfer-desktop');
+      const enferViewEn = document.querySelector('.enfer-desktop-en');
+      const enferViewEs = document.querySelector('.enfer-desktop-es');
+      const enferMobile = document.querySelector('.enfer-mobile');
+      const enferMobileEn = document.querySelector('.enfer-mobile-en');
+      const enferMobileEs = document.querySelector('.enfer-mobile-es');
+      const simpleViewFr = document.querySelector('.simple-desktop');
+      const simpleViewEn = document.querySelector('.simple-desktop-en');
+      const simpleViewEs = document.querySelector('.simple-desktop-es');
+      const simpleMobileFr = document.querySelector('.simple-mobile');
+      const simpleMobileEn = document.querySelector('.simple-mobile-en');
+      const simpleMobileEs = document.querySelector('.simple-mobile-es');
       const title = document.querySelector('.paradise__title');
       const description = document.querySelector('.paradise__description');
+      const lang = document.getElementById('lang');
+      const mediaQuery = window.matchMedia("(max-width: 500px)");
+
+    // Récupérer l'état sauvegardé du toggle et de la langue
+    let savedLang = localStorage.getItem("selectedLang") || document.documentElement.lang || "en";
+    let savedToggleState = localStorage.getItem("toggleState") === "true";
     
-      toggle.checked = false;
-      simpleView.style.display = 'none';
-      enferView.style.display = 'block';
-      title.textContent = "L'enfer sans tweetz-it";
-    
-      toggle.addEventListener('change', function() {
-        if (this.checked) {
+      toggle.checked = savedToggleState;
+      lang.value = savedLang;
+      document.documentElement.lang = savedLang;
+      enferView.style.display = "block";
+
+      function updateSVG(lang) {
+        document.querySelectorAll('.svg-lang').forEach(svg => svg.style.display = "none");
+        let svgToShow = document.getElementById(`svg-${lang}`);
+        if (svgToShow) svgToShow.style.display = "block";
+      }
+
+      function handleMediaQueryChange(event) {
+        let currentLang = document.documentElement.lang || "en";
+        
+        if (event.matches) {
+
+          if (currentLang === "en") {
+            enferMobile.style.display = "none";
+            enferMobileEn.style.display = "block";
+          }
+          if (currentLang === "es") {
+            enferMobile.style.display = "none";
+            enferMobileEs.style.display = "block";
+          }
+
+          if (toggle.checked) {
+
+            simpleMobileFr.style.display = "block";
+
+            if (currentLang === "en") {
+              simpleMobileFr.style.display = "none";
+              simpleMobileEn.style.display = "block";
+            }
+
+            if (currentLang === "es") {
+              simpleMobileFr.style.display = "none";
+              simpleMobileEs.style.display = "block";
+            }
+          }
+        }
+      }
+
+      // Charger le fichier JSON
+      function loadTranslations(lang) {
+        fetch("../assets/js/translations.json")
+      .then((response) => response.json())
+      .then((translations) => {
+        const data = translations[lang] || translations["en"]; // Si la langue n'existe pas => "en"
+
+        function updateText() {
+
+          if (toggle.checked) {
           simpleView.style.display = 'block';
           enferView.style.display = 'none';
-          title.textContent = "Le paradis avec tweetz-it";
-          description.textContent = "Sur 100 clics, vous sauvez 80 utilisateurs.";
+          title.textContent = data.paradise_title;
+          description.textContent = data.paradise_content;
+
+          simpleViewFr.style.display = lang === "fr" ? "block" : "none";
+          simpleViewEn.style.display = lang === "en" ? "block" : "none";
+          simpleViewEs.style.display = lang === "es" ? "block" : "none";
+          
         } else {
           simpleView.style.display = 'none';
           enferView.style.display = 'block';
-          title.textContent = "L'enfer sans tweetz-it";
-          description.textContent = "50% du public qui est perdu sans même en avoir conscience.";
+          title.textContent = data.enfer_title;
+          description.textContent = data.enfer_content;
+
+          enferViewFr.style.display = lang === 'fr' ? "block" : "none";
+          enferViewEn.style.display = lang === 'en' ? "block" : "none";
+          enferViewEs.style.display = lang === 'es' ? "block" : "none";
         }
+        handleMediaQueryChange(mediaQuery);
+        }
+
+        updateText();
+        toggle.addEventListener('change', updateText);
+      })
+      .catch((error) => console.log('Erreur de chargement des traductions :', error));
+      }
+
+      mediaQuery.addEventListener("change", handleMediaQueryChange);
+      handleMediaQueryChange(mediaQuery);
+
+      // Détection de la langue initiale dans la balise <html>
+      let currentLang = document.documentElement.lang || "en";
+      lang.value = currentLang;
+      loadTranslations(currentLang);
+
+      // Changement de langue avec le select
+      lang.addEventListener("change", function() {
+        location.reload();
+        let newLang = this.value;
+        document.documentElement.lang = newLang;
+        localStorage.setItem("selectedLang", newLang);
+        updateSVG(newLang);
+        loadTranslations(newLang);
       });
     });
     

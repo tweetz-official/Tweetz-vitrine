@@ -8,18 +8,14 @@
       font-size: clamp(2rem, 5vw, 3rem);
       font-weight: 600;
       color: #102542;
+      line-height: 2rem;
     }
 
     .offer {
-      background-color: #E0295D;
-      color: #fff;
+      color: gray;
       font-weight: 600;
-      width: fit-content;
-      padding: 0.5rem 2rem;
-      border-radius: 1rem;
       margin: 2rem auto;
       font-family: "Chillax", sans-serif;
-      box-shadow: 0 0 30px rgba(224, 41, 93, 0.5);
     }
 
     .formulae {
@@ -33,7 +29,7 @@
   }
 
   .premium > p {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
 
   .Card__premium {
@@ -106,7 +102,7 @@
     color: #fff;
     background: #E0295D;
     padding: 0.5rem 2rem;
-    border-radius: 0.5rem;
+    border-radius: 2rem;
     margin: auto auto 0;
     transition: ease-in-out 0.3s;
   }
