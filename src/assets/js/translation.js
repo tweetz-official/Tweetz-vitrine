@@ -1,10 +1,10 @@
 document.addEventListener("DOMContentLoaded", function () {
     const langSelect = document.getElementById("lang");
     const supportedLanguages = ['en','fr','es']; // Langues supportées
-    let currentLang = localStorage.getItem("lang") || navigator.language;
+    let currentLang = localStorage.getItem("lang") || navigator.language.slice(0,2);
 
     if (!supportedLanguages.includes(currentLang)) {
-        supportedLanguages[0]; // Langue par défaut
+        currentLang = supportedLanguages[0]; // Langue par défaut
     }
 
     // Charger les traductions depuis le fichier JSON
@@ -13,8 +13,8 @@ document.addEventListener("DOMContentLoaded", function () {
         .then(translations => {
             // Vérifie si la langue actuelle existe dans les traductions
             if (!translations[currentLang]) {
-                currentLang = "fr"; 
-                localStorage.setItem("lang", "fr");
+                currentLang = "en"; 
+                localStorage.setItem("lang", "en");
             }
 
             langSelect.value = currentLang;
