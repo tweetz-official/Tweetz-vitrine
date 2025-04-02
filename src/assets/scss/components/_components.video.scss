@@ -1,20 +1,5 @@
 .video {
     padding: 8rem 0;
-
-    h2 {
-        max-width: 800px;
-        font-size: clamp(2rem, 5vw, 3rem);
-        font-family: "Chillax", sans-serif;
-        color: #102542;
-        line-height: 1.2;
-        font-weight: 600;
-    }
-
-    p {
-        max-width: 800px;
-        padding-bottom: 2rem;
-        font-size: 1.3rem;
-    }
     
     .video_content {
         display: flex;
@@ -30,14 +15,39 @@
             justify-content: center;
             max-width: 90%;
 
+            h2 {
+                max-width: 800px;
+                font-size: clamp(2rem, 5vw, 3rem);
+                font-family: "Chillax", sans-serif;
+                color: #102542;
+                line-height: 1.2;
+                font-weight: 600;
+            }
+        
+            p {
+                max-width: 800px;
+                padding-bottom: 2rem;
+                font-size: 1.3rem;
+            }
+
             li {
                 padding-bottom: 2rem;
                 display: flex;
                 font-weight: 500;
-            }
 
-            svg {
-                margin-right: 1rem;
+                .video_advantage {
+                    display: flex;
+
+                    p {
+                        font-size: 1.125rem;
+                        margin: 0;
+                        padding: 0;
+                    }
+                }
+
+                svg {
+                    margin-right: 1rem;
+                }
             }
         }
     }
@@ -46,10 +56,10 @@
         border: 5px solid #111;
         border-radius: 10px;
         box-shadow: 0 0 20px rgba($color: #000, $alpha: 0.2);
-    }
-    
-    video {
-        width: auto;
-        height: 800px;
+
+        video {
+            width: auto;
+            height: 800px;
+        }
     }
 }
