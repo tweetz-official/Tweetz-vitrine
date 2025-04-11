@@ -8,7 +8,7 @@
       font-size: clamp(2rem, 5vw, 3rem);
       font-weight: 600;
       color: #102542;
-      line-height: 2rem;
+      line-height: clamp(2rem, 1.2em, 3.6rem); /* Modification du line-height pour s'adapter aux tailles d'écran */
     }
 
     .offer {

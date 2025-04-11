@@ -27,7 +27,27 @@
   position: relative;
   display: flex;
   gap: 1rem;
-  margin-left: auto;
+  margin: 0 auto 1rem auto;
+  width: fit-content;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  background-color: var(--color-grey-9);
+  align-items: center;
+  order: -1; /* Pour le placer en haut en mobile */
+  
+  @include breakpoint(medium){
+    margin-left: auto;
+    margin-right: 0;
+    margin-bottom: 0;
+    background-color: transparent;
+    padding: 0;
+    order: 0;
+  }
+  
+  svg {
+    width: 20px;
+    height: 20px;
+  }
 }
 
 #lang {
@@ -43,20 +63,16 @@
   border: .5px solid rgba($color: #000, $alpha: 0.2);
 }
 
-.c-sitefooter__nav,
-.c-sitefooter__footer{
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
 .c-sitefooter__nav{
   position: relative;
   flex-direction: column;
+  align-items: center;
+  gap: 1rem;
 
   @include breakpoint(medium){
     flex-direction: row;
+    align-items: flex-start;
+    gap: 0;
   }
 
   .c-mainnav{
