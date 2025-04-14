@@ -10,6 +10,8 @@
         gap: clamp(2rem, 5vw, 4rem);
         padding: 2rem 0;
         min-height: 60lvh;
+        margin: 0 auto;
+        width: 90%;
 
         @include breakpoint(medium) {
             flex-direction: row;
