@@ -45,12 +45,15 @@
     
         p {
             color: black;
-            font-size: clamp(1rem, 3vw, 1.3rem);
+            font-size: clamp(1rem, 5vw, 1.3rem);
             font-family: "Switzer", sans-serif;
             font-weight: 400;
             line-height: clamp(1.4, 1.6, 1.8);
             max-width: 95%;
             word-wrap: break-word;
+        }
+        .description{
+            margin-bottom: 2.5rem !important;
         }
 
         li {
