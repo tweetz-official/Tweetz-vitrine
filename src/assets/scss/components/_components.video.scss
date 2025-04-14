@@ -1,65 +1,116 @@
 .video {
-    padding: 8rem 0;
+    position: relative;
+    padding: clamp(4rem, 8vw, 8rem) 0;
     
     .video_content {
         display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 8rem;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        gap: clamp(2rem, 5vw, 4rem);
         padding: 2rem 0;
+        min-height: 60lvh;
 
-        .video_list {
-            list-style: none;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            max-width: 90%;
+        @include breakpoint(medium) {
+            flex-direction: row;
+            align-items: center;
+        }
+    }
 
-            h2 {
-                max-width: 800px;
-                font-size: clamp(2rem, 5vw, 3rem);
-                font-family: "Chillax", sans-serif;
-                color: #102542;
-                line-height: 1.2;
-                font-weight: 600;
-            }
+    .video_list {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        max-width: 600px;
+        text-wrap: pretty;
+        align-self: center;
         
-            p {
-                max-width: 800px;
-                padding-bottom: 2rem;
-                font-size: 1.3rem;
+        @include breakpoint(medium) {
+            flex: 1;
+            padding-right: 2rem;
+        }
+
+        h2 {
+            max-width: 100%;
+            font-size: clamp(2rem, 5vw, 3rem);
+            font-family: "Chillax", sans-serif;
+            color: #102542;
+            line-height: 1.2;
+            font-weight: 600;
+        }
+    
+        p {
+            max-width: 100%;
+            padding-bottom: clamp(1rem, 2vw, 2rem);
+            font-size: clamp(1rem, 2vw, 1.3rem);
+        }
+
+        li {
+            padding-bottom: clamp(1rem, 2vw, 2rem);
+            display: flex;
+            font-weight: 500;
+
+            .video_advantage {
+                display: flex;
+
+                p {
+                    font-size: clamp(1rem, 1.5vw, 1.125rem);
+                    margin: 0;
+                    padding: 0;
+                }
             }
 
-            li {
-                padding-bottom: 2rem;
-                display: flex;
-                font-weight: 500;
-
-                .video_advantage {
-                    display: flex;
-
-                    p {
-                        font-size: 1.125rem;
-                        margin: 0;
-                        padding: 0;
-                    }
-                }
-
-                svg {
-                    margin-right: 1rem;
-                }
+            svg {
+                margin-right: 1rem;
+                flex-shrink: 0;
             }
         }
     }
 
     .video_container {
-        border-radius: 20px;
-        overflow: hidden;
-        box-shadow: 0 0 20px rgba($color: #000, $alpha: 0.2);
+        position: relative;
+        aspect-ratio: 9/16;
+        width: 100%;
+        max-width: 450px;
+        
+        @include breakpoint(medium) {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+        }
+
+        media-controller {
+            position: relative;
+            width: min(450px, 90%);
+            height: auto;
+            aspect-ratio: 9/16;
+            max-height: 800px;
+            margin: 0 auto;
+            border: 10px solid #F2F1F5;
+            border-radius: 47px;
+            overflow: hidden;
+            box-shadow: 0 12px 25px rgba(13, 9, 27, 0.06),
+                        0 46px 46px rgba(13, 9, 27, 0.05),
+                        0 104px 63px rgba(13, 9, 27, 0.03),
+                        0 185px 74px rgba(13, 9, 27, 0.01);
+        }
 
         video {
-            width: auto;
-            height: 800px;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .video {
+        .video_container {
+            media-controller {
+                max-height: 600px;
+            }
         }
     }
 }
