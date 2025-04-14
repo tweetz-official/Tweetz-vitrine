@@ -1,6 +1,6 @@
 .video {
     position: relative;
-    padding: clamp(4rem, 8vw, 8rem) 0;
+    padding: clamp(4rem, 5vw, 8rem) 0;
     
     .video_content {
         display: flex;
@@ -74,6 +74,9 @@
         aspect-ratio: 9/16;
         width: 100%;
         max-width: 450px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         
         @include breakpoint(medium) {
             flex: 1;
